@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 import "./globals.css";
+import CookieConsent from "./components/CookieConsent";
 
 const barlow = Barlow({
   weight: ['400', '500', '600', '700', '800'],
@@ -26,6 +27,7 @@ export default function RootLayout({
       </head>
       <body className={barlow.variable}>
         {children}
+        <CookieConsent />
       </body>
     </html>
   );

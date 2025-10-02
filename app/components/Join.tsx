@@ -8,10 +8,10 @@ export default function Join() {
         <div className="join-hero">
           <h2 className="section-title">Ready to Start Shopping?</h2>
           <p className="section-subtitle">
-            Join the waitlist and be the first to experience your high street, instantly
+            Be the first to experience your high street, instantly
           </p>
           <Link href="/waitlist" className="btn-primary btn-large">Join the Waitlist</Link>
-          <p className="join-note">No credit card required • Early access for first 1,000 users</p>
+          <p className="join-note">Get exclusive early access & rewards</p>
         </div>
 
         <div className="join-options">

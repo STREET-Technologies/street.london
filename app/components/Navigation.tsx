@@ -14,13 +14,13 @@ export default function Navigation() {
             STREET
           </Link>
           <div className="nav-links">
-            <Link href="#features" className="nav-link">
+            <Link href="/#features" className="nav-link">
               Features
             </Link>
-            <Link href="#how-it-works" className="nav-link">
+            <Link href="/#how-it-works" className="nav-link">
               How it Works
             </Link>
-            <Link href="#join" className="nav-link">
+            <Link href="/#join" className="nav-link">
               Join
             </Link>
             <Link href="/waitlist" className="btn-primary-sm">Join Waitlist</Link>
