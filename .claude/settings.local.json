@@ -14,7 +14,9 @@
       "Bash(git push:*)",
       "Bash(git remote set-url:*)",
       "Bash(npx vercel:*)",
-      "Bash(taskkill:*)"
+      "Bash(taskkill:*)",
+      "Bash(curl:*)",
+      "Bash(npm uninstall:*)"
     ],
     "deny": [],
     "ask": []
