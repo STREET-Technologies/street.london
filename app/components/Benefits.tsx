@@ -33,7 +33,7 @@ export default function Benefits() {
         <div className="benefits-grid">
           {/* Benefit 1 */}
           <div className="benefit-card" data-aos="fade-up">
-            <div className="benefit-image benefit-img-1" style={{ backgroundImage: 'url(/img/4.png)' }}>
+            <div className="benefit-image" style={{ backgroundImage: 'url(/img/gen-z.png)' }}>
               <div className="benefit-overlay">
                 <span className="benefit-badge">All Your Favourites</span>
               </div>
@@ -64,7 +64,7 @@ export default function Benefits() {
                 <li>Flexible pickup options</li>
               </ul>
             </div>
-            <div className="benefit-image benefit-img-2" style={{ backgroundImage: 'url(/img/5.png)' }}>
+            <div className="benefit-image" style={{ backgroundImage: 'url(/img/delivery.png)' }}>
               <div className="benefit-overlay">
                 <span className="benefit-badge">Lightning Fast</span>
               </div>
@@ -73,7 +73,7 @@ export default function Benefits() {
 
           {/* Benefit 3 */}
           <div className="benefit-card" data-aos="fade-up" data-aos-delay="200">
-            <div className="benefit-image benefit-img-3" style={{ backgroundImage: 'url(/img/6.png)' }}>
+            <div className="benefit-image" style={{ backgroundImage: 'url(/img/returns.png)' }}>
               <div className="benefit-overlay">
                 <span className="benefit-badge">Hassle-Free</span>
               </div>

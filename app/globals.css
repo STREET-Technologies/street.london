@@ -379,13 +379,13 @@ body {
 
 .benefit-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: 4rem;
     align-items: center;
 }
 
 .benefit-card-reverse {
-    direction: ltr;
+    grid-template-columns: 1fr 1.2fr;
 }
 
 .benefit-card-reverse .benefit-content {
@@ -397,7 +397,8 @@ body {
 }
 
 .benefit-image {
-    height: 500px;
+    width: 100%;
+    height: 400px;
     background: var(--gray-light);
     border-radius: 16px;
     position: relative;
@@ -843,7 +844,7 @@ body {
     }
 
     .benefit-image {
-        height: 350px;
+        height: 300px;
     }
 
     .millie-content {
