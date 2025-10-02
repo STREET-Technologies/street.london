@@ -1,21 +1,47 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-background">
-        <div className="hero-image-grid">
-          <div className="hero-image hero-img-1">
-            <Image src="/img/1.png" alt="Shopping lifestyle" fill style={{ objectFit: 'cover' }} />
-          </div>
-          <div className="hero-image hero-img-2">
-            <Image src="/img/2.png" alt="Local retail" fill style={{ objectFit: 'cover' }} />
-          </div>
-          <div className="hero-image hero-img-3">
-            <Image src="/img/3.png" alt="High street shopping" fill style={{ objectFit: 'cover' }} />
-          </div>
-        </div>
+        <Swiper
+          modules={[Autoplay, Pagination, EffectFade]}
+          effect="fade"
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+          loop={true}
+          className="hero-swiper"
+        >
+          <SwiperSlide>
+            <div className="hero-slide">
+              <Image src="/img/1.png" alt="Shopping lifestyle" fill style={{ objectFit: 'cover' }} priority />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="hero-slide">
+              <Image src="/img/2.png" alt="Local retail" fill style={{ objectFit: 'cover' }} />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="hero-slide">
+              <Image src="/img/3.png" alt="High street shopping" fill style={{ objectFit: 'cover' }} />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
       <div className="container">
         <div className="hero-content">

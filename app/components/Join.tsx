@@ -23,7 +23,7 @@ export default function Join() {
               </div>
               <h4>For Retailers</h4>
               <p>Bring your store online and reach more local customers</p>
-              <Link href="#retailers" className="btn-text">
+              <Link href="/retailers" className="btn-text">
                 Learn More →
               </Link>
             </div>
@@ -33,7 +33,7 @@ export default function Join() {
               </div>
               <h4>For Drivers</h4>
               <p>Earn money delivering to your local community</p>
-              <Link href="#drivers" className="btn-text">
+              <Link href="/rider" className="btn-text">
                 Learn More →
               </Link>
             </div>
@@ -43,7 +43,7 @@ export default function Join() {
               </div>
               <h4>For Ambassadors</h4>
               <p>Spread the word and earn exclusive rewards</p>
-              <Link href="#ambassadors" className="btn-text">
+              <Link href="/doers" className="btn-text">
                 Learn More →
               </Link>
             </div>

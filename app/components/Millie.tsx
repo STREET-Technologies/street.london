@@ -7,7 +7,7 @@ export default function Millie() {
         <div className="millie-content">
           <div className="millie-text">
             <p className="millie-eyebrow">Your Personal Stylist</p>
-            <h2 className="section-title">Meet Millie</h2>
+            <h2 className="section-title millie-title">Meet Millie</h2>
             <p className="section-subtitle">
               Your AI shopping assistant who knows your style better than you do
             </p>
@@ -40,7 +40,6 @@ export default function Millie() {
                 </div>
               </div>
             </div>
-            <button className="btn-primary">Try Millie</button>
           </div>
           <div className="millie-visual">
             <div className="millie-images-grid">

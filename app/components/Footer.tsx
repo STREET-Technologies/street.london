@@ -11,22 +11,21 @@ export default function Footer() {
           </div>
           <div className="footer-links">
             <div className="footer-column">
-              <h4>Company</h4>
-              <Link href="#about">About</Link>
-              <Link href="#careers">Careers</Link>
-              <Link href="#press">Press</Link>
+              <h4>Join Us</h4>
+              <Link href="/retailers">For Retailers</Link>
+              <Link href="/rider">For Drivers</Link>
+              <Link href="/doers">For Ambassadors</Link>
             </div>
             <div className="footer-column">
               <h4>Legal</h4>
-              <Link href="#privacy">Privacy Policy</Link>
-              <Link href="#terms">User Terms</Link>
-              <Link href="#contact">Contact Us</Link>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+              <Link href="/user-terms">User Terms</Link>
+              <Link href="/contact-us">Contact Us</Link>
             </div>
             <div className="footer-column">
               <h4>Connect</h4>
-              <Link href="#linkedin">LinkedIn</Link>
-              <Link href="#instagram">Instagram</Link>
-              <Link href="#twitter">Twitter</Link>
+              <a href="https://www.linkedin.com/company/street-london/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.instagram.com/st.reet.app/" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
           </div>
         </div>
