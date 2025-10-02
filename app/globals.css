@@ -669,7 +669,8 @@ body {
 /* Millie Carousel (mobile only) */
 .millie-carousel {
     width: 100%;
-    max-width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
     padding-bottom: 3rem;
     overflow: hidden;
 }
@@ -683,6 +684,7 @@ body {
 .millie-carousel .millie-image {
     transform: none !important;
     max-width: 100%;
+    width: 100%;
 }
 
 .millie-carousel .swiper-pagination {
