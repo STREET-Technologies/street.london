@@ -1,6 +1,24 @@
+'use client';
+
 import { Star, Scan, Mic } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { useEffect, useState } from 'react';
 
 export default function Millie() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <section className="millie-section">
       <div className="container">
@@ -42,17 +60,44 @@ export default function Millie() {
             </div>
           </div>
           <div className="millie-visual">
-            <div className="millie-images-grid">
-              <div className="millie-image">
-                <img src="/img/millie-1.png" alt="Millie AI interface 1" />
+            {isMobile ? (
+              <Swiper
+                modules={[Pagination, Autoplay]}
+                spaceBetween={20}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                className="millie-carousel"
+              >
+                <SwiperSlide>
+                  <div className="millie-image">
+                    <img src="/img/millie-1.png" alt="Millie AI interface 1" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="millie-image">
+                    <img src="/img/millie-2.png" alt="Millie AI interface 2" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="millie-image">
+                    <img src="/img/millie-3.png" alt="Millie AI interface 3" />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            ) : (
+              <div className="millie-images-grid">
+                <div className="millie-image">
+                  <img src="/img/millie-1.png" alt="Millie AI interface 1" />
+                </div>
+                <div className="millie-image">
+                  <img src="/img/millie-2.png" alt="Millie AI interface 2" />
+                </div>
+                <div className="millie-image">
+                  <img src="/img/millie-3.png" alt="Millie AI interface 3" />
+                </div>
               </div>
-              <div className="millie-image">
-                <img src="/img/millie-2.png" alt="Millie AI interface 2" />
-              </div>
-              <div className="millie-image">
-                <img src="/img/millie-3.png" alt="Millie AI interface 3" />
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

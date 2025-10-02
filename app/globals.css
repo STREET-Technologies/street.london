@@ -666,6 +666,28 @@ body {
     transform: translateY(20px);
 }
 
+/* Millie Carousel (mobile only) */
+.millie-carousel {
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+.millie-carousel .swiper-pagination {
+    bottom: 0;
+}
+
+.millie-carousel .swiper-pagination-bullet {
+    background: var(--white);
+    opacity: 0.5;
+    width: 8px;
+    height: 8px;
+}
+
+.millie-carousel .swiper-pagination-bullet-active {
+    background: var(--primary);
+    opacity: 1;
+}
+
 .millie-image:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
