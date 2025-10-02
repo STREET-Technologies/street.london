@@ -669,7 +669,20 @@ body {
 /* Millie Carousel (mobile only) */
 .millie-carousel {
     width: 100%;
+    max-width: 100%;
     padding-bottom: 3rem;
+    overflow: hidden;
+}
+
+.millie-carousel .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.millie-carousel .millie-image {
+    transform: none !important;
+    max-width: 100%;
 }
 
 .millie-carousel .swiper-pagination {
@@ -967,6 +980,11 @@ body {
     .millie-content {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+
+    .millie-visual {
+        width: 100%;
+        overflow: hidden;
     }
 
     .millie-images-grid {
