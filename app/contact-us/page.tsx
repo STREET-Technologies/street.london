@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -51,7 +52,9 @@ export default function ContactUsPage() {
         <main className="contact-page">
           <div className="container">
             <div className="success-message">
-              <div className="success-icon">✓</div>
+              <div className="success-icon">
+                <CheckCircle size={64} strokeWidth={2} />
+              </div>
               <h1>Message Sent!</h1>
               <p>Thank you for reaching out. We&apos;ll get back to you as soon as possible.</p>
               <button onClick={() => setSubmitted(false)} className="btn-secondary">

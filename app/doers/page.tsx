@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Sparkles, Gift, DollarSign, Utensils, Shirt } from 'lucide-react';
+import { Sparkles, Gift, DollarSign, Utensils, Shirt, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -67,10 +67,17 @@ export default function DoersPage() {
         <main className="retailers-page">
           <div className="container">
             <div className="success-message">
-              <div className="success-icon">✓</div>
+              <div className="success-icon">
+                <CheckCircle size={64} strokeWidth={2} />
+              </div>
               <h1>Welcome to the squad!</h1>
               <p>Thank you for joining us! We&apos;re excited to have you as part of the STREET community.</p>
-              <p className="success-tagline">Follow us on Instagram for a chance to win FREE delivery for a whole year!</p>
+              <p className="success-tagline">
+                Follow us on Instagram{' '}
+                <a href="https://www.instagram.com/st.reet.app/" target="_blank" rel="noopener noreferrer">
+                  @ST.REET.APP
+                </a>
+              </p>
               <button onClick={() => setSubmitted(false)} className="btn-secondary">
                 Submit Another
               </button>

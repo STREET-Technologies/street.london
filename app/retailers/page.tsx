@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -67,7 +68,9 @@ export default function RetailersPage() {
         <main className="retailers-page">
           <div className="container">
             <div className="success-message">
-              <div className="success-icon">✓</div>
+              <div className="success-icon">
+                <CheckCircle size={64} strokeWidth={2} />
+              </div>
               <h1>Thank you!</h1>
               <p>
                 We are thrilled at your interest! Our awesome team will get back to you shortly! Keep an eye on your

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -54,15 +55,16 @@ export default function WaitlistPage() {
         <main className="waitlist-page">
           <div className="container">
             <div className="success-message">
-              <div className="success-icon">🎉</div>
+              <div className="success-icon">
+                <CheckCircle size={64} strokeWidth={2} />
+              </div>
               <h1>Welcome to the waitlist!</h1>
               <p>You&apos;re now on the list to be one of the first to experience STREET.</p>
               <p className="success-tagline">
                 Follow us on Instagram{' '}
                 <a href="https://www.instagram.com/st.reet.app/" target="_blank" rel="noopener noreferrer">
                   @ST.REET.APP
-                </a>{' '}
-                for a chance to win <strong>FREE delivery for a whole year!</strong>
+                </a>
               </p>
               <button onClick={() => setSubmitted(false)} className="btn-secondary">
                 Submit Another

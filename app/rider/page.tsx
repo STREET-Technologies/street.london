@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -55,7 +56,9 @@ export default function RiderPage() {
         <main className="retailers-page">
           <div className="container">
             <div className="success-message">
-              <div className="success-icon">✓</div>
+              <div className="success-icon">
+                <CheckCircle size={64} strokeWidth={2} />
+              </div>
               <h1>Thank you!</h1>
               <p>We will be in touch soon! Don&apos;t forget to refer your friends for rewards!</p>
               <button onClick={() => setSubmitted(false)} className="btn-secondary">
