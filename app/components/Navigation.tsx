@@ -23,7 +23,7 @@ export default function Navigation() {
             <Link href="#join" className="nav-link">
               Join
             </Link>
-            <button className="btn-primary-sm">Join Waitlist</button>
+            <Link href="/waitlist" className="btn-primary-sm">Join Waitlist</Link>
           </div>
           <button
             className="mobile-menu-btn"

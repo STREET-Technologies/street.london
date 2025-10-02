@@ -10,7 +10,7 @@ export default function Join() {
           <p className="section-subtitle">
             Join the waitlist and be the first to experience your high street, instantly
           </p>
-          <button className="btn-primary btn-large">Join the Waitlist</button>
+          <Link href="/waitlist" className="btn-primary btn-large">Join the Waitlist</Link>
           <p className="join-note">No credit card required • Early access for first 1,000 users</p>
         </div>
 
