@@ -29,10 +29,28 @@ export default function RetailersPage() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
+
+    try {
+      const response = await fetch('/api/retailers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        console.error('Submission failed:', result.error);
+        alert('Failed to submit. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Failed to submit. Please try again.');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
