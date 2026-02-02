@@ -3,6 +3,7 @@
 import { Star, Scan, Mic } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
+import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useEffect, useState } from 'react';
@@ -71,30 +72,30 @@ export default function Millie() {
               >
                 <SwiperSlide>
                   <div className="millie-image">
-                    <img src="/img/millie-1.png" alt="Millie AI interface 1" />
+                    <Image src="/img/millie-1.png" alt="Millie AI interface 1" width={300} height={600} />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="millie-image">
-                    <img src="/img/millie-2.png" alt="Millie AI interface 2" />
+                    <Image src="/img/millie-2.png" alt="Millie AI interface 2" width={300} height={600} />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="millie-image">
-                    <img src="/img/millie-3.png" alt="Millie AI interface 3" />
+                    <Image src="/img/millie-3.png" alt="Millie AI interface 3" width={300} height={600} />
                   </div>
                 </SwiperSlide>
               </Swiper>
             ) : (
               <div className="millie-images-grid">
                 <div className="millie-image">
-                  <img src="/img/millie-1.png" alt="Millie AI interface 1" />
+                  <Image src="/img/millie-1.png" alt="Millie AI interface 1" width={300} height={600} />
                 </div>
                 <div className="millie-image">
-                  <img src="/img/millie-2.png" alt="Millie AI interface 2" />
+                  <Image src="/img/millie-2.png" alt="Millie AI interface 2" width={300} height={600} />
                 </div>
                 <div className="millie-image">
-                  <img src="/img/millie-3.png" alt="Millie AI interface 3" />
+                  <Image src="/img/millie-3.png" alt="Millie AI interface 3" width={300} height={600} />
                 </div>
               </div>
             )}

@@ -1,13 +1,17 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-background">
-        <img
+        <Image
           src="/img/hero-bg.png"
           alt="STREET shopping experience"
           className="hero-image"
+          fill
+          priority
+          sizes="100vw"
         />
       </div>
       <div className="container hero-content">
