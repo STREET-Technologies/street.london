@@ -5,14 +5,19 @@ export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
 
-    const result = await submitToAirtable(TABLES.WAITLIST, {
-      Name: data.name,
-      Postcode: data.postcode,
-      Email: data.email,
-      Phone: data.phone,
-      'Top Stores': data.stores,
-      'Referred By': data.referredBy || '',
-    });
+    // Build fields object with only provided values
+    const fields: Record<string, string> = {
+      Name: data.name || '',
+      Email: data.email || '',
+    };
+
+    // Add optional fields if provided
+    if (data.postcode) fields['Postcode'] = data.postcode;
+    if (data.phone) fields['Phone'] = data.phone;
+    if (data.stores) fields['Top Stores'] = data.stores;
+    if (data.referredBy) fields['Referred By'] = data.referredBy;
+
+    const result = await submitToAirtable(TABLES.WAITLIST, fields);
 
     if (result.success) {
       return NextResponse.json({ success: true });

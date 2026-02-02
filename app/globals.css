@@ -1828,3 +1828,134 @@ body {
         font-size: 1.15rem;
     }
 }
+
+/* ===================================
+   MYSTERY LANDING PAGE
+   =================================== */
+.mystery-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+.mystery-flash-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(60%) contrast(1.2);
+    transition: opacity 0.1s ease;
+}
+
+.mystery-static {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.mystery-content {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 2rem;
+}
+
+.mystery-logo {
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 12vw, 6rem);
+    color: #fff;
+    letter-spacing: 0.1em;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.mystery-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 320px;
+}
+
+.mystery-input {
+    background: rgba(26, 26, 26, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.25rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.mystery-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.mystery-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(26, 26, 26, 1);
+}
+
+.mystery-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.mystery-submit {
+    background: var(--primary);
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    font-family: var(--font-title);
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.mystery-submit:hover:not(:disabled) {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.mystery-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.mystery-error {
+    color: #ff4444;
+    font-size: 0.875rem;
+    text-align: center;
+    margin: 0;
+}
+
+.mystery-success {
+    text-align: center;
+}
+
+.mystery-success p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
