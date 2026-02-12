@@ -20,7 +20,7 @@ export default function AnimatedBackground() {
     if (!ctx) return;
 
     const resize = () => {
-      const scale = window.innerWidth <= 768 ? 8 : 4;
+      const scale = window.innerWidth <= 768 ? 6 : 4;
       canvas.width = Math.ceil(window.innerWidth / scale);
       canvas.height = Math.ceil(window.innerHeight / scale);
     };
