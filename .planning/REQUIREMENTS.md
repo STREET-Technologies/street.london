@@ -28,10 +28,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Performance & Accessibility
 
-- [ ] **PERF-01**: Total JavaScript bundle stays under 150KB compressed (200KB hard max)
-- [ ] **PERF-02**: Page achieves LCP under 2.5 seconds on throttled 4G
-- [ ] **PERF-03**: Users with `prefers-reduced-motion` see an elegant static fallback (not broken/blank)
-- [ ] **PERF-04**: Meaningful HTML text renders in the DOM for SEO and screen readers (not canvas-only)
+- [x] **PERF-01**: Total JavaScript bundle stays under 150KB compressed (200KB hard max)
+- [x] **PERF-02**: Page achieves LCP under 2.5 seconds on throttled 4G
+- [x] **PERF-03**: Users with `prefers-reduced-motion` see an elegant static fallback (not broken/blank)
+- [x] **PERF-04**: Meaningful HTML text renders in the DOM for SEO and screen readers (not canvas-only)
 
 ## v2 Requirements
 
@@ -89,10 +89,10 @@ Which phases cover which requirements. Updated by create-roadmap.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PERF-01 | Phase 1 | Pending |
-| PERF-02 | Phase 1 | Pending |
-| PERF-03 | Phase 1 | Pending |
-| PERF-04 | Phase 1 | Pending |
+| PERF-01 | Phase 1 | Complete |
+| PERF-02 | Phase 1 | Complete |
+| PERF-03 | Phase 1 | Complete |
+| PERF-04 | Phase 1 | Complete |
 | VIS-01 | Phase 2 | Pending |
 | VIS-02 | Phase 2 | Pending |
 | VIS-03 | Phase 2 | Pending |

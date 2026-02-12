@@ -6,7 +6,7 @@ Replace the current underwhelming TV static homepage with a cinematic mystery te
 
 ## Phases
 
-- [ ] **Phase 1: Foundation** - Performance-safe, accessible page structure ready for cinematic content
+- [x] **Phase 1: Foundation** - Performance-safe, accessible page structure ready for cinematic content
 - [ ] **Phase 2: Visual Atmosphere** - Dark cinematic mood that feels intentional and immersive
 - [ ] **Phase 3: Cinematic Sequence** - Auto-playing timed experience that builds tension and curiosity
 - [ ] **Phase 4: Waitlist Integration** - Curiosity converts to email signups through existing Airtable pipeline
@@ -23,11 +23,11 @@ Replace the current underwhelming TV static homepage with a cinematic mystery te
   3. JS bundle stays under 150KB compressed (verified via `next build` output)
   4. Page scores >80 on Lighthouse Performance (mobile)
 **Research**: Unlikely (established Next.js patterns, standard CSS/HTML)
-**Plans**: TBD
+**Plans**: 2/2 complete
 
 Plans:
-- [ ] 01-01: Server/client component boundary, page structure, performance baseline
-- [ ] 01-02: Reduced-motion fallback experience with static waitlist view
+- [x] 01-01: Server/client component boundary, page structure, performance baseline
+- [x] 01-02: Reduced-motion fallback experience with static waitlist view
 
 ### Phase 2: Visual Atmosphere
 **Goal**: Dark cinematic mood that feels intentional and immersive
@@ -77,7 +77,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/2 | Not started | - |
+| 1. Foundation | 2/2 | Complete | 2026-02-12 |
 | 2. Visual Atmosphere | 0/2 | Not started | - |
 | 3. Cinematic Sequence | 0/2 | Not started | - |
 | 4. Waitlist Integration | 0/1 | Not started | - |
