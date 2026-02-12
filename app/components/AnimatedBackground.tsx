@@ -11,13 +11,15 @@ const FLASH_IMAGES = [
   '/img/bliss.png',
 ];
 
+const GRAIN_FPS = 15;
+const GRAIN_ALPHA = 12;
+
 export default function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [currentImage, setCurrentImage] = useState<string | null>(null);
   const [imageOpacity, setImageOpacity] = useState(0);
-  const [staticIntensity, setStaticIntensity] = useState(0.08);
 
-  // TV Static Effect
+  // Film grain overlay — renders at reduced resolution, throttled to ~15fps
   useEffect(() => {
     // Respect OS-level reduced motion preference — skip canvas animation entirely
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -29,51 +31,40 @@ export default function AnimatedBackground() {
     if (!ctx) return;
 
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const scale = window.innerWidth <= 768 ? 8 : 4;
+      canvas.width = Math.ceil(window.innerWidth / scale);
+      canvas.height = Math.ceil(window.innerHeight / scale);
     };
     resize();
     window.addEventListener('resize', resize);
 
     let animationId: number;
-    const renderStatic = () => {
+    let lastFrame = 0;
+    const frameInterval = 1000 / GRAIN_FPS;
+
+    const renderGrain = (timestamp: number) => {
+      animationId = requestAnimationFrame(renderGrain);
+      if (timestamp - lastFrame < frameInterval) return;
+      lastFrame = timestamp;
+
       const imageData = ctx.createImageData(canvas.width, canvas.height);
       const data = imageData.data;
-
       for (let i = 0; i < data.length; i += 4) {
-        const value = Math.random() > 0.5 ? 255 : 0;
+        const value = Math.floor(Math.random() * 255);
         data[i] = value;
         data[i + 1] = value;
         data[i + 2] = value;
-        data[i + 3] = Math.random() * 40 * staticIntensity * 10;
+        data[i + 3] = GRAIN_ALPHA;
       }
-
       ctx.putImageData(imageData, 0, 0);
-      animationId = requestAnimationFrame(renderStatic);
     };
 
-    renderStatic();
+    requestAnimationFrame(renderGrain);
 
     return () => {
       window.removeEventListener('resize', resize);
       cancelAnimationFrame(animationId);
     };
-  }, [staticIntensity]);
-
-  // Static intensity breathing
-  useEffect(() => {
-    // Respect OS-level reduced motion preference — skip breathing animation
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    const breathe = () => {
-      const time = Date.now() / 1000;
-      const base = 0.08;
-      const variation = 0.04;
-      setStaticIntensity(base + Math.sin(time * 0.5) * variation);
-    };
-
-    const interval = setInterval(breathe, 50);
-    return () => clearInterval(interval);
   }, []);
 
   // Image flash sequence
@@ -108,8 +99,6 @@ export default function AnimatedBackground() {
           if (elapsed >= durations.fadeIn) {
             phase = 'hold';
             phaseStart = Date.now();
-            // Intensify static during image
-            setStaticIntensity(0.15);
           }
           break;
         case 'hold':
@@ -126,7 +115,6 @@ export default function AnimatedBackground() {
             setCurrentImage(null);
             setImageOpacity(0);
             imageIndex = (imageIndex + 1) % FLASH_IMAGES.length;
-            setStaticIntensity(0.08);
           }
           break;
       }
@@ -149,7 +137,7 @@ export default function AnimatedBackground() {
         />
       )}
 
-      {/* TV Static overlay */}
+      {/* Film grain overlay */}
       <canvas ref={canvasRef} className="mystery-static" />
     </>
   );
