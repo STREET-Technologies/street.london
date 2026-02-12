@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 
 const GRAIN_FPS = 15;
-const GRAIN_ALPHA = 30;
+const GRAIN_ALPHA = 20;
 
 export default function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

@@ -24,23 +24,32 @@ export default function CinematicSequence() {
     // First-time visitor: play the cinematic sequence
     setState('play');
 
-    // Mark as visited after sequence completes (~8.5s)
+    // Mark as visited after sequence completes (~11s)
     const timer = setTimeout(() => {
       localStorage.setItem('street-visited', '1');
-    }, 8500);
+    }, 11000);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className={`mystery-content sequence-${state}`}>
-      <div className="sequence-beat-1">
+      {/* Pain-point beats — each occupies same center position, fades in/out */}
+      <div className="sequence-hook">
+        <p className="sequence-line sequence-line-1">3-day delivery.</p>
+        <p className="sequence-line sequence-line-2">Next-day delivery.</p>
+        <p className="sequence-line sequence-line-3">Same-day delivery.</p>
+        <p className="sequence-line sequence-line-4">Not fast enough.</p>
+      </div>
+
+      {/* Brand reveal — stays visible after appearing */}
+      <div className="sequence-reveal sequence-reveal-logo">
         <h1 className="mystery-logo">STREET</h1>
       </div>
-      <div className="sequence-beat-2">
-        <p className="mystery-tagline">Something is coming to London.</p>
+      <div className="sequence-reveal sequence-reveal-tagline">
+        <p className="mystery-tagline">Coming to London.</p>
       </div>
-      <div className="sequence-beat-3">
+      <div className="sequence-reveal sequence-reveal-form">
         <HomepageSignup />
       </div>
     </div>

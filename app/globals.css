@@ -1974,41 +1974,95 @@ body {
 
 /* --- Cinematic Sequence Animations --- */
 
-@keyframes sequenceFadeIn {
+/* Fade in, hold, fade out — for pain-point lines that disappear */
+@keyframes beatInOut {
+    0% { opacity: 0; transform: translateY(8px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-4px); }
+}
+
+/* Fade in and stay — for brand reveal elements */
+@keyframes beatIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Hook container — holds pain-point lines in overlapping position */
+.sequence-hook {
+    position: relative;
+    height: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.sequence-line {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.125rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+.sequence-line-4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.2em;
+}
+
 /* Pending state (SSR default — hidden until JS decides play vs skip) */
-.sequence-pending .sequence-beat-1,
-.sequence-pending .sequence-beat-2,
-.sequence-pending .sequence-beat-3 {
+.sequence-pending .sequence-line,
+.sequence-pending .sequence-reveal {
     opacity: 0;
 }
 
-/* Play state (first-time visitor — progressive animation) */
-.sequence-play .sequence-beat-1,
-.sequence-play .sequence-beat-2,
-.sequence-play .sequence-beat-3 {
+/* Play state — pain-point lines cycle in same position, then brand reveals */
+.sequence-play .sequence-line,
+.sequence-play .sequence-reveal {
     opacity: 0;
 }
 
-.sequence-play .sequence-beat-1 {
-    animation: sequenceFadeIn 1.5s ease-out 2s forwards;
+/* Pain-point lines: each ~1.5s total (fade in, hold, fade out) */
+.sequence-play .sequence-line-1 {
+    animation: beatInOut 1.5s ease-in-out 0.8s forwards;
+}
+.sequence-play .sequence-line-2 {
+    animation: beatInOut 1.5s ease-in-out 2.5s forwards;
+}
+.sequence-play .sequence-line-3 {
+    animation: beatInOut 1.5s ease-in-out 4.2s forwards;
+}
+.sequence-play .sequence-line-4 {
+    animation: beatInOut 1.8s ease-in-out 5.9s forwards;
 }
 
-.sequence-play .sequence-beat-2 {
-    animation: sequenceFadeIn 1s ease-out 5s forwards;
+/* Hide hook container after pain-point lines finish */
+.sequence-play .sequence-hook {
+    animation: beatInOut 0.01s linear 8s forwards;
 }
 
-.sequence-play .sequence-beat-3 {
-    animation: sequenceFadeIn 1s ease-out 7.5s forwards;
+/* Brand reveal: fade in and stay */
+.sequence-play .sequence-reveal-logo {
+    animation: beatIn 1.5s ease-out 8s forwards;
+}
+.sequence-play .sequence-reveal-tagline {
+    animation: beatIn 0.8s ease-out 9.5s forwards;
+}
+.sequence-play .sequence-reveal-form {
+    animation: beatIn 0.8s ease-out 10.3s forwards;
 }
 
-/* Skip state (returning visitor — everything visible immediately) */
-.sequence-skip .sequence-beat-1,
-.sequence-skip .sequence-beat-2,
-.sequence-skip .sequence-beat-3 {
+/* Skip state (returning visitor — brand visible, hook hidden) */
+.sequence-skip .sequence-hook {
+    display: none;
+}
+.sequence-skip .sequence-reveal {
     opacity: 1;
 }
 
@@ -2049,16 +2103,15 @@ body {
     }
 
     /* Belt-and-suspenders: ensure sequence content visible even if JS fails */
-    .sequence-play .sequence-beat-1,
-    .sequence-play .sequence-beat-2,
-    .sequence-play .sequence-beat-3 {
-        animation: none;
+    .sequence-play .sequence-line,
+    .sequence-play .sequence-reveal,
+    .sequence-pending .sequence-line,
+    .sequence-pending .sequence-reveal {
+        animation: none !important;
         opacity: 1;
     }
 
-    .sequence-pending .sequence-beat-1,
-    .sequence-pending .sequence-beat-2,
-    .sequence-pending .sequence-beat-3 {
-        opacity: 1;
+    .sequence-hook {
+        display: none;
     }
 }
