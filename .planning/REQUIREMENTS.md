@@ -9,9 +9,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Visual Atmosphere
 
-- [ ] **VIS-01**: Homepage displays a dark cinematic aesthetic with deep blacks, subtle glows, and neon accents
-- [ ] **VIS-02**: Animated film grain/noise overlay covers the viewport (Canvas 2D or CSS SVG, low opacity, non-interactive)
-- [ ] **VIS-03**: Visual atmosphere works on mobile screens without performance degradation
+- [x] **VIS-01**: Homepage displays a dark cinematic aesthetic with deep blacks, subtle glows, and neon accents
+- [x] **VIS-02**: Animated film grain/noise overlay covers the viewport (Canvas 2D or CSS SVG, low opacity, non-interactive)
+- [x] **VIS-03**: Visual atmosphere works on mobile screens without performance degradation
 
 ### Cinematic Sequence
 
@@ -93,9 +93,9 @@ Which phases cover which requirements. Updated by create-roadmap.
 | PERF-02 | Phase 1 | Complete |
 | PERF-03 | Phase 1 | Complete |
 | PERF-04 | Phase 1 | Complete |
-| VIS-01 | Phase 2 | Pending |
-| VIS-02 | Phase 2 | Pending |
-| VIS-03 | Phase 2 | Pending |
+| VIS-01 | Phase 2 | Complete |
+| VIS-02 | Phase 2 | Complete |
+| VIS-03 | Phase 2 | Complete |
 | SEQ-01 | Phase 3 | Pending |
 | SEQ-02 | Phase 3 | Pending |
 | SEQ-04 | Phase 3 | Pending |

@@ -7,7 +7,7 @@ Replace the current underwhelming TV static homepage with a cinematic mystery te
 ## Phases
 
 - [x] **Phase 1: Foundation** - Performance-safe, accessible page structure ready for cinematic content
-- [ ] **Phase 2: Visual Atmosphere** - Dark cinematic mood that feels intentional and immersive
+- [x] **Phase 2: Visual Atmosphere** - Dark cinematic mood that feels intentional and immersive
 - [ ] **Phase 3: Cinematic Sequence** - Auto-playing timed experience that builds tension and curiosity
 - [ ] **Phase 4: Waitlist Integration** - Curiosity converts to email signups through existing Airtable pipeline
 
@@ -38,11 +38,11 @@ Plans:
   2. Animated film grain overlay is visible and subtle (not distracting, not performance-killing)
   3. Visual atmosphere renders correctly on mobile screens without frame drops
 **Research**: Unlikely (CSS animations + Canvas 2D patterns covered by project research)
-**Plans**: TBD
+**Plans**: 2/2 complete
 
 Plans:
-- [ ] 02-01: Dark cinematic palette, layout, and neon accent styling
-- [ ] 02-02: Animated film grain overlay (Canvas 2D or CSS SVG) with mobile optimization
+- [x] 02-01: Dark cinematic palette, layout, and neon accent styling
+- [x] 02-02: Animated film grain overlay (Canvas 2D or CSS SVG) with mobile optimization
 
 ### Phase 3: Cinematic Sequence
 **Goal**: Auto-playing timed experience that builds tension and curiosity
@@ -78,6 +78,6 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | 2026-02-12 |
-| 2. Visual Atmosphere | 0/2 | Not started | - |
+| 2. Visual Atmosphere | 2/2 | Complete | 2026-02-12 |
 | 3. Cinematic Sequence | 0/2 | Not started | - |
 | 4. Waitlist Integration | 0/1 | Not started | - |
