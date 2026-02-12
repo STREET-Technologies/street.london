@@ -1886,8 +1886,8 @@ body {
 }
 
 .mystery-tagline {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.125rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     margin-bottom: 3rem;
@@ -2045,7 +2045,7 @@ body {
     }
 
     .mystery-tagline {
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 0.85);
     }
 
     /* Belt-and-suspenders: ensure sequence content visible even if JS fails */
