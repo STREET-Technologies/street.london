@@ -2,15 +2,13 @@
 
 import { useEffect, useRef } from 'react';
 
-const GRAIN_FPS = 15;
 const GRAIN_ALPHA = 20;
 
 export default function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Film grain overlay — renders at reduced resolution, throttled to ~15fps
+  // Static film grain overlay — renders once for grungy texture without motion
   useEffect(() => {
-    // Respect OS-level reduced motion preference — skip canvas animation entirely
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const canvas = canvasRef.current;
@@ -19,22 +17,10 @@ export default function AnimatedBackground() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const resize = () => {
-      const scale = window.innerWidth <= 768 ? 6 : 4;
+    const render = () => {
+      const scale = 4;
       canvas.width = Math.ceil(window.innerWidth / scale);
       canvas.height = Math.ceil(window.innerHeight / scale);
-    };
-    resize();
-    window.addEventListener('resize', resize);
-
-    let animationId: number;
-    let lastFrame = 0;
-    const frameInterval = 1000 / GRAIN_FPS;
-
-    const renderGrain = (timestamp: number) => {
-      animationId = requestAnimationFrame(renderGrain);
-      if (timestamp - lastFrame < frameInterval) return;
-      lastFrame = timestamp;
 
       const imageData = ctx.createImageData(canvas.width, canvas.height);
       const data = imageData.data;
@@ -48,11 +34,11 @@ export default function AnimatedBackground() {
       ctx.putImageData(imageData, 0, 0);
     };
 
-    requestAnimationFrame(renderGrain);
+    render();
+    window.addEventListener('resize', render);
 
     return () => {
-      window.removeEventListener('resize', resize);
-      cancelAnimationFrame(animationId);
+      window.removeEventListener('resize', render);
     };
   }, []);
 

@@ -1862,7 +1862,7 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: 10;
-    image-rendering: pixelated;
+    image-rendering: auto;
 }
 
 .mystery-content {
