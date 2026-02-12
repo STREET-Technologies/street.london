@@ -1838,7 +1838,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #000;
+    background: radial-gradient(ellipse at 50% 40%, rgba(198, 255, 0, 0.03) 0%, #000 70%);
     overflow: hidden;
 }
 
@@ -1881,7 +1881,7 @@ body {
     color: #fff;
     letter-spacing: 0.1em;
     margin-bottom: 0.5rem;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 20px rgba(198, 255, 0, 0.3), 0 0 60px rgba(198, 255, 0, 0.1), 0 0 100px rgba(198, 255, 0, 0.05);
 }
 
 .mystery-tagline {
@@ -1919,6 +1919,7 @@ body {
     outline: none;
     border-color: var(--primary);
     background: rgba(26, 26, 26, 1);
+    box-shadow: 0 0 15px rgba(198, 255, 0, 0.08);
 }
 
 .mystery-input:disabled {
@@ -1938,11 +1939,13 @@ body {
     border-radius: 4px;
     transition: all 0.3s ease;
     margin-top: 0.5rem;
+    box-shadow: 0 0 20px rgba(198, 255, 0, 0.15);
 }
 
 .mystery-submit:hover:not(:disabled) {
-    background: #fff;
+    background: #d4ff33;
     transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(198, 255, 0, 0.4);
 }
 
 .mystery-submit:disabled {
