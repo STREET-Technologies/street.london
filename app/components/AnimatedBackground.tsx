@@ -1,23 +1,12 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-
-const FLASH_IMAGES = [
-  '/img/millie-1.png',
-  '/img/millie-2.png',
-  '/img/millie-3.png',
-  '/img/delivery.png',
-  '/img/gen-z.png',
-  '/img/bliss.png',
-];
+import { useEffect, useRef } from 'react';
 
 const GRAIN_FPS = 15;
-const GRAIN_ALPHA = 12;
+const GRAIN_ALPHA = 30;
 
 export default function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [currentImage, setCurrentImage] = useState<string | null>(null);
-  const [imageOpacity, setImageOpacity] = useState(0);
 
   // Film grain overlay — renders at reduced resolution, throttled to ~15fps
   useEffect(() => {
@@ -67,78 +56,7 @@ export default function AnimatedBackground() {
     };
   }, []);
 
-  // Image flash sequence
-  useEffect(() => {
-    // Respect OS-level reduced motion preference — skip image flash sequence
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    let imageIndex = 0;
-    let phase: 'wait' | 'fadeIn' | 'hold' | 'fadeOut' = 'wait';
-    let phaseStart = Date.now();
-
-    const durations = {
-      wait: 200,
-      fadeIn: 75,
-      hold: 100,
-      fadeOut: 75,
-    };
-
-    const tick = () => {
-      const elapsed = Date.now() - phaseStart;
-
-      switch (phase) {
-        case 'wait':
-          if (elapsed >= durations.wait) {
-            phase = 'fadeIn';
-            phaseStart = Date.now();
-            setCurrentImage(FLASH_IMAGES[imageIndex]);
-          }
-          break;
-        case 'fadeIn':
-          setImageOpacity(Math.min(elapsed / durations.fadeIn, 1) * 0.7);
-          if (elapsed >= durations.fadeIn) {
-            phase = 'hold';
-            phaseStart = Date.now();
-          }
-          break;
-        case 'hold':
-          if (elapsed >= durations.hold) {
-            phase = 'fadeOut';
-            phaseStart = Date.now();
-          }
-          break;
-        case 'fadeOut':
-          setImageOpacity((1 - elapsed / durations.fadeOut) * 0.7);
-          if (elapsed >= durations.fadeOut) {
-            phase = 'wait';
-            phaseStart = Date.now();
-            setCurrentImage(null);
-            setImageOpacity(0);
-            imageIndex = (imageIndex + 1) % FLASH_IMAGES.length;
-          }
-          break;
-      }
-    };
-
-    const interval = setInterval(tick, 30);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <>
-      {/* Background flash images */}
-      {currentImage && (
-        <div
-          className="mystery-flash-image"
-          style={{
-            backgroundImage: `url(${currentImage})`,
-            opacity: imageOpacity,
-          }}
-        />
-      )}
-
-      {/* Film grain overlay */}
-      <canvas ref={canvasRef} className="mystery-static" />
-    </>
+    <canvas ref={canvasRef} className="mystery-static" />
   );
 }
