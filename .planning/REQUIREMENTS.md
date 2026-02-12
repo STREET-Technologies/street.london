@@ -89,26 +89,26 @@ Which phases cover which requirements. Updated by create-roadmap.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| VIS-01 | — | Pending |
-| VIS-02 | — | Pending |
-| VIS-03 | — | Pending |
-| SEQ-01 | — | Pending |
-| SEQ-02 | — | Pending |
-| SEQ-03 | — | Pending |
-| SEQ-04 | — | Pending |
-| WL-01 | — | Pending |
-| WL-02 | — | Pending |
-| WL-03 | — | Pending |
-| PERF-01 | — | Pending |
-| PERF-02 | — | Pending |
-| PERF-03 | — | Pending |
-| PERF-04 | — | Pending |
+| PERF-01 | Phase 1 | Pending |
+| PERF-02 | Phase 1 | Pending |
+| PERF-03 | Phase 1 | Pending |
+| PERF-04 | Phase 1 | Pending |
+| VIS-01 | Phase 2 | Pending |
+| VIS-02 | Phase 2 | Pending |
+| VIS-03 | Phase 2 | Pending |
+| SEQ-01 | Phase 3 | Pending |
+| SEQ-02 | Phase 3 | Pending |
+| SEQ-04 | Phase 3 | Pending |
+| SEQ-03 | Phase 4 | Pending |
+| WL-01 | Phase 4 | Pending |
+| WL-02 | Phase 4 | Pending |
+| WL-03 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 14 total
-- Mapped to phases: 0
-- Unmapped: 14
+- Mapped to phases: 14
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-12*
-*Last updated: 2026-02-12 after initial definition*
+*Last updated: 2026-02-12 after roadmap creation*
