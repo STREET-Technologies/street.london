@@ -1967,3 +1967,40 @@ body {
     font-weight: 500;
     letter-spacing: 0.05em;
 }
+
+/* ===================================
+   REDUCED MOTION - Accessibility
+   Users who prefer reduced motion see a complete
+   static experience: dark background, heading,
+   tagline, and working form — no animations.
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+    .mystery-static {
+        display: none;
+    }
+
+    .mystery-flash-image {
+        display: none;
+    }
+
+    .mystery-container {
+        background: #0a0a0a;
+    }
+
+    .mystery-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .mystery-logo {
+        color: #fff;
+        text-shadow: none;
+    }
+
+    .mystery-tagline {
+        color: rgba(255, 255, 255, 0.5);
+    }
+}

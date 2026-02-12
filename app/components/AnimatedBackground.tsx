@@ -19,6 +19,9 @@ export default function AnimatedBackground() {
 
   // TV Static Effect
   useEffect(() => {
+    // Respect OS-level reduced motion preference — skip canvas animation entirely
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -59,6 +62,9 @@ export default function AnimatedBackground() {
 
   // Static intensity breathing
   useEffect(() => {
+    // Respect OS-level reduced motion preference — skip breathing animation
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     const breathe = () => {
       const time = Date.now() / 1000;
       const base = 0.08;
@@ -72,6 +78,9 @@ export default function AnimatedBackground() {
 
   // Image flash sequence
   useEffect(() => {
+    // Respect OS-level reduced motion preference — skip image flash sequence
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     let imageIndex = 0;
     let phase: 'wait' | 'fadeIn' | 'hold' | 'fadeOut' = 'wait';
     let phaseStart = Date.now();
