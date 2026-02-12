@@ -15,10 +15,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Cinematic Sequence
 
-- [ ] **SEQ-01**: Homepage auto-plays a timed cinematic sequence that builds tension across multiple beats
-- [ ] **SEQ-02**: Sequence includes a clear value hint anchored to London (e.g. "Something is coming to London") without explaining the product
+- [x] **SEQ-01**: Homepage auto-plays a timed cinematic sequence that builds tension across multiple beats
+- [x] **SEQ-02**: Sequence includes a clear value hint anchored to London (e.g. "Something is coming to London") without explaining the product
 - [ ] **SEQ-03**: Sequence culminates with the waitlist form appearing as the climax/payoff
-- [ ] **SEQ-04**: Returning visitors (detected via localStorage) skip the sequence and see the waitlist form directly
+- [x] **SEQ-04**: Returning visitors (detected via localStorage) skip the sequence and see the waitlist form directly
 
 ### Waitlist Capture
 
@@ -96,9 +96,9 @@ Which phases cover which requirements. Updated by create-roadmap.
 | VIS-01 | Phase 2 | Complete |
 | VIS-02 | Phase 2 | Complete |
 | VIS-03 | Phase 2 | Complete |
-| SEQ-01 | Phase 3 | Pending |
-| SEQ-02 | Phase 3 | Pending |
-| SEQ-04 | Phase 3 | Pending |
+| SEQ-01 | Phase 3 | Complete |
+| SEQ-02 | Phase 3 | Complete |
+| SEQ-04 | Phase 3 | Complete |
 | SEQ-03 | Phase 4 | Pending |
 | WL-01 | Phase 4 | Pending |
 | WL-02 | Phase 4 | Pending |
@@ -111,4 +111,4 @@ Which phases cover which requirements. Updated by create-roadmap.
 
 ---
 *Requirements defined: 2026-02-12*
-*Last updated: 2026-02-12 after roadmap creation*
+*Last updated: 2026-02-12 after Phase 3 completion*

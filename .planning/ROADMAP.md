@@ -8,7 +8,7 @@ Replace the current underwhelming TV static homepage with a cinematic mystery te
 
 - [x] **Phase 1: Foundation** - Performance-safe, accessible page structure ready for cinematic content
 - [x] **Phase 2: Visual Atmosphere** - Dark cinematic mood that feels intentional and immersive
-- [ ] **Phase 3: Cinematic Sequence** - Auto-playing timed experience that builds tension and curiosity
+- [x] **Phase 3: Cinematic Sequence** - Auto-playing timed experience that builds tension and curiosity
 - [ ] **Phase 4: Waitlist Integration** - Curiosity converts to email signups through existing Airtable pipeline
 
 ## Phase Details
@@ -53,11 +53,10 @@ Plans:
   2. Sequence communicates "something is coming to London" without explaining what STREET is
   3. Returning visitors (localStorage) skip the sequence and see the waitlist form directly
 **Research**: Unlikely (animation sequencing patterns covered by project research)
-**Plans**: TBD
+**Plans**: 1/1 complete
 
 Plans:
-- [ ] 03-01: Timed animation sequence with CSS keyframes or GSAP timeline
-- [ ] 03-02: Narrative content, text reveals, and returning visitor detection
+- [x] 03-01: Pain-point cinematic sequence with escalating delivery beats and returning visitor detection
 
 ### Phase 4: Waitlist Integration
 **Goal**: Curiosity converts to email signups through existing Airtable pipeline
@@ -79,5 +78,5 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | 2026-02-12 |
 | 2. Visual Atmosphere | 2/2 | Complete | 2026-02-12 |
-| 3. Cinematic Sequence | 0/2 | Not started | - |
+| 3. Cinematic Sequence | 1/1 | Complete | 2026-02-12 |
 | 4. Waitlist Integration | 0/1 | Not started | - |
