@@ -7,7 +7,7 @@ const GRAIN_ALPHA = 20;
 export default function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Static film grain overlay — renders once for grungy texture without motion
+  // Animated film grain overlay — flashing pixels at ~15fps
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -17,10 +17,22 @@ export default function AnimatedBackground() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const render = () => {
-      const scale = 4;
+    const scale = 4;
+    let rafId: number;
+    let lastFrame = 0;
+    const FRAME_INTERVAL = 1000 / 15; // ~15fps
+
+    const resize = () => {
       canvas.width = Math.ceil(window.innerWidth / scale);
       canvas.height = Math.ceil(window.innerHeight / scale);
+    };
+
+    resize();
+
+    const render = (timestamp: number) => {
+      rafId = requestAnimationFrame(render);
+      if (timestamp - lastFrame < FRAME_INTERVAL) return;
+      lastFrame = timestamp;
 
       const imageData = ctx.createImageData(canvas.width, canvas.height);
       const data = imageData.data;
@@ -34,11 +46,12 @@ export default function AnimatedBackground() {
       ctx.putImageData(imageData, 0, 0);
     };
 
-    render();
-    window.addEventListener('resize', render);
+    rafId = requestAnimationFrame(render);
+    window.addEventListener('resize', resize);
 
     return () => {
-      window.removeEventListener('resize', render);
+      cancelAnimationFrame(rafId);
+      window.removeEventListener('resize', resize);
     };
   }, []);
 

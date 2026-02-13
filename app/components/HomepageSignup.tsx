@@ -79,7 +79,7 @@ export default function HomepageSignup() {
         className="mystery-submit"
         disabled={formState === 'loading'}
       >
-        {formState === 'loading' ? 'JOINING...' : 'GET EARLY ACCESS'}
+        {formState === 'loading' ? 'JOINING...' : 'JOIN THE WAITLIST'}
       </button>
     </form>
   );
