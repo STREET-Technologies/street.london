@@ -48,7 +48,7 @@ export default function HomepageSignup() {
   if (formState === 'success') {
     return (
       <div className="mystery-success">
-        <p>We&apos;ll be in touch.</p>
+        <p>You&apos;re on the list.</p>
       </div>
     );
   }
@@ -79,7 +79,7 @@ export default function HomepageSignup() {
         className="mystery-submit"
         disabled={formState === 'loading'}
       >
-        {formState === 'loading' ? '...' : 'ENTER'}
+        {formState === 'loading' ? 'JOINING...' : 'GET EARLY ACCESS'}
       </button>
     </form>
   );
