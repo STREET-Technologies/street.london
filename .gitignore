@@ -17,6 +17,7 @@
 .DS_Store
 *.pem
 .tmp/
+.claude/
 
 # debug
 npm-debug.log*
@@ -36,3 +37,9 @@ next-env.d.ts
 
 # backup
 /backup
+
+# Local IDE settings
+.vscode/
+
+# Firebase debug logs
+firebase-debug.log
