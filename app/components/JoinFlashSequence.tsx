@@ -7,38 +7,39 @@ const TOTAL_IMAGES = 29;
 const IMG_BASE = '/img/street/';
 
 // Sequence: [1-based image number, hold duration in ms]
-// Rhythm: quick lifestyle flashes build kinetic energy → text-overlay images HOLD so copy lands
+// Every image used once. Lifestyle shots flash quick; text overlays hold so copy lands.
+// Image 29 ("BE THE FIRST ON OUR STREET") closes the sequence — leads directly into the form.
 const SEQUENCE: [number, number][] = [
-  // Phase 1: Quick intro — viewer registers each image, pace feels urgent not chaotic
-  [6,  350],  // hoodies rack
-  [2,  300],  // green cap girl
-  [4,  400],  // tram interior
-  [10, 300],  // green bag
-  [8,  400],  // neon corridor
-  [6,  300],  // hoodies
-  [4,  350],  // tram
-  [2,  300],  // cap girl
+  // Phase 1: Rapid intro — fresh lifestyle & atmospheric images
+  [19, 300], // metro tunnel
+  [16, 300], // green coat belt detail
+  [21, 300], // green staircase gold rail
+  [14, 350], // neon exit door
+  [26, 300], // Nike AF1 shoes
+  [27, 300], // green doorway abstract
+  [24, 350], // hanging neon lights interior
+  [22, 350], // two girls street style
 
-  // Phase 2: First message hits — flash then HOLD so copy reads clearly
-  [8,  400],  // atmospheric transition
-  [20, 2000], // "FAILED DELIVERY?" — green cap side — READ IT
-  [6,  320],  // quick reset
-  [4,  300],  // quick
-  [15, 2200], // "DELIVERY ATTEMPT UNSUCCESSFUL?" — plant face — READ IT
-  [2,  320],  // quick
-  [10, 350],  // quick
+  // Phase 2: First text overlays hit
+  [8,  400], // neon corridor — atmospheric bridge
+  [20, 2000], // "FAILED DELIVERY?" — green cap side
+  [28, 350], // man neon green portrait
+  [18, 2200], // "DELIVERY ATTEMPT UNSUCCESSFUL?" — green portal doorway
+  [4,  350], // tram interior
+  [23, 2200], // "OOPS, WE TRIED BUT YOU WEREN'T IN" — green door
 
-  // Phase 3: Narrative builds — longer holds, copy escalates
-  [9,  2500], // "WE TRIED, BUT YOU WEREN'T HOME" — elevator — READ IT
-  [8,  700],  // breathe
-  [7,  2500], // "WHERE WERE YOU WHEN THE PARCEL CAME?" — blazer — READ IT
-  [6,  700],  // breathe
+  // Phase 3: Tension builds
+  [10, 400], // green bag detail
+  [7,  2500], // "WHERE WERE YOU WHEN THE PARCEL CAME?" — blazer woman
+  [6,  400], // hoodies rack
+  [17, 2500], // "WE TRIED, BUT YOU WEREN'T HOME" — outdoors green
+  [2,  400], // green cap girl
 
-  // Phase 4: Final beats — slowest pace, maximum impact before form
-  [13, 2500], // "WHERE WERE YOU?" — green slip dress
-  [11, 2800], // "SORRY WE MISSED YOU" — concert sparkle
-  [5,  2800], // "DELIVERY ATTEMPT UNSUCCESSFUL?" — neon portrait
-  [1,  3200], // "WHERE WERE YOU WHEN THE PARCEL CAME?" — final hold, then form
+  // Phase 4: Emotional peak — longest holds
+  [5,  2800], // "DELIVERY ATTEMPT UNSUCCESSFUL?" — neon green portrait
+  [9,  2800], // "WE TRIED, BUT YOU WEREN'T HOME" — elevator
+  [1,  3000], // "WHERE WERE YOU WHEN THE PARCEL CAME?" — woman, green towel
+  [29, 3500], // "BE THE FIRST ON OUR STREET" — leads straight into form
 ];
 
 type Phase = 'black' | 'flash' | 'fadeout' | 'form';
