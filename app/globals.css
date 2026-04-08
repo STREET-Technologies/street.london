@@ -2120,3 +2120,132 @@ body {
         display: none;
     }
 }
+
+/* ===================================
+   JOIN PAGE — IMAGE FLASH SEQUENCE
+   =================================== */
+
+.join-root {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    overflow: hidden;
+}
+
+/* Full-screen image — centered, preserves portrait AR, mask fades edges into black */
+.join-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Fadeout phase: image dissolves to black before form appears */
+.join-phase-fadeout .join-image {
+    animation: joinImageFade 0.6s ease forwards;
+}
+
+@keyframes joinImageFade {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Form overlay — centered, fades and rises in */
+.join-form-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: joinFormReveal 0.8s ease forwards;
+}
+
+@keyframes joinFormReveal {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.join-form-inner {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.join-eyebrow {
+    font-family: var(--font-title);
+    color: var(--primary);
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    margin-bottom: 0.75rem;
+    opacity: 0.7;
+}
+
+.join-headline {
+    font-family: var(--font-title);
+    color: #fff;
+    font-size: clamp(2.2rem, 9vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin-bottom: 2.5rem;
+}
+
+/* Skip button — barely visible, appears bottom-right after 2s */
+.join-skip {
+    position: fixed;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0.5rem;
+    animation: joinSkipFadeIn 0.6s ease forwards;
+    z-index: 10;
+}
+
+@keyframes joinSkipFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.join-skip:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* "Explore STREET" link beneath the form — very understated */
+.join-site-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.25);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.join-site-link:hover {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .join-phase-fadeout .join-image {
+        animation: none;
+        opacity: 0;
+    }
+    .join-form-overlay {
+        animation: none;
+    }
+}
