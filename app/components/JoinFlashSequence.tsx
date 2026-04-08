@@ -124,8 +124,6 @@ export default function JoinFlashSequence() {
       {/* Form — always visible, centered over the images */}
       <div className="join-form-overlay">
         <div className="join-form-inner">
-          <p className="join-eyebrow">LONDON</p>
-          <h1 className="join-headline">GET EARLY ACCESS</h1>
           <HomepageSignup />
         </div>
       </div>
