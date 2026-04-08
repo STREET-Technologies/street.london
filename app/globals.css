@@ -2145,17 +2145,16 @@ body {
     display: block;
 }
 
-/* Fadeout phase: image dissolves to black before form appears */
-.join-phase-fadeout .join-image {
-    animation: joinImageFade 0.6s ease forwards;
+/* Dark scrim between image and form — keeps text legible over any image */
+.join-scrim {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    pointer-events: none;
+    z-index: 3;
 }
 
-@keyframes joinImageFade {
-    from { opacity: 1; }
-    to   { opacity: 0; }
-}
-
-/* Form overlay — centered, fades and rises in */
+/* Form overlay — always visible, centered over the looping images */
 .join-form-overlay {
     position: absolute;
     inset: 0;
@@ -2163,12 +2162,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    animation: joinFormReveal 0.8s ease forwards;
-}
-
-@keyframes joinFormReveal {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
+    z-index: 4;
 }
 
 .join-form-inner {

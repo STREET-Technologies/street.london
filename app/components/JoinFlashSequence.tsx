@@ -6,138 +6,129 @@ import HomepageSignup from './HomepageSignup';
 const TOTAL_IMAGES = 29;
 const IMG_BASE = '/img/street/';
 
-// Sequence: [1-based image number, hold duration in ms]
-// Every image used once. Lifestyle shots flash quick; text overlays hold so copy lands.
-// Image 29 ("BE THE FIRST ON OUR STREET") closes the sequence — leads directly into the form.
+// Three speed tiers:
+//   FAST   150–250ms — abstract/atmospheric, subliminal energy
+//   NORMAL 400–600ms — lifestyle shots, viewer registers them
+//   SLOW   2000–3000ms — text overlay images, copy must be read
+//
+// Sequence loops continuously. Form is always visible on top.
 const SEQUENCE: [number, number][] = [
-  // Phase 1: Rapid intro — fresh lifestyle & atmospheric images
-  [19, 300], // metro tunnel
-  [16, 300], // green coat belt detail
-  [21, 300], // green staircase gold rail
-  [14, 350], // neon exit door
-  [26, 300], // Nike AF1 shoes
-  [27, 300], // green doorway abstract
-  [24, 350], // hanging neon lights interior
-  [22, 350], // two girls street style
+  // Fast burst — pure energy
+  [19, 180], // metro tunnel
+  [16, 160], // green coat detail
+  [21, 200], // green staircase
+  [14, 180], // neon exit door
+  [26, 160], // Nike AF1 shoes
+  [27, 200], // green doorway abstract
 
-  // Phase 2: First text overlays hit
-  [8,  400], // neon corridor — atmospheric bridge
-  [20, 2000], // "FAILED DELIVERY?" — green cap side
-  [28, 350], // man neon green portrait
-  [18, 2200], // "DELIVERY ATTEMPT UNSUCCESSFUL?" — green portal doorway
-  [4,  350], // tram interior
-  [23, 2200], // "OOPS, WE TRIED BUT YOU WEREN'T IN" — green door
+  // Normal + first text hit
+  [22, 500], // two girls street style
+  [8,  500], // neon corridor
+  [20, 2500], // "FAILED DELIVERY?"
 
-  // Phase 3: Tension builds
-  [10, 400], // green bag detail
-  [7,  2500], // "WHERE WERE YOU WHEN THE PARCEL CAME?" — blazer woman
-  [6,  400], // hoodies rack
-  [17, 2500], // "WE TRIED, BUT YOU WEREN'T HOME" — outdoors green
-  [2,  400], // green cap girl
+  // Fast burst
+  [24, 180], // hanging lights
+  [28, 200], // man neon green
+  [4,  180], // tram interior
 
-  // Phase 4: Emotional peak — longest holds
-  [5,  2800], // "DELIVERY ATTEMPT UNSUCCESSFUL?" — neon green portrait
-  [9,  2800], // "WE TRIED, BUT YOU WEREN'T HOME" — elevator
-  [1,  3000], // "WHERE WERE YOU WHEN THE PARCEL CAME?" — woman, green towel
-  [29, 3500], // "BE THE FIRST ON OUR STREET" — leads straight into form
+  // Normal + text
+  [10, 500], // green bag
+  [18, 2500], // "DELIVERY ATTEMPT UNSUCCESSFUL?" — portal doorway
+  [6,  500], // hoodies rack
+  [23, 2500], // "OOPS, WE TRIED BUT YOU WEREN'T IN"
+
+  // Fast burst
+  [27, 160], // green doorway
+  [21, 180], // staircase
+  [19, 160], // metro
+
+  // Normal + text escalation
+  [2,  500], // green cap girl
+  [7,  2800], // "WHERE WERE YOU WHEN THE PARCEL CAME?"
+  [16, 200], // quick flash
+  [11, 2800], // "SORRY WE MISSED YOU" — concert sparkle
+
+  // Emotional peak — slowest holds
+  [5,  2800], // "DELIVERY ATTEMPT UNSUCCESSFUL?" — neon portrait
+  [9,  3000], // "WE TRIED, BUT YOU WEREN'T HOME" — elevator
+  [1,  3000], // "WHERE WERE YOU WHEN THE PARCEL CAME?"
+  [29, 3500], // "BE THE FIRST ON OUR STREET" — then loops back
 ];
 
-type Phase = 'black' | 'flash' | 'fadeout' | 'form';
-
 export default function JoinFlashSequence() {
-  const [phase, setPhase] = useState<Phase>('black');
-  const [currentImg, setCurrentImg] = useState(1);
-  const [showSkip, setShowSkip] = useState(false);
+  const [currentImg, setCurrentImg] = useState(SEQUENCE[0][0]);
+  const cancelledRef = useRef(false);
+  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
-    let cancelled = false;
-    const timers: ReturnType<typeof setTimeout>[] = [];
+    cancelledRef.current = false;
 
-    function schedule(fn: () => void, delay: number) {
-      const id = setTimeout(() => {
-        if (!cancelled) fn();
-      }, delay);
-      timers.push(id);
-    }
-
-    // Preload all images so the sequence never stalls on a late network request
+    // Preload all images before sequence starts
     for (let i = 1; i <= TOTAL_IMAGES; i++) {
       const img = new window.Image();
       img.src = `${IMG_BASE}${i}.jpg`;
     }
 
-    // Reduced-motion users go straight to form
+    // Reduced motion: static background
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setPhase('form');
-      return () => { cancelled = true; timers.forEach(clearTimeout); };
+      setCurrentImg(29);
+      return;
     }
 
-    // Show skip after 2s — doesn't interrupt the opening impact
-    schedule(() => setShowSkip(true), 2000);
-
-    // 600ms black hold — creates tension before first image hits
-    schedule(() => {
-      setPhase('flash');
-
+    function runSequence() {
+      if (cancelledRef.current) return;
+      timersRef.current = [];
       let offset = 0;
-      SEQUENCE.forEach(([imgNum, duration], i) => {
-        schedule(() => setCurrentImg(imgNum), offset);
-        offset += duration;
 
-        // After last image's hold, fade to form
-        if (i === SEQUENCE.length - 1) {
-          schedule(() => {
-            setPhase('fadeout');
-            schedule(() => setPhase('form'), 600);
-          }, offset);
-        }
+      SEQUENCE.forEach(([imgNum, duration], i) => {
+        const id = setTimeout(() => {
+          if (cancelledRef.current) return;
+          setCurrentImg(imgNum);
+          // After last image's hold, loop
+          if (i === SEQUENCE.length - 1) {
+            setTimeout(runSequence, duration);
+          }
+        }, offset);
+        timersRef.current.push(id);
+        offset += duration;
       });
-    }, 600);
+    }
+
+    // 600ms black hold before first image — creates opening tension
+    const startId = setTimeout(runSequence, 600);
+    timersRef.current.push(startId);
 
     return () => {
-      cancelled = true;
-      timers.forEach(clearTimeout);
+      cancelledRef.current = true;
+      timersRef.current.forEach(clearTimeout);
     };
   }, []);
 
-  function skipToForm() {
-    setPhase('form');
-    setShowSkip(false);
-  }
-
   return (
-    <div className={`join-root join-phase-${phase}`}>
+    <div className="join-root">
 
-      {/* Full-screen image — <img> lets mask-image percentages target the image itself, not the viewport */}
-      {(phase === 'flash' || phase === 'fadeout') && (
-        <img
-          src={`${IMG_BASE}${currentImg}.jpg`}
-          alt=""
-          className="join-image"
-          style={{
-            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%)',
-            maskImage: 'linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%)',
-          }}
-        />
-      )}
+      {/* Looping background image */}
+      <img
+        src={`${IMG_BASE}${currentImg}.jpg`}
+        alt=""
+        className="join-image"
+        style={{
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%)',
+          maskImage: 'linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%)',
+        }}
+      />
 
-      {/* Form reveal */}
-      {phase === 'form' && (
-        <div className="join-form-overlay">
-          <div className="join-form-inner">
-            <p className="join-eyebrow">LONDON</p>
-            <h1 className="join-headline">GET EARLY ACCESS</h1>
-            <HomepageSignup />
-          </div>
+      {/* Dark scrim so form text is always legible over any image */}
+      <div className="join-scrim" />
+
+      {/* Form — always visible, centered over the images */}
+      <div className="join-form-overlay">
+        <div className="join-form-inner">
+          <p className="join-eyebrow">LONDON</p>
+          <h1 className="join-headline">GET EARLY ACCESS</h1>
+          <HomepageSignup />
         </div>
-      )}
-
-      {/* Skip — appears after 2s, only during flash phase */}
-      {showSkip && phase === 'flash' && (
-        <button className="join-skip" onClick={skipToForm}>
-          skip
-        </button>
-      )}
+      </div>
 
     </div>
   );
