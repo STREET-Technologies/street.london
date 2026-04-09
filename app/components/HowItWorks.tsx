@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { ShoppingBag, Sparkles, Zap } from 'lucide-react';
+import { ShoppingBag, CreditCard, Zap } from 'lucide-react';
 
 export default function HowItWorks() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -46,12 +46,12 @@ export default function HowItWorks() {
           <div className="step" data-aos="fade-up" data-aos-delay="100">
             <div className="step-visual">
               <div className="step-icon">
-                <Sparkles size={48} strokeWidth={1.5} />
+                <CreditCard size={48} strokeWidth={1.5} />
               </div>
             </div>
-            <h3 className="step-title">Get AI Recommendations</h3>
+            <h3 className="step-title">Pick Your Store & Order</h3>
             <p className="step-description">
-              Millie finds exactly what you&apos;re looking for based on your style and preferences
+              Found something you love? Order directly from the store and checkout in seconds
             </p>
           </div>
           <div className="step" data-aos="fade-up" data-aos-delay="200">
@@ -62,7 +62,7 @@ export default function HowItWorks() {
             </div>
             <h3 className="step-title">Receive Instantly</h3>
             <p className="step-description">
-              Choose instant delivery or pickup - your order arrives in minutes, not days
+              Your order is collected from the store and delivered straight to your door in minutes, not days
             </p>
           </div>
         </div>

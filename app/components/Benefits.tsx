@@ -59,11 +59,11 @@ export default function Benefits() {
             <div className="benefit-content">
               <h3 className="benefit-title">All Shops in One Place</h3>
               <p className="benefit-description">
-                Browse products from every store on your high street without leaving home. One app, one basket, one checkout.
+                Browse products from every store on your high street without leaving home — all in one app.
               </p>
               <ul className="benefit-list">
-                <li>Compare prices across stores</li>
-                <li>Single checkout for everything</li>
+                <li>Every local store in one place</li>
+                <li>Fast checkout direct with your store</li>
                 <li>Unified loyalty rewards</li>
               </ul>
             </div>
