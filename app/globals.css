@@ -474,6 +474,7 @@ body {
 .benefit-image {
     position: relative;
     aspect-ratio: 5 / 6;
+    overflow: hidden;
 }
 
 .benefit-collage-primary,
@@ -1030,6 +1031,10 @@ body {
 
     .benefit-card-reverse .benefit-image {
         order: 1;
+    }
+
+    .benefit-image {
+        aspect-ratio: 4 / 3;
     }
 
     .benefit-image {
@@ -2307,6 +2312,13 @@ body {
 
 .join-site-link:hover {
     color: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 768px) {
+    .join-image {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
