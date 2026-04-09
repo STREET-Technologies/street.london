@@ -1,34 +1,16 @@
-'use client';
-
-import { Star, Scan, Mic } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
-import Image from 'next/image';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { useEffect, useState } from 'react';
+import { Star, Scan, ShoppingBag } from 'lucide-react';
 
 export default function Millie() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   return (
     <section className="millie-section">
       <div className="container">
         <div className="millie-content">
           <div className="millie-text">
             <p className="millie-eyebrow">Your Personal Stylist</p>
+            <span className="millie-coming-soon">Coming Soon</span>
             <h2 className="section-title millie-title">Meet Millie</h2>
             <p className="section-subtitle">
-              Your AI shopping assistant who knows your style better than you do
+              She&apos;s almost here. Millie will know your style, find your fits, and make shopping on your high street effortless.
             </p>
             <div className="millie-features">
               <div className="millie-feature">
@@ -37,7 +19,7 @@ export default function Millie() {
                 </div>
                 <div>
                   <h4>Knows Your Style</h4>
-                  <p>Millie learns what you love and finds pieces that match your unique taste</p>
+                  <p>Millie will learn what you love and find pieces that match your unique taste across every store on your street</p>
                 </div>
               </div>
               <div className="millie-feature">
@@ -46,59 +28,23 @@ export default function Millie() {
                 </div>
                 <div>
                   <h4>Try Before You Buy</h4>
-                  <p>See how clothes look on you with virtual try-on technology</p>
+                  <p>See how clothes will look on you before you buy, powered by virtual try-on technology</p>
                 </div>
               </div>
               <div className="millie-feature">
                 <div className="millie-feature-icon">
-                  <Mic size={32} strokeWidth={1.5} />
+                  <ShoppingBag size={32} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h4>Shop by Voice</h4>
-                  <p>Just tell Millie what you need - &quot;black dress for a wedding&quot; - and she&apos;ll find it</p>
+                  <h4>Buy Through the Conversation</h4>
+                  <p>Find what you love and buy it directly through Millie — no switching apps, no separate checkout</p>
                 </div>
               </div>
             </div>
+            <a href="/join" className="millie-cta">Join the waitlist to meet Millie first →</a>
           </div>
           <div className="millie-visual">
-            {isMobile ? (
-              <Swiper
-                modules={[Pagination, Autoplay]}
-                spaceBetween={20}
-                slidesPerView={1}
-                pagination={{ clickable: true }}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
-                className="millie-carousel"
-              >
-                <SwiperSlide>
-                  <div className="millie-image">
-                    <Image src="/img/millie-1.png" alt="Millie AI interface 1" width={300} height={600} />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="millie-image">
-                    <Image src="/img/millie-2.png" alt="Millie AI interface 2" width={300} height={600} />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="millie-image">
-                    <Image src="/img/millie-3.png" alt="Millie AI interface 3" width={300} height={600} />
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            ) : (
-              <div className="millie-images-grid">
-                <div className="millie-image">
-                  <Image src="/img/millie-1.png" alt="Millie AI interface 1" width={300} height={600} />
-                </div>
-                <div className="millie-image">
-                  <Image src="/img/millie-2.png" alt="Millie AI interface 2" width={300} height={600} />
-                </div>
-                <div className="millie-image">
-                  <Image src="/img/millie-3.png" alt="Millie AI interface 3" width={300} height={600} />
-                </div>
-              </div>
-            )}
+            <div className="millie-brand-image" style={{ backgroundImage: 'url(/img/street/27.jpg)' }} />
           </div>
         </div>
       </div>

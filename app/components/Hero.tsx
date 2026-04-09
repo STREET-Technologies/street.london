@@ -11,6 +11,7 @@ export default function Hero() {
           className="hero-image"
           fill
           priority
+          unoptimized
           sizes="100vw"
         />
       </div>

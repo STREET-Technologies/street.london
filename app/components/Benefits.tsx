@@ -33,11 +33,29 @@ export default function Benefits() {
         <div className="benefits-grid">
           {/* Benefit 1 */}
           <div className="benefit-card" data-aos="fade-up">
-            <div className="benefit-image" style={{ backgroundImage: 'url(/img/gen-z.png)' }}>
-              <div className="benefit-overlay">
-                <span className="benefit-badge">All Your Favourites</span>
+            <div className="benefit-image">
+              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/31.jpg)' }}>
+                <div className="benefit-overlay">
+                  <span className="benefit-badge">Made for You</span>
+                </div>
               </div>
+              <div className="benefit-collage-secondary" style={{ backgroundImage: 'url(/img/street/10.jpg)' }} />
             </div>
+            <div className="benefit-content">
+              <h3 className="benefit-title">Discover Your High Street</h3>
+              <p className="benefit-description">
+                Find independent boutiques, local favourites, and emerging brands you won&apos;t find anywhere else. Your street, curated for you.
+              </p>
+              <ul className="benefit-list">
+                <li>Independent and local stores</li>
+                <li>Personalised recommendations</li>
+                <li>Support your neighbourhood</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Benefit 2 */}
+          <div className="benefit-card benefit-card-reverse" data-aos="fade-up" data-aos-delay="100">
             <div className="benefit-content">
               <h3 className="benefit-title">All Shops in One Place</h3>
               <p className="benefit-description">
@@ -49,44 +67,35 @@ export default function Benefits() {
                 <li>Unified loyalty rewards</li>
               </ul>
             </div>
-          </div>
-
-          {/* Benefit 2 */}
-          <div className="benefit-card benefit-card-reverse" data-aos="fade-up" data-aos-delay="100">
-            <div className="benefit-content">
-              <h3 className="benefit-title">Instant Delivery</h3>
-              <p className="benefit-description">
-                Not next day. Not same day. <strong>Right now.</strong> Get your shopping delivered in minutes or pick up instantly from your local store.
-              </p>
-              <ul className="benefit-list">
-                <li>Delivery in under 60 minutes</li>
-                <li>Track in real-time</li>
-                <li>Flexible pickup options</li>
-              </ul>
-            </div>
-            <div className="benefit-image" style={{ backgroundImage: 'url(/img/delivery.png)' }}>
-              <div className="benefit-overlay">
-                <span className="benefit-badge">Lightning Fast</span>
+            <div className="benefit-image">
+              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/22.jpg)' }}>
+                <div className="benefit-overlay">
+                  <span className="benefit-badge">Your High Street</span>
+                </div>
               </div>
+              <div className="benefit-collage-secondary" style={{ backgroundImage: 'url(/img/street/16.jpg)' }} />
             </div>
           </div>
 
           {/* Benefit 3 */}
           <div className="benefit-card" data-aos="fade-up" data-aos-delay="200">
-            <div className="benefit-image" style={{ backgroundImage: 'url(/img/returns.png)' }}>
-              <div className="benefit-overlay">
-                <span className="benefit-badge">Hassle-Free</span>
+            <div className="benefit-image">
+              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/30.jpg)' }}>
+                <div className="benefit-overlay">
+                  <span className="benefit-badge">Lightning Fast</span>
+                </div>
               </div>
+              <div className="benefit-collage-secondary" style={{ backgroundImage: 'url(/img/street/26.jpg)' }} />
             </div>
             <div className="benefit-content">
-              <h3 className="benefit-title">Easy Returns</h3>
+              <h3 className="benefit-title">Instant Delivery</h3>
               <p className="benefit-description">
-                Changed your mind? No problem. We&apos;ll collect it, process your refund instantly, and you don&apos;t even need to find a box.
+                Not next day. Not same day. <strong>Right now.</strong> Get your shopping delivered straight to your door in minutes.
               </p>
               <ul className="benefit-list">
-                <li>No packaging needed</li>
-                <li>Instant refund processing</li>
-                <li>Free collection</li>
+                <li>Delivery in under 60 minutes</li>
+                <li>Track in real-time</li>
+                <li>Straight to your door, every time</li>
               </ul>
             </div>
           </div>
