@@ -8,50 +8,59 @@ const IMG_BASE = '/img/street/';
 
 // Three speed tiers:
 //   FAST   150–250ms — abstract/atmospheric, subliminal energy
-//   NORMAL 400–600ms — lifestyle shots, viewer registers them
-//   SLOW   2000–3000ms — text overlay images, copy must be read
+//   NORMAL 300–500ms — lifestyle shots, viewer registers them
+//   SLOW   2500–3500ms — text overlay images, copy must be read
+//
+// Three-act narrative structure:
+//   ACT 1 — "You're out there"  (fast energy, no text, pure lifestyle)
+//   ACT 2 — "The old world can't find you"  (delivery frustration beats)
+//   ACT 3 — "STREET is the answer"  (pivot to solution + resolution)
 //
 // Sequence loops continuously. Form is always visible on top.
 const SEQUENCE: [number, number][] = [
-  // Fast burst — pure energy
+
+  // ── ACT 1: You're out there ─────────────────────────────────────
+  // Fast burst — pure energy, no text
   [19, 180], // metro tunnel
-  [16, 160], // green coat detail
+  [16, 160], // coat detail
   [21, 200], // green staircase
   [14, 180], // neon exit door
-  [26, 160], // Nike AF1 shoes
-  [27, 200], // green doorway abstract
+  [26, 160], // Nike AF1
+  [27, 200], // green doorway
 
-  // Normal + first text hit
+  // Settle into the world — lifestyle, viewer registers the people
   [22, 500], // two girls street style
+  [4,  400], // tram interior
   [8,  500], // neon corridor
-  [20, 2500], // "FAILED DELIVERY?"
-
-  // Fast burst
-  [24, 180], // hanging lights
-  [28, 200], // man neon green
-  [4,  180], // tram interior
-
-  // Normal + text
-  [10, 500], // green bag
-  [18, 2500], // "DELIVERY ATTEMPT UNSUCCESSFUL?" — portal doorway
+  [24, 300], // hanging lights
+  [28, 400], // man under neon
   [6,  500], // hoodies rack
-  [23, 2500], // "OOPS, WE TRIED BUT YOU WEREN'T IN"
+  [10, 500], // green bag
 
-  // Fast burst
-  [27, 160], // green doorway
-  [21, 180], // staircase
-  [19, 160], // metro
-
-  // Normal + text escalation
-  [2,  500], // green cap girl
-  [7,  2800], // "WHERE WERE YOU WHEN THE PARCEL CAME?"
-  [16, 200], // quick flash
-  [11, 2800], // "SORRY WE MISSED YOU" — concert sparkle
-
-  // Emotional peak — slowest holds
-  [5,  2800], // "DELIVERY ATTEMPT UNSUCCESSFUL?" — neon portrait
-  [9,  3000], // "WE TRIED, BUT YOU WEREN'T HOME" — elevator
+  // ── ACT 2: The old world can't find you ─────────────────────────
+  // Delivery frustration — 5 beats, quick flashes between each text
+  [20, 2500], // "FAILED DELIVERY?"
+  [2,  400],  // green cap girl — breath between texts
+  [5,  2800], // "DELIVERY ATTEMPT UNSUCCESSFUL?"
+  [21, 160],  // flash
+  [23, 2500], // "OOPS, WE TRIED, BUT YOU WEREN'T IN"
+  [19, 160],  // flash
+  [9,  3000], // "WE TRIED, BUT YOU WEREN'T HOME"
+  [16, 200],  // flash
+  [11, 2800], // "SORRY, WE MISSED YOU"
   [1,  3000], // "WHERE WERE YOU WHEN THE PARCEL CAME?"
+
+  // ── ACT 3: STREET is the answer ─────────────────────────────────
+  // Tonal break — doorway flash before the pivot
+  [27, 160],  // green doorway — quick breath
+
+  // Solution copy — slow holds, building conviction
+  [7,  3000], // "YOUR HIGH STREET, YOUR RULES"
+  [13, 3000], // "THE STREET NEVER CLOSES"
+  [12, 2800], // "NOT ANYMORE."
+  [18, 3000], // "YOUR HIGH STREET. IN YOUR POCKET."
+
+  // ── RESOLUTION ──────────────────────────────────────────────────
   [29, 3500], // "BE THE FIRST ON OUR STREET" — then loops back
 ];
 
