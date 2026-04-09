@@ -41,7 +41,7 @@ export default function Millie() {
                 </div>
               </div>
             </div>
-            <a href="/join" className="millie-cta">Join the waitlist to meet Millie first →</a>
+            <a href="/#join" className="millie-cta">Join the waitlist to meet Millie first →</a>
           </div>
           <div className="millie-visual">
             <div className="millie-brand-image" style={{ backgroundImage: 'url(/img/street/27.jpg)' }} />
