@@ -2145,16 +2145,22 @@ body {
     display: block;
 }
 
-/* Dark scrim between image and form — keeps text legible over any image */
+/* Scrim — fades in with the form at Act 3 so images play vivid during Acts 1–2 */
 .join-scrim {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.55);
     pointer-events: none;
     z-index: 3;
+    opacity: 0;
+    transition: opacity 1.4s ease;
 }
 
-/* Form overlay — always visible, centered over the looping images */
+.join-scrim.is-visible {
+    opacity: 1;
+}
+
+/* Form overlay — hidden until Act 3, then fades in */
 .join-form-overlay {
     position: absolute;
     inset: 0;
@@ -2163,6 +2169,13 @@ body {
     justify-content: center;
     padding: 2rem;
     z-index: 4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.join-form-overlay.is-visible {
+    animation: joinFormReveal 1.4s ease forwards;
+    pointer-events: auto;
 }
 
 .join-form-inner {

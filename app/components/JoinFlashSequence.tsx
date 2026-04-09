@@ -16,7 +16,10 @@ const IMG_BASE = '/img/street/';
 //   ACT 2 — "The old world can't find you"  (delivery frustration beats)
 //   ACT 3 — "STREET is the answer"  (pivot to solution + resolution)
 //
-// Sequence loops continuously. Form is always visible on top.
+// Form phases in at this sequence index (start of Act 3).
+const ACT3_INDEX = 27;
+
+// Sequence loops continuously. Form phases in at Act 3.
 const SEQUENCE: [number, number][] = [
 
   // ── ACT 1: You're out there ─────────────────────────────────────
@@ -69,11 +72,14 @@ const SEQUENCE: [number, number][] = [
 
 export default function JoinFlashSequence() {
   const [currentImg, setCurrentImg] = useState(SEQUENCE[0][0]);
+  const [showForm, setShowForm] = useState(false);
   const cancelledRef = useRef(false);
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const formShownRef = useRef(false);
 
   useEffect(() => {
     cancelledRef.current = false;
+    formShownRef.current = false;
 
     // Preload all images before sequence starts
     for (let i = 1; i <= TOTAL_IMAGES; i++) {
@@ -81,9 +87,10 @@ export default function JoinFlashSequence() {
       img.src = `${IMG_BASE}${i}.jpg`;
     }
 
-    // Reduced motion: static background
+    // Reduced motion: show form immediately with static background
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       setCurrentImg(29);
+      setShowForm(true);
       return;
     }
 
@@ -96,6 +103,11 @@ export default function JoinFlashSequence() {
         const id = setTimeout(() => {
           if (cancelledRef.current) return;
           setCurrentImg(imgNum);
+          // Reveal form once at Act 3 — never hides again
+          if (i === ACT3_INDEX && !formShownRef.current) {
+            formShownRef.current = true;
+            setShowForm(true);
+          }
           // After last image's hold, loop
           if (i === SEQUENCE.length - 1) {
             setTimeout(runSequence, duration);
@@ -130,11 +142,11 @@ export default function JoinFlashSequence() {
         }}
       />
 
-      {/* Dark scrim so form text is always legible over any image */}
-      <div className="join-scrim" />
+      {/* Scrim — fades in with the form at Act 3 */}
+      <div className={`join-scrim${showForm ? ' is-visible' : ''}`} />
 
-      {/* Form — always visible, centered over the images */}
-      <div className="join-form-overlay">
+      {/* Form — phases in at Act 3 alongside first solution image */}
+      <div className={`join-form-overlay${showForm ? ' is-visible' : ''}`}>
         <div className="join-form-inner">
           <HomepageSignup />
           <a href="/api/skip" className="join-site-link">Explore STREET</a>
