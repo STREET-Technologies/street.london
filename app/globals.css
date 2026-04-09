@@ -2132,16 +2132,16 @@ body {
     overflow: hidden;
 }
 
-/* Full-screen image — centered, preserves portrait AR, mask fades edges into black */
+/* Full-screen image — locked to 4:5 portrait, center-cropped to fit.
+   Normalises any source AR so all images appear at the same size. */
 .join-image {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 100%;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
     display: block;
 }
 

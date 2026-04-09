@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import HomepageSignup from './HomepageSignup';
 
-const TOTAL_IMAGES = 29;
+const TOTAL_IMAGES = 32;
 const IMG_BASE = '/img/street/';
 
 // Three speed tiers:
@@ -30,10 +30,13 @@ const SEQUENCE: [number, number][] = [
 
   // Settle into the world — lifestyle, viewer registers the people
   [22, 500], // two girls street style
+  [30, 500], // man at King's Cross
   [4,  400], // tram interior
   [8,  500], // neon corridor
+  [31, 400], // woman in black cab
   [24, 300], // hanging lights
   [28, 400], // man under neon
+  [32, 500], // coffee, outdoors
   [6,  500], // hoodies rack
   [10, 500], // green bag
 
