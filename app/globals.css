@@ -2178,6 +2178,11 @@ body {
     pointer-events: auto;
 }
 
+@keyframes joinFormReveal {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 .join-form-inner {
     text-align: center;
     max-width: 400px;

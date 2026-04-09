@@ -17,7 +17,7 @@ const IMG_BASE = '/img/street/';
 //   ACT 3 — "STREET is the answer"  (pivot to solution + resolution)
 //
 // Form phases in at this sequence index (start of Act 3).
-const ACT3_INDEX = 27;
+const ACT3_INDEX = 16;
 
 // Sequence loops continuously. Form phases in at Act 3.
 const SEQUENCE: [number, number][] = [
@@ -31,43 +31,28 @@ const SEQUENCE: [number, number][] = [
   [26, 160], // Nike AF1
   [27, 200], // green doorway
 
-  // Settle into the world — lifestyle, viewer registers the people
+  // Settle into the world — 5 lifestyle shots
   [22, 500], // two girls street style
   [30, 500], // man at King's Cross
-  [4,  400], // tram interior
   [8,  500], // neon corridor
   [31, 400], // woman in black cab
-  [24, 300], // hanging lights
-  [28, 400], // man under neon
-  [32, 500], // coffee, outdoors
-  [6,  500], // hoodies rack
   [10, 500], // green bag
 
   // ── ACT 2: The old world can't find you ─────────────────────────
-  // Delivery frustration — 5 beats, quick flashes between each text
-  [20, 2500], // "FAILED DELIVERY?"
-  [2,  400],  // green cap girl — breath between texts
-  [5,  2800], // "DELIVERY ATTEMPT UNSUCCESSFUL?"
-  [21, 160],  // flash
-  [23, 2500], // "OOPS, WE TRIED, BUT YOU WEREN'T IN"
+  [20, 2000], // "FAILED DELIVERY?"
   [19, 160],  // flash
-  [9,  3000], // "WE TRIED, BUT YOU WEREN'T HOME"
-  [16, 200],  // flash
-  [11, 2800], // "SORRY, WE MISSED YOU"
-  [1,  3000], // "WHERE WERE YOU WHEN THE PARCEL CAME?"
+  [9,  2500], // "WE TRIED, BUT YOU WEREN'T HOME"
+  [1,  2500], // "WHERE WERE YOU WHEN THE PARCEL CAME?"
 
   // ── ACT 3: STREET is the answer ─────────────────────────────────
-  // Tonal break — doorway flash before the pivot
-  [27, 160],  // green doorway — quick breath
-
-  // Solution copy — slow holds, building conviction
-  [7,  3000], // "YOUR HIGH STREET, YOUR RULES"
-  [13, 3000], // "THE STREET NEVER CLOSES"
-  [12, 2800], // "NOT ANYMORE."
-  [18, 3000], // "YOUR HIGH STREET. IN YOUR POCKET."
+  [27, 160],  // doorway flash — tonal break
+  [7,  2500], // "YOUR HIGH STREET, YOUR RULES"
+  [13, 2500], // "THE STREET NEVER CLOSES"
+  [12, 2000], // "NOT ANYMORE."
+  [18, 2500], // "YOUR HIGH STREET. IN YOUR POCKET."
 
   // ── RESOLUTION ──────────────────────────────────────────────────
-  [29, 3500], // "BE THE FIRST ON OUR STREET" — then loops back
+  [29, 3000], // "BE THE FIRST ON OUR STREET" — then loops back
 ];
 
 export default function JoinFlashSequence() {
