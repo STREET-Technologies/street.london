@@ -125,6 +125,7 @@ export default function JoinFlashSequence() {
       <div className="join-form-overlay">
         <div className="join-form-inner">
           <HomepageSignup />
+          <a href="/api/skip" className="join-site-link">Explore STREET</a>
         </div>
       </div>
 
