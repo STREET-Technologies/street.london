@@ -56,7 +56,7 @@ export default function CookieConsent() {
             <h3>We value your privacy</h3>
             <p>
               We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By
-              clicking "Accept All", you consent to our use of cookies.
+              clicking &quot;Accept All&quot;, you consent to our use of cookies.
             </p>
             <div className="cookie-banner-actions">
               <button onClick={acceptAll} className="btn-primary">

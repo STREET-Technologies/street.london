@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -8,7 +9,7 @@ export default function UserTermsPage() {
       <main className="legal-page">
         <div className="container">
           <h1 className="legal-title">Terms & Conditions</h1>
-          <p className="legal-updated">As of: April 2025</p>
+          <p className="legal-updated">As of: April 2026</p>
 
           <div className="legal-content">
             <section className="legal-section">
@@ -256,7 +257,7 @@ export default function UserTermsPage() {
             </section>
 
             <section className="legal-section">
-              <p>© 2025 STREET Ltd</p>
+              <p>© 2026 STREET Ltd</p>
             </section>
           </div>
         </div>

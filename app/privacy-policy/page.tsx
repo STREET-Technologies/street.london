@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -39,7 +40,7 @@ export default function PrivacyPolicyPage() {
                 <li>Searches</li>
                 <li>Timestamps</li>
               </ul>
-              <p>We share this information with Squarespace, our website analytics provider, to learn about site traffic and activity.</p>
+              <p>We share this information with Vercel, our website hosting provider, to learn about site traffic and activity.</p>
 
               <h3>2.2 Webforms & Submitted Data</h3>
               <p>When you submit a form on our website, we collect the information you provide. This may include:</p>
@@ -51,13 +52,13 @@ export default function PrivacyPolicyPage() {
               </ul>
               <p>We use this data to respond to your submissions and improve our services. This information may be shared with:</p>
               <ul>
-                <li>Squarespace – to facilitate website hosting and functionality</li>
+                <li>Vercel – to facilitate website hosting and functionality</li>
                 <li>Amazon AWS – for secure data storage</li>
                 <li>Zapier – to automate and transfer data where necessary</li>
               </ul>
 
               <h3>2.3 Hosting Provider</h3>
-              <p>This website is hosted by Squarespace. Squarespace collects personal data when you visit this website, including:</p>
+              <p>This website is hosted by Vercel. Vercel collects personal data when you visit this website, including:</p>
               <ul>
                 <li>Information about your browser, network and device</li>
                 <li>Web pages you visited prior to coming to this website</li>
@@ -65,7 +66,7 @@ export default function PrivacyPolicyPage() {
                 <li>Your IP address</li>
               </ul>
               <p>
-                Squarespace needs the data to run this website, and to protect and improve its platform and services. Squarespace analyses the data in a de-personalised form.
+                Vercel needs the data to run this website, and to protect and improve its platform and services. Vercel analyses the data in a de-personalised form.
               </p>
             </section>
 
@@ -85,7 +86,7 @@ export default function PrivacyPolicyPage() {
               <h2>4. Data Sharing & Third Parties</h2>
               <p>We do not sell or rent your personal data. However, we share data with third parties only where necessary:</p>
               <ul>
-                <li>Squarespace – website hosting and analytics</li>
+                <li>Vercel – website hosting and analytics</li>
                 <li>Amazon AWS – secure storage of form submissions</li>
                 <li>Zapier – automation and data transfer (if applicable)</li>
               </ul>
