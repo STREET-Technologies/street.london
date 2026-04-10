@@ -53,6 +53,7 @@ body {
     color: var(--black);
     background: var(--cream);
     line-height: 1.7;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -1034,11 +1035,20 @@ body {
     }
 
     .benefit-image {
-        aspect-ratio: 4 / 3;
+        aspect-ratio: unset;
+        height: 280px;
+        width: 100%;
     }
 
-    .benefit-image {
-        height: 300px;
+    .benefit-collage-primary {
+        width: 68%;
+        height: 80%;
+    }
+
+    .benefit-collage-secondary {
+        transform: none;
+        width: 52%;
+        height: 60%;
     }
 
     .millie-content {
