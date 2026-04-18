@@ -1,18 +1,38 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-background">
-        <Image
-          src="/img/hero-bg.png"
+        <video
+          className="hero-video hero-video-desktop"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/img/hero-poster.jpg"
+          preload="metadata"
+        >
+          <source src="/img/hero.webm" type="video/webm" />
+          <source src="/img/hero.mp4" type="video/mp4" />
+        </video>
+        <video
+          className="hero-video hero-video-mobile"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/img/hero-poster.jpg"
+          preload="metadata"
+        >
+          <source src="/img/hero-portrait.webm" type="video/webm" />
+          <source src="/img/hero-portrait.mp4" type="video/mp4" />
+        </video>
+        {/* prefers-reduced-motion fallback */}
+        <img
+          src="/img/hero-poster.jpg"
           alt="STREET shopping experience"
-          className="hero-image"
-          fill
-          priority
-          unoptimized
-          sizes="100vw"
+          className="hero-image hero-fallback"
         />
       </div>
       <div className="container hero-content">
