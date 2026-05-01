@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
                 <li>Withdraw consent where processing is based on consent</li>
                 <li>Lodge a complaint with a supervisory authority (in the UK, the Information Commissioner's Office at ico.org.uk)</li>
               </ul>
-              <p>To exercise your rights, please contact us at hi@street.london. We will respond within one month, as required by the UK GDPR.</p>
+              <p>To exercise your rights, please contact us at support@street.london. We will respond within one month, as required by the UK GDPR.</p>
             </section>
 
             <section className="legal-section">
@@ -159,7 +159,7 @@ export default function PrivacyPolicyPage() {
                 <li><strong>Sentry</strong> – error and performance monitoring (logs may include partial request metadata)</li>
                 <li><strong>Google Firebase</strong> – push notifications and real-time delivery tracking</li>
                 <li><strong>Vonage</strong> – SMS notifications to customers</li>
-                <li><strong>Stripe</strong> – payment account onboarding for merchants (no customer card data)</li>
+                <li><strong>Amplitude</strong> – product analytics for the STREET mobile apps</li>
                 <li><strong>Stuart</strong> – courier delivery service for same-day orders</li>
                 <li><strong>Vercel</strong> – marketing website hosting</li>
               </ul>
@@ -176,7 +176,7 @@ export default function PrivacyPolicyPage() {
               <p>Customers of STREET-enabled merchants can exercise their rights set out in section 7 by contacting either:</p>
               <ul>
                 <li>The merchant they purchased from (the merchant is the primary data controller for their customer data)</li>
-                <li>STREET directly at hi@street.london – we will forward the request to the merchant where required and respond within one month</li>
+                <li>STREET directly at support@street.london – we will forward the request to the merchant where required and respond within one month</li>
               </ul>
               <p>Shopify also supports the <code>customers/data_request</code> webhook for formal data subject access requests, which we honour within 30 days.</p>
 
@@ -193,8 +193,7 @@ export default function PrivacyPolicyPage() {
               <h2>10. Contact Us</h2>
               <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
               <p>
-                📧 <a href="mailto:hi@street.london" className="contact-link">hi@street.london</a><br />
-                📍 Street.london
+                <a href="mailto:support@street.london" className="contact-link">support@street.london</a>
               </p>
             </section>
           </div>
