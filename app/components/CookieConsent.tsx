@@ -9,8 +9,8 @@ export default function CookieConsent() {
   const [showManage, setShowManage] = useState(false);
   const [preferences, setPreferences] = useState({
     necessary: true,
-    performance: true,
-    advertising: true,
+    performance: false,
+    advertising: false,
   });
 
   useEffect(() => {
@@ -29,7 +29,19 @@ export default function CookieConsent() {
       performance: true,
       advertising: true,
     };
+    setPreferences(allAccepted);
     saveCookiePreferences(allAccepted);
+    setShowBanner(false);
+  };
+
+  const rejectAll = () => {
+    const onlyNecessary = {
+      necessary: true,
+      performance: false,
+      advertising: false,
+    };
+    setPreferences(onlyNecessary);
+    saveCookiePreferences(onlyNecessary);
     setShowBanner(false);
   };
 
@@ -55,12 +67,16 @@ export default function CookieConsent() {
           <div className="cookie-banner-content">
             <h3>We value your privacy</h3>
             <p>
-              We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By
-              clicking &quot;Accept All&quot;, you consent to our use of cookies.
+              We use cookies to enhance your browsing experience, serve personalised content, and analyse our traffic.
+              You can accept all cookies, reject all non-essential cookies, or manage your preferences. Strictly necessary
+              cookies are always on so the site works correctly.
             </p>
             <div className="cookie-banner-actions">
               <button onClick={acceptAll} className="btn-primary">
                 Accept All
+              </button>
+              <button onClick={rejectAll} className="btn-primary">
+                Reject All
               </button>
               <button onClick={() => setShowManage(true)} className="btn-secondary">
                 Manage Preferences
