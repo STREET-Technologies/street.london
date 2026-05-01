@@ -78,10 +78,14 @@ export default function CookieConsent() {
               <button onClick={rejectAll} className="btn-primary">
                 Reject All
               </button>
-              <button onClick={() => setShowManage(true)} className="btn-secondary">
-                Manage Preferences
-              </button>
             </div>
+            <button
+              onClick={() => setShowManage(true)}
+              className="cookie-manage-link"
+              type="button"
+            >
+              Manage Preferences
+            </button>
           </div>
         </div>
       ) : (
