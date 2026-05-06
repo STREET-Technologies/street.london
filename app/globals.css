@@ -2599,7 +2599,7 @@ body {
    (even after the Google PNG was cropped). Apple gets a slightly
    smaller intrinsic height so the two render at visually balanced size. */
 .app-download-badge--apple img {
-    height: 48px;
+    height: 46px;
 }
 
 .app-download-badge--google img {
@@ -2621,7 +2621,7 @@ body {
         padding: 4rem 0;
     }
     .app-download-badge--apple img {
-        height: 42px;
+        height: 40px;
     }
     .app-download-badge--google img {
         height: 48px;
