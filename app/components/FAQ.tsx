@@ -64,7 +64,7 @@ export default function FAQ() {
 
         <div className="faq-list">
           {FAQS.map((faq) => (
-            <details key={faq.question} className="faq-item">
+            <details key={faq.question} className="faq-item" name="faq-group">
               <summary className="faq-question">
                 <span className="faq-question-text">{faq.question}</span>
                 <Plus className="faq-icon" size={20} aria-hidden="true" />
