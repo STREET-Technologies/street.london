@@ -18,7 +18,7 @@ const CONTENT: Record<FormType, EmailContent> = {
   waitlist: {
     subject: "You're on the STREET waitlist",
     preheader: "We'll let you know the moment STREET is live in your area.",
-    heading: "You're on the list.",
+    heading: 'Welcome to the waitlist.',
     body:
       "Thanks for joining the STREET waitlist. We're building the easiest way to shop London's high street, and you'll be among the first to hear when we go live in your neighbourhood.<br/><br/>" +
       "In the meantime, follow us on <a href=\"https://www.instagram.com/st.reet.app/\" style=\"color:#000;text-decoration:underline;\">Instagram</a> for updates and behind-the-scenes from the build.",
@@ -29,7 +29,8 @@ const CONTENT: Record<FormType, EmailContent> = {
     heading: 'Application received.',
     body:
       "Thanks for applying to sell on STREET. We've received your retailer application and our team will be in touch shortly to discuss next steps and get your shop onboarded.<br/><br/>" +
-      "If you have any questions in the meantime, just reply to this email.",
+      "If you have any questions in the meantime, just reply to this email.<br/><br/>" +
+      "See you on the STREETS.",
   },
   rider: {
     subject: 'Your STREET courier application has been received',
@@ -37,7 +38,8 @@ const CONTENT: Record<FormType, EmailContent> = {
     heading: 'Thanks for applying.',
     body:
       "We've received your application to become a STREET courier. Our team will review the details and be in touch shortly with next steps.<br/><br/>" +
-      "If you have any questions in the meantime, just reply to this email.",
+      "If you have any questions in the meantime, just reply to this email.<br/><br/>" +
+      "And don't forget — refer your friends and earn rewards once we're live.",
   },
   doers: {
     subject: 'Welcome to the STREET squad',
