@@ -72,8 +72,11 @@ export default function JoinFlashSequence() {
       img.src = `${IMG_BASE}${i}.jpg`;
     }
 
-    // Reduced motion: show form immediately with static background
+    // Reduced motion: show form immediately with static background.
+    // matchMedia is browser-only — must read after mount. Lint rule false-positive
+    // for legitimate post-hydration browser-API feature detection.
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setCurrentImg(29);
       setShowForm(true);
       return;

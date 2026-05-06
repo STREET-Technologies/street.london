@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Sparkles, Gift, DollarSign, Utensils, Shirt, CheckCircle } from 'lucide-react';
+import { Sparkles, Gift, DollarSign, Shirt, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -111,9 +111,6 @@ export default function DoersClient() {
               </div>
               <div className="benefit-pill">
                 <DollarSign size={18} /> STREET Credit & Cash Bonuses
-              </div>
-              <div className="benefit-pill">
-                <Utensils size={18} /> Dinner Coupons
               </div>
               <div className="benefit-pill">
                 <Shirt size={18} /> Exclusive Merch

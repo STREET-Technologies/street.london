@@ -9,8 +9,12 @@ export default function CinematicSequence() {
   const [state, setState] = useState<SequenceState>('pending');
 
   useEffect(() => {
+    // Browser-only feature detection (matchMedia + localStorage) must run
+    // post-mount. Lint rule false-positive — refactoring to useSyncExternalStore
+    // adds complexity without changing observable behavior.
     // Reduced-motion users skip the sequence entirely
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setState('skip');
       return;
     }

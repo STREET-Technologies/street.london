@@ -14,8 +14,12 @@ export default function CookieConsent() {
   });
 
   useEffect(() => {
+    // localStorage is browser-only — must read after mount to avoid SSR/hydration mismatch.
+    // The setState-in-effect lint rule's recommended alternative (useSyncExternalStore) is
+    // awkward here because localStorage doesn't emit change events for the same tab.
     const savedPreferences = getCookiePreferences();
     if (!savedPreferences) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShowBanner(true);
     } else {
       setPreferences(savedPreferences);

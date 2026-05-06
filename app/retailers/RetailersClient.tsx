@@ -187,7 +187,7 @@ export default function RetailersClient() {
             <div className="form-group">
               <label>Product Categories *</label>
               <div className="selection-pills">
-                {['Womenswear', 'Menswear', 'Accessories', 'Shoes', 'Kidswear', 'Kids', 'Beauty', 'Homewear'].map(
+                {['Womenswear', 'Menswear', 'Activewear', 'Eyewear', 'Accessories', 'Shoes', 'Kidswear', 'Kids', 'Beauty', 'Homewear'].map(
                   (category) => (
                     <button
                       key={category}
