@@ -2551,3 +2551,88 @@ body {
         padding: 1.5rem 0;
     }
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   App Download — homepage "coming soon" badges
+   ───────────────────────────────────────────────────────────────── */
+.app-download {
+    background: var(--white);
+    padding: 5rem 0 6rem;
+    text-align: center;
+}
+
+.app-download .section-title {
+    margin-bottom: 0.75rem;
+}
+
+.app-download .section-intro {
+    margin-bottom: 2.5rem;
+}
+
+.app-download-badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.app-download-badge {
+    display: inline-block;
+    transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease;
+    opacity: 0.55;
+    filter: grayscale(100%);
+}
+
+.app-download-badge:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: translateY(-2px);
+}
+
+.app-download-badge img {
+    display: block;
+    width: auto;
+}
+
+/* Apple's badge content fills its frame more tightly than Google's
+   (even after the Google PNG was cropped). Apple gets a slightly
+   smaller intrinsic height so the two render at visually balanced size. */
+.app-download-badge--apple img {
+    height: 48px;
+}
+
+.app-download-badge--google img {
+    height: 54px;
+}
+
+.app-download-note {
+    margin: 1.5rem 0 0;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray);
+}
+
+@media (max-width: 768px) {
+    .app-download {
+        padding: 4rem 0;
+    }
+    .app-download-badge--apple img {
+        height: 42px;
+    }
+    .app-download-badge--google img {
+        height: 48px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .app-download-badge {
+        transition: none;
+    }
+    .app-download-badge:hover {
+        transform: none;
+    }
+}
