@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { submitToAirtable, TABLES } from '@/lib/airtable';
+import { sendConfirmationEmail } from '@/lib/email';
 
 export async function POST(request: NextRequest) {
   try {
@@ -19,6 +20,13 @@ export async function POST(request: NextRequest) {
     });
 
     if (result.success) {
+      if (data.email) {
+        await sendConfirmationEmail({
+          to: data.email,
+          type: 'retailers',
+          name: [data.firstName, data.lastName].filter(Boolean).join(' '),
+        });
+      }
       return NextResponse.json({ success: true });
     } else {
       return NextResponse.json({ success: false, error: result.error }, { status: 400 });
