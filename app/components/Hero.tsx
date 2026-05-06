@@ -31,7 +31,7 @@ export default function Hero() {
         {/* prefers-reduced-motion fallback */}
         <img
           src="/img/hero-poster.jpg"
-          alt="STREET shopping experience"
+          alt="Person walking through a London street carrying a lime-green STREET shopping bag"
           className="hero-image hero-fallback"
         />
       </div>
