@@ -1,6 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
+import type { Metadata } from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'How STREET collects, uses, and protects personal data. Your privacy rights, data retention, and contact details for data requests.',
+  alternates: { canonical: 'https://street.london/privacy-policy' },
+};
 
 export default function PrivacyPolicyPage() {
   return (

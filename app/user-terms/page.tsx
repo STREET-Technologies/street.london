@@ -1,6 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
+import type { Metadata } from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+
+export const metadata: Metadata = {
+  title: 'User Terms & Conditions',
+  description: "STREET's terms of use for shoppers. Read the full agreement covering orders, payments, deliveries, returns, and platform conduct.",
+  alternates: { canonical: 'https://street.london/user-terms' },
+};
 
 export default function UserTermsPage() {
   return (

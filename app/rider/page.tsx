@@ -1,182 +1,27 @@
-'use client';
+import type { Metadata } from 'next';
+import RiderClient from './RiderClient';
 
-import { useState } from 'react';
-import { CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+const TITLE = 'Become a STREET Courier — Flexible Delivery Work';
+const DESCRIPTION = 'Earn flexible income as a STREET delivery courier in London. Choose your hours, get paid weekly, deliver from local shops. Apply now.';
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: 'https://street.london/rider' },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: 'https://street.london/rider',
+    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'STREET — Flexible delivery work in London' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ['/img/og-image.jpg'],
+  },
+};
 
 export default function RiderPage() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    postcode: '',
-    rideType: '',
-    referral: '',
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch('/api/riders', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        setSubmitted(true);
-      } else {
-        console.error('Submission failed:', result.error);
-        alert('Failed to submit. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('Failed to submit. Please try again.');
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
-  if (submitted) {
-    return (
-      <>
-        <Navigation />
-        <main className="retailers-page">
-          <div className="container">
-            <div className="success-message">
-              <div className="success-icon">
-                <CheckCircle size={64} strokeWidth={2} />
-              </div>
-              <h1>Thank you!</h1>
-              <p>We will be in touch soon! Don&apos;t forget to refer your friends for rewards!</p>
-              <button onClick={() => setSubmitted(false)} className="btn-secondary">
-                Submit Another
-              </button>
-            </div>
-          </div>
-        </main>
-        <Footer />
-      </>
-    );
-  }
-
-  return (
-    <>
-      <Navigation />
-      <main className="retailers-page">
-        <div className="container">
-          <div className="retailers-hero">
-            <h1 className="retailers-title">Let&apos;s cover the streetS together</h1>
-            <p className="retailers-subtitle">
-              Join our team of riders and drivers. Earn money delivering to your local community with flexible hours.
-            </p>
-          </div>
-
-          <form className="retailers-form" onSubmit={handleSubmit}>
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="firstName">First Name *</label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="lastName">Last Name *</label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="email">Email *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="phone">Phone Number *</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="+44"
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="postcode">Postcode *</label>
-              <input
-                type="text"
-                id="postcode"
-                name="postcode"
-                value={formData.postcode}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="rideType">Ride Type *</label>
-              <select id="rideType" name="rideType" value={formData.rideType} onChange={handleChange} required>
-                <option value="">Select your ride type</option>
-                <option value="bike">Bike</option>
-                <option value="scooter">Scooter</option>
-                <option value="car">Car</option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="referral">Referral Name (Optional)</label>
-              <input
-                type="text"
-                id="referral"
-                name="referral"
-                value={formData.referral}
-                onChange={handleChange}
-                placeholder="Who referred you?"
-              />
-            </div>
-
-            <button type="submit" className="btn-primary btn-large">
-              Submit Application
-            </button>
-          </form>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+  return <RiderClient />;
 }

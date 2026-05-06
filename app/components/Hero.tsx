@@ -39,6 +39,9 @@ export default function Hero() {
         <h1 className="hero-title">
           Your high street, <span className="highlight">instantly</span>
         </h1>
+        <h2 className="hero-tagline">
+          Instant delivery from London&apos;s local shops in under an hour
+        </h2>
         <p className="hero-subtitle">
           Discover your favourite local shops, all in one place. Browse, buy, and get it delivered in minutes.
         </p>

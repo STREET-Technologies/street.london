@@ -9,23 +9,37 @@ const barlow = Barlow({
   variable: "--font-body",
 });
 
+const SITE_TITLE = "Instant Delivery from London's Local Shops";
+const SITE_DESCRIPTION = "Shop London's high street and get it delivered in under an hour. Fashion, activewear, eyewear, beauty and more from independent boutiques in one app.";
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://street.london'),
   title: {
-    default: 'STREET — Your high street, instantly',
+    default: SITE_TITLE,
     template: '%s | STREET',
   },
-  description: 'Discover independent boutiques and local favourites on your London high street. Browse, buy, and get it delivered to your door in under 60 minutes.',
-  keywords: ['high street shopping', 'London delivery', 'local shops London', 'instant delivery London', 'independent boutiques London'],
+  description: SITE_DESCRIPTION,
+  keywords: [
+    'instant delivery London',
+    'local shops London',
+    'London high street app',
+    'independent boutiques London',
+    'same hour delivery London',
+    'fashion delivery London',
+    'activewear London delivery',
+    'eyewear London delivery',
+    'beauty delivery London',
+  ],
   authors: [{ name: 'STREET', url: 'https://street.london' }],
   creator: 'STREET',
+  publisher: 'STREET',
   openGraph: {
     type: 'website',
     locale: 'en_GB',
     url: 'https://street.london',
     siteName: 'STREET',
-    title: 'STREET — Your high street, instantly',
-    description: 'Discover independent boutiques and local favourites on your London high street. Browse, buy, and get it delivered to your door in under 60 minutes.',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: [
       {
         url: '/img/og-image.jpg',
@@ -37,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'STREET — Your high street, instantly',
-    description: 'Discover independent boutiques and local favourites on your London high street. Browse, buy, and get it delivered to your door in under 60 minutes.',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: ['/img/og-image.jpg'],
   },
   alternates: {
@@ -63,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -73,8 +87,9 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "STREET",
+            "alternateName": "STREET London",
             "url": "https://street.london",
-            "description": "Instant delivery from your favourite local shops on your London high street.",
+            "description": "Instant delivery marketplace connecting Londoners with their local high street retailers.",
             "email": "hi@street.london",
             "logo": "https://street.london/img/logo-green-transparent.png",
             "address": {
