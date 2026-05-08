@@ -2553,6 +2553,114 @@ body {
 }
 
 /* ─────────────────────────────────────────────────────────────────
+   404 / Not Found page
+   ───────────────────────────────────────────────────────────────── */
+.not-found {
+    background: var(--cream);
+    min-height: calc(100vh - 200px);
+    padding: 6rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.not-found-content {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.not-found-code {
+    font-family: var(--font-title);
+    font-size: clamp(5rem, 14vw, 9rem);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--primary);
+    letter-spacing: -0.04em;
+    margin-bottom: 1rem;
+    text-shadow: 4px 4px 0 var(--black);
+}
+
+.not-found-title {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--black);
+    margin: 0 0 1rem;
+    letter-spacing: -0.02em;
+}
+
+.not-found-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--gray-dark);
+    margin: 0 auto 2.5rem;
+    max-width: 480px;
+}
+
+.not-found-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.not-found-suggested {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 2rem;
+    margin-top: 1rem;
+}
+
+.not-found-suggested-label {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin: 0 0 1rem;
+}
+
+.not-found-suggested-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 2rem;
+}
+
+.not-found-suggested-list a {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease;
+}
+
+.not-found-suggested-list a:hover {
+    border-bottom-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .not-found {
+        padding: 4rem 0;
+    }
+    .not-found-code {
+        text-shadow: 3px 3px 0 var(--black);
+    }
+    .not-found-suggested-list {
+        gap: 0.75rem 1.25rem;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────
    App Download — homepage "coming soon" badges
    ───────────────────────────────────────────────────────────────── */
 .app-download {

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Hero() {
@@ -29,10 +30,14 @@ export default function Hero() {
           <source src="/img/hero-portrait.mp4" type="video/mp4" />
         </video>
         {/* prefers-reduced-motion fallback */}
-        <img
+        <Image
           src="/img/hero-poster.jpg"
           alt="Person walking through a London street carrying a lime-green STREET shopping bag"
           className="hero-image hero-fallback"
+          width={1920}
+          height={1280}
+          priority
+          sizes="100vw"
         />
       </div>
       <div className="container hero-content">
