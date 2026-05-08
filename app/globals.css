@@ -2607,6 +2607,23 @@ body {
     margin-bottom: 3rem;
 }
 
+/* .btn-secondary is designed for dark backgrounds (white-on-translucent).
+   On the cream 404 background it'd be invisible — invert it to a dark
+   outline button that reads cleanly on light surfaces. */
+.not-found .btn-secondary {
+    background: transparent;
+    color: var(--black);
+    border: 2px solid var(--black);
+    backdrop-filter: none;
+}
+
+.not-found .btn-secondary:hover,
+.not-found .btn-secondary:focus-visible {
+    background: var(--primary);
+    color: var(--black);
+    border-color: var(--primary);
+}
+
 .not-found-suggested {
     border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding-top: 2rem;

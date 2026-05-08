@@ -25,10 +25,10 @@ export default function NotFound() {
               Looks like you took a wrong turn. The page you&apos;re after either moved or never made it to STREET.
             </p>
             <div className="not-found-cta">
-              <Link href="/" className="btn-primary btn-large">
+              <Link href="/" className="btn-primary">
                 ← Back to home
               </Link>
-              <Link href="/waitlist" className="btn-secondary btn-large">
+              <Link href="/waitlist" className="btn-secondary">
                 Join the waitlist
               </Link>
             </div>
