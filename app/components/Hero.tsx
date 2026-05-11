@@ -1,22 +1,23 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import HeroVideoStack, { type HeroClip } from './HeroVideoStack';
+
+// Edit this array to change the desktop hero playlist.
+// Clips play in order, then loop back to the first. Mobile (.hero-video-mobile)
+// stays on the single portrait loop until portrait variants exist for new clips.
+const DESKTOP_CLIPS: HeroClip[] = [
+  { webm: '/img/hero.webm', mp4: '/img/hero.mp4' },
+  { webm: '/img/hero-2.webm', mp4: '/img/hero-2.mp4' },
+  { webm: '/img/hero-3.webm', mp4: '/img/hero-3.mp4' },
+];
 
 export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-background">
-        <video
-          className="hero-video hero-video-desktop"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/img/hero-poster.jpg"
-          preload="metadata"
-        >
-          <source src="/img/hero.webm" type="video/webm" />
-          <source src="/img/hero.mp4" type="video/mp4" />
-        </video>
+        <div className="hero-video-stack hero-video-desktop">
+          <HeroVideoStack clips={DESKTOP_CLIPS} poster="/img/hero-poster.jpg" />
+        </div>
         <video
           className="hero-video hero-video-mobile"
           autoPlay
