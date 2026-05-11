@@ -2826,6 +2826,21 @@ body {
     aspect-ratio: 16 / 9;
 }
 
+.demo-video-landscape { display: block; }
+.demo-video-portrait { display: none; }
+
+@media (max-width: 768px) {
+    .demo-video-landscape { display: none; }
+    .demo-video-portrait {
+        display: block;
+        aspect-ratio: 460 / 720;
+        max-width: min(90vw, calc(75vh * 460 / 720));
+        max-height: 75vh;
+        margin: 0 auto 3.5rem;
+        border-radius: 18px;
+    }
+}
+
 .demo-video {
     width: 100%;
     height: 100%;

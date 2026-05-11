@@ -30,7 +30,7 @@ export default function DemoPage() {
             </p>
           </header>
 
-          <div className="demo-video-wrap">
+          <div className="demo-video-wrap demo-video-landscape">
             <video
               className="demo-video"
               controls
@@ -41,6 +41,20 @@ export default function DemoPage() {
               <source src="/demo/demo.mp4" type="video/mp4" />
               Your browser does not support HTML5 video.{' '}
               <a href="/demo/demo.mp4">Download the demo</a>.
+            </video>
+          </div>
+
+          <div className="demo-video-wrap demo-video-portrait">
+            <video
+              className="demo-video"
+              controls
+              playsInline
+              preload="metadata"
+              poster="/demo/poster-portrait.jpg"
+            >
+              <source src="/demo/demo-portrait.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.{' '}
+              <a href="/demo/demo-portrait.mp4">Download the demo</a>.
             </video>
           </div>
 
