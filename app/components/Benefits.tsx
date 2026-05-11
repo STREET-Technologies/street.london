@@ -68,7 +68,7 @@ export default function Benefits() {
               </ul>
             </div>
             <div className="benefit-image">
-              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/22.jpg)' }}>
+              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/28.jpg)' }}>
                 <div className="benefit-overlay">
                   <span className="benefit-badge">Your High Street</span>
                 </div>
