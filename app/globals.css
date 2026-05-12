@@ -2551,17 +2551,35 @@ body {
     color: var(--black);
     font-weight: 600;
     text-decoration: none;
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 2px;
+    padding-bottom: 4px;
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-    transition: var(--transition);
     margin-left: 0.25rem;
+    position: relative;
 }
 
-.faq-cta-link:hover {
+.faq-cta-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
     background: var(--primary);
+    transition: height 0.15s ease;
+}
+
+.faq-cta-link:hover::after {
+    height: 4px;
+}
+
+.faq-cta-link svg {
+    transition: transform 0.15s ease;
+}
+
+.faq-cta-link:hover svg {
+    transform: translate(2px, -2px);
 }
 
 @media (max-width: 768px) {
