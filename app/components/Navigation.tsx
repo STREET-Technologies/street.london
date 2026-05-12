@@ -24,8 +24,8 @@ export default function Navigation() {
               <Link href="/#how-it-works" className="nav-link">
                 How it Works
               </Link>
-              <Link href="/#join" className="nav-link">
-                Join
+              <Link href="/#faq" className="nav-link">
+                FAQ
               </Link>
               <Link href="/waitlist" className="btn-primary-sm">Join Waitlist</Link>
             </div>
@@ -59,8 +59,8 @@ export default function Navigation() {
           <Link href="/#how-it-works" className="mobile-nav-link" onClick={closeMenu}>
             How it Works
           </Link>
-          <Link href="/#join" className="mobile-nav-link" onClick={closeMenu}>
-            Join
+          <Link href="/#faq" className="mobile-nav-link" onClick={closeMenu}>
+            FAQ
           </Link>
           <Link href="/waitlist" className="btn-primary btn-large" onClick={closeMenu}>
             Join Waitlist
