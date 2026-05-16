@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Store, Car, Megaphone } from 'lucide-react';
+import { Store, Megaphone } from 'lucide-react';
 
 export default function Join() {
   return (
@@ -27,16 +27,7 @@ export default function Join() {
                 Learn More →
               </Link>
             </div>
-            <div className="join-card">
-              <div className="join-icon">
-                <Car size={48} strokeWidth={1.5} />
-              </div>
-              <h4>For Drivers</h4>
-              <p>Earn money delivering to your local community</p>
-              <Link href="/rider" className="btn-text">
-                Learn More →
-              </Link>
-            </div>
+            {/* "For Drivers" card hidden 2026-05-16 — couriers not yet onboarded. Restore (and re-import Car icon) when ready. */}
             <div className="join-card">
               <div className="join-icon">
                 <Megaphone size={48} strokeWidth={1.5} />

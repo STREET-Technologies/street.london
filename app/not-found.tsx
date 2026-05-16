@@ -37,7 +37,7 @@ export default function NotFound() {
               <p className="not-found-suggested-label">Try one of these instead:</p>
               <ul className="not-found-suggested-list">
                 <li><Link href="/retailers">For retailers</Link></li>
-                <li><Link href="/rider">For couriers</Link></li>
+                {/* For couriers hidden 2026-05-16 — couriers not yet onboarded. */}
                 <li><Link href="/doers">For ambassadors</Link></li>
                 <li><Link href="/contact-us">Contact us</Link></li>
               </ul>

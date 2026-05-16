@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="footer-column">
               <h4>Join Us</h4>
               <Link href="/retailers">For Retailers</Link>
-              <Link href="/rider">For Drivers</Link>
+              {/* For Drivers hidden 2026-05-16 — couriers not yet onboarded. Restore when ready. */}
               <Link href="/doers">For Ambassadors</Link>
             </div>
             <div className="footer-column">
