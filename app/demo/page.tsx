@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Zap, Plug, BadgePercent, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -60,40 +60,29 @@ export default function DemoPage() {
 
           <section className="demo-why">
             <h2 className="demo-section-title">Why STREET</h2>
-            <div className="demo-why-grid">
-              <div className="demo-why-card">
-                <div className="demo-why-icon">
-                  <Zap size={28} strokeWidth={2.25} />
-                </div>
+            <ul className="demo-why-list">
+              <li className="demo-why-item">
                 <h3>Instant delivery, ready to go</h3>
                 <p>
                   We bring London shoppers to your shop without them needing
                   to travel. Orders arrive at the customer in under an hour.
                 </p>
-              </div>
-
-              <div className="demo-why-card">
-                <div className="demo-why-icon">
-                  <Plug size={28} strokeWidth={2.25} />
-                </div>
+              </li>
+              <li className="demo-why-item">
                 <h3>Full Shopify integration</h3>
                 <p>
                   Your products, inventory and orders sync automatically. No
                   new system to learn, no manual updates.
                 </p>
-              </div>
-
-              <div className="demo-why-card">
-                <div className="demo-why-icon">
-                  <BadgePercent size={28} strokeWidth={2.25} />
-                </div>
+              </li>
+              <li className="demo-why-item">
                 <h3>Zero platform fees to start</h3>
                 <p>
                   No upfront cost. No platform fees on your first orders. We
                   earn when you earn.
                 </p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </section>
 
           <div className="demo-cta">
