@@ -27,7 +27,7 @@ export default function Navigation() {
               <Link href="/#faq" className="nav-link">
                 FAQ
               </Link>
-              <Link href="/waitlist" className="btn-primary-sm">Join Waitlist</Link>
+              <Link href="/waitlist" className="btn-primary-sm">Join the Waitlist</Link>
             </div>
             <button
               className={`mobile-menu-btn ${mobileMenuOpen ? 'active' : ''}`}
@@ -63,7 +63,7 @@ export default function Navigation() {
             FAQ
           </Link>
           <Link href="/waitlist" className="btn-primary btn-large" onClick={closeMenu}>
-            Join Waitlist
+            Join the Waitlist
           </Link>
         </div>
       </div>

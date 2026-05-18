@@ -29,7 +29,7 @@ export default function NotFound() {
                 ← Back to home
               </Link>
               <Link href="/waitlist" className="btn-secondary">
-                Join the waitlist
+                Join the Waitlist
               </Link>
             </div>
 
