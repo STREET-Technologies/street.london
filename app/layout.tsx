@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         url: '/img/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'STREET — Your high street, instantly',
+        alt: 'STREET. Your high street, instantly.',
       },
     ],
   },

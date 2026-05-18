@@ -29,7 +29,7 @@ export default function HowItWorks() {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">How STREET Works</h2>
-          <p className="section-intro">Shopping your high street has never been easier</p>
+          <p className="section-intro">From browse to doorstep in under an hour</p>
         </div>
         <div className="steps-grid">
           <div className="step" data-aos="fade-up">

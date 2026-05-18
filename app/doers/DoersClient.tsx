@@ -95,9 +95,9 @@ export default function DoersClient() {
       <main className="retailers-page doers-page">
         <div className="container">
           <div className="retailers-hero">
-            <h1 className="retailers-title doers-title">WE ARE the DOERS</h1>
+            <h1 className="retailers-title doers-title">WE ARE the AMBASSADORS</h1>
             <h2 className="page-tagline">
-              Become a STREET ambassador — earn rewards for sharing London&apos;s high street
+              Become a STREET ambassador. Earn rewards for sharing London&apos;s high street.
             </h2>
             <p className="retailers-subtitle">
               Be part of shaping London&apos;s instant delivery culture. Get early access, exclusive rewards, and be at the forefront of the movement.

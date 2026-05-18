@@ -38,7 +38,7 @@ export default function Millie() {
                 </div>
                 <div>
                   <h4>Buy Through the Conversation</h4>
-                  <p>Find what you love and buy it directly through Millie — no switching apps, no separate checkout</p>
+                  <p>Find what you love and buy it directly through Millie. No switching apps, no separate checkout.</p>
                 </div>
               </div>
             </div>

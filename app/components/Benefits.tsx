@@ -28,7 +28,7 @@ export default function Benefits() {
       <div className="container">
         <div className="benefits-intro">
           <h2 className="section-title">Why Shop with STREET?</h2>
-          <p className="section-intro">Everything you love about shopping, made effortless</p>
+          <p className="section-intro">Local shops, one app, sixty-minute delivery</p>
         </div>
         <div className="benefits-grid">
           {/* Benefit 1 */}
@@ -59,7 +59,7 @@ export default function Benefits() {
             <div className="benefit-content">
               <h3 className="benefit-title">All Shops in One Place</h3>
               <p className="benefit-description">
-                Browse products from every store on your high street without leaving home — all in one app.
+                Every shop on your high street, in one app. Browse and buy without leaving home.
               </p>
               <ul className="benefit-list">
                 <li>Every local store in one place</li>

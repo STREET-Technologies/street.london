@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 
 export const metadata: Metadata = {
   title: "This street doesn't exist.",
-  description: "Page not found. Get back to STREET — instant delivery from London's local shops.",
+  description: "Page not found. Get back to STREET, instant delivery from London's local shops.",
   robots: {
     index: false,
     follow: true,

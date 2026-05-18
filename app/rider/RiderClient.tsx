@@ -80,7 +80,7 @@ export default function RiderClient() {
           <div className="retailers-hero">
             <h1 className="retailers-title">Let&apos;s cover the streetS together</h1>
             <h2 className="page-tagline">
-              Become a STREET courier — flexible delivery work in London
+              Become a STREET courier. Flexible delivery work in London.
             </h2>
             <p className="retailers-subtitle">
               Join our team of riders and drivers. Earn money delivering to your local community with flexible hours.

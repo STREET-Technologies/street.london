@@ -5,7 +5,7 @@ export default function AppDownload() {
     <section className="app-download" aria-labelledby="app-download-heading">
       <div className="container">
         <h2 id="app-download-heading" className="section-title">Coming soon to your phone</h2>
-        <p className="section-intro">Be among the first to download STREET — join the waitlist below.</p>
+        <p className="section-intro">Be among the first to download STREET. Join the waitlist below.</p>
 
         <div className="app-download-badges">
           <Link href="/waitlist" className="app-download-badge app-download-badge--apple" aria-label="Download STREET on the App Store (coming soon)">

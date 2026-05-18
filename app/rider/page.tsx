@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import RiderClient from './RiderClient';
 
-const TITLE = 'Become a STREET Courier — Flexible Delivery Work';
+const TITLE = 'Become a STREET Courier: Flexible Delivery Work';
 const DESCRIPTION = 'Earn flexible income as a STREET delivery courier in London. Choose your hours, get paid weekly, deliver from local shops. Apply now.';
 
 // Page hidden from indexing/linking 2026-05-16 — couriers not yet onboarded.
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     url: 'https://street.london/rider',
-    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'STREET — Flexible delivery work in London' }],
+    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'STREET. Flexible delivery work in London.' }],
   },
   twitter: {
     card: 'summary_large_image',

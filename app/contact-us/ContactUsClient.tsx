@@ -77,7 +77,7 @@ export default function ContactUsClient() {
             <div className="contact-info">
               <h1 className="contact-title">Get in Touch</h1>
               <h2 className="page-tagline">
-                Contact STREET — London local delivery marketplace
+                Contact STREET. London&apos;s local delivery marketplace.
               </h2>
               <p className="contact-intro">
                 Have a question or want to learn more about STREET? We&apos;d love to hear from you.

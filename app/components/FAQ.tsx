@@ -9,7 +9,7 @@ const FAQS: FAQItem[] = [
   {
     question: 'How fast is STREET delivery?',
     answer:
-      'STREET delivers in under 60 minutes. We use Stuart, a same-day courier network — once a retailer accepts your order, a courier is dispatched immediately. There are no scheduled or next-day delivery options; everything is instant.',
+      'STREET delivers in under 60 minutes. We use Stuart, a same-day courier network. Once a retailer accepts your order, a courier is dispatched immediately. There are no scheduled or next-day delivery options; everything is instant.',
   },
   {
     question: 'Where in London does STREET deliver?',
@@ -24,17 +24,17 @@ const FAQS: FAQItem[] = [
   {
     question: 'How do returns work?',
     answer:
-      "Returns are managed by each retailer through Shopify, following their own returns policy. STREET handles cancellations before your order is accepted — if you cancel before the retailer prepares it, the payment hold is released instantly. Once an order is on its way, you'll arrange the return directly with the retailer.",
+      "Returns are managed by each retailer through Shopify, following their own returns policy. STREET handles cancellations before your order is accepted. If you cancel before the retailer prepares it, the payment hold is released instantly. Once an order is on its way, you'll arrange the return directly with the retailer.",
   },
   {
     question: 'How does payment work?',
     answer:
-      "Payment is handled through Shopify's secure checkout. Your card is authorised when you place an order; the charge is only completed once the retailer accepts. If you cancel before acceptance — or the retailer declines — the hold is released instantly and no money moves.",
+      "Payment is handled through Shopify's secure checkout. Your card is authorised when you place an order; the charge is only completed once the retailer accepts. If you cancel before acceptance, or the retailer declines, the hold is released instantly and no money moves.",
   },
   {
     question: 'When does STREET launch?',
     answer:
-      'STREET is in pre-launch. Sign up to the waitlist for the earliest access — waitlist members get notified first when STREET goes live in their area.',
+      'STREET is in pre-launch. Sign up to the waitlist for the earliest access. Waitlist members get notified first when STREET goes live in their area.',
   },
 ];
 

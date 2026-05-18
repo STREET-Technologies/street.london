@@ -96,7 +96,7 @@ export default function RetailersClient() {
           <div className="retailers-hero">
             <h1 className="retailers-title">Become one of our retail partners</h1>
             <h2 className="page-tagline">
-              Sell on STREET — reach London customers with instant delivery
+              Sell on STREET. Reach London customers with instant delivery.
             </h2>
             <p className="retailers-subtitle">
               Let us bring shoppers to you virtually and increase your exposure! Sign up to hear more and be one of the

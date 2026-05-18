@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ContactUsClient from './ContactUsClient';
 
-const TITLE = 'Contact STREET — London Local Delivery Marketplace';
+const TITLE = 'Contact STREET: London Local Delivery Marketplace';
 const DESCRIPTION = 'Get in touch with the STREET team. Email hi@street.london or visit us at 62 Sutherland Avenue, London W9 2QU.';
 
 export const metadata: Metadata = {
