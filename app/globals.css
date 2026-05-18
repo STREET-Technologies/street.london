@@ -865,42 +865,52 @@ body {
 
 .join-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    max-width: 64rem;
+    margin: 0 auto;
 }
 
-.join-card {
-    background: var(--white);
-    padding: 3rem 2rem;
-    border-radius: 16px;
-    text-align: center;
-    transition: var(--transition);
-    border: 2px solid transparent;
-}
-
-.join-card:hover {
-    border-color: var(--black);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
-
-.join-icon {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
+.join-option {
+    display: block;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
     color: var(--black);
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
-.join-card h4 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-}
-
-.join-card p {
+.join-option:hover {
     color: var(--gray-dark);
-    margin-bottom: 1.5rem;
+}
+
+.join-option:hover .join-option-cta {
+    transform: translateX(4px);
+}
+
+.join-option h4 {
+    font-family: var(--font-title);
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+.join-option p {
+    color: var(--gray-dark);
+    margin-bottom: 1.25rem;
     line-height: 1.6;
+    max-width: 26rem;
+}
+
+.join-option-cta {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--black);
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 2px;
+    transition: transform 0.2s;
 }
 
 /* ===================================
@@ -1123,6 +1133,7 @@ body {
 
     .join-grid {
         grid-template-columns: 1fr;
+        gap: 0;
     }
 
     .footer-content {
