@@ -672,53 +672,40 @@ body {
    MILLIE SECTION - Shopping Assistant
    =================================== */
 .millie-section {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: var(--black);
     color: var(--white);
 }
 
 .millie-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    display: flex;
     align-items: center;
-}
-
-.millie-eyebrow {
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--gray);
-    margin-bottom: 1rem;
-}
-
-.millie-coming-soon {
-    display: inline-block;
-    background: var(--primary);
-    color: #000;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 0.35rem 0.9rem;
-    border-radius: 50px;
-    margin-bottom: 1.25rem;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
 }
 
 .millie-cta {
-    display: inline-block;
-    margin-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding: 0.875rem 1.75rem;
+    background: transparent;
     color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 8px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     text-decoration: none;
-    letter-spacing: 0.03em;
-    transition: opacity 0.2s;
+    letter-spacing: 0.02em;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 
 .millie-cta:hover {
-    opacity: 0.65;
+    background: var(--primary);
+    color: var(--black);
+    transform: translateY(-1px);
 }
 
 .millie-title {
@@ -729,49 +716,13 @@ body {
     font-size: 1.125rem;
     color: var(--white);
     opacity: 0.8;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
-}
-
-.millie-features {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-}
-
-.millie-feature {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-}
-
-.millie-feature-icon {
-    flex-shrink: 0;
-    width: 56px;
-    height: 56px;
-    background: rgba(198, 255, 0, 0.1);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-}
-
-.millie-feature h4 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--white);
-}
-
-.millie-feature p {
-    color: var(--white);
-    opacity: 0.8;
-    line-height: 1.6;
+    max-width: 32rem;
 }
 
 .millie-brand-image {
-    width: 100%;
+    width: 280px;
     aspect-ratio: 4 / 5;
     background-size: cover;
     background-position: center;
@@ -1143,13 +1094,8 @@ body {
     }
 
     .millie-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .millie-visual {
-        width: 100%;
-        overflow: hidden;
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .millie-images-grid {
