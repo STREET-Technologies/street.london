@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { ShoppingBag, CreditCard, Zap } from 'lucide-react';
 
 export default function HowItWorks() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -31,41 +30,29 @@ export default function HowItWorks() {
           <h2 className="section-title">How STREET Works</h2>
           <p className="section-intro">From browse to doorstep in under an hour</p>
         </div>
-        <div className="steps-grid">
-          <div className="step" data-aos="fade-up">
-            <div className="step-visual">
-              <div className="step-icon">
-                <ShoppingBag size={48} strokeWidth={1.5} />
-              </div>
-            </div>
+        <ol className="steps-grid">
+          <li className="step" data-aos="fade-up">
+            <span className="step-number" aria-hidden="true">01</span>
             <h3 className="step-title">Browse Local Shops</h3>
             <p className="step-description">
-              Explore products from all your favourite high street stores in one beautiful app
+              Explore products from all your favourite high street stores in one beautiful app.
             </p>
-          </div>
-          <div className="step" data-aos="fade-up" data-aos-delay="100">
-            <div className="step-visual">
-              <div className="step-icon">
-                <CreditCard size={48} strokeWidth={1.5} />
-              </div>
-            </div>
-            <h3 className="step-title">Pick Your Store & Order</h3>
+          </li>
+          <li className="step" data-aos="fade-up" data-aos-delay="100">
+            <span className="step-number" aria-hidden="true">02</span>
+            <h3 className="step-title">Pick Your Store &amp; Order</h3>
             <p className="step-description">
-              Found something you love? Order directly from the store and checkout in seconds
+              Found something you love? Order directly from the store and checkout in seconds.
             </p>
-          </div>
-          <div className="step" data-aos="fade-up" data-aos-delay="200">
-            <div className="step-visual">
-              <div className="step-icon">
-                <Zap size={48} strokeWidth={1.5} />
-              </div>
-            </div>
+          </li>
+          <li className="step" data-aos="fade-up" data-aos-delay="200">
+            <span className="step-number" aria-hidden="true">03</span>
             <h3 className="step-title">Receive Instantly</h3>
             <p className="step-description">
-              Your order is collected from the store and delivered straight to your door in minutes, not days
+              Your order is collected from the store and delivered to your door in minutes, not days.
             </p>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
   );

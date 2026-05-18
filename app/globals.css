@@ -491,29 +491,43 @@ body {
 }
 
 .steps-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 3rem 4rem;
+    counter-reset: step;
 }
 
 .step {
+    position: relative;
     text-align: center;
+    padding-top: 0.5rem;
 }
 
-.step-visual {
-    margin-bottom: 2rem;
+.step-number {
+    display: block;
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1;
+    color: var(--black);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
 }
 
 .step-title {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: var(--black);
 }
 
 .step-description {
     color: var(--gray-dark);
     line-height: 1.6;
+    max-width: 28rem;
+    margin-inline: auto;
 }
 
 /* ===================================
@@ -874,12 +888,6 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
-    color: var(--black);
-}
-
-.step-icon {
-    display: flex;
-    justify-content: center;
     color: var(--black);
 }
 
