@@ -2773,7 +2773,7 @@ body {
 
 .demo-page {
     min-height: 100vh;
-    padding: 120px 0 6rem;
+    padding-top: 120px;
     background: var(--cream);
 }
 
@@ -2832,76 +2832,176 @@ body {
     background: var(--black);
 }
 
-.demo-why {
-    max-width: 720px;
-    margin: 0 auto 4rem;
+/* Feature sections */
+.demo-feature {
+    padding: 6rem 0;
 }
 
-.demo-section-title {
+.demo-feature-sand {
+    background: var(--sand);
+}
+
+.demo-feature-dark {
+    background: #0c0c0e;
+    color: var(--white);
+}
+
+.demo-feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.demo-feature-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.demo-feature-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+.demo-feature-heading {
     font-family: var(--font-title);
     font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     font-weight: 800;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--black);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
 }
 
-.demo-why-list {
+.demo-feature-text {
+    font-size: 1.1rem;
+    color: var(--gray-dark);
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+    max-width: 48ch;
+}
+
+.demo-feature-dark .demo-feature-text {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.demo-feature-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.demo-why-item {
-    padding: 2rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
+.demo-feature-list li {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.45rem 0 0.45rem 1.5rem;
+    position: relative;
+    color: var(--gray-dark);
 }
 
-.demo-why-item:last-child {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+.demo-feature-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.85rem;
+    width: 7px;
+    height: 7px;
+    background: var(--primary);
+    border-radius: 50%;
 }
 
-.demo-why-item h3 {
+.demo-feature-dark .demo-feature-list li {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Retailer screenshot pair */
+.demo-screens {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.demo-screen {
+    border-radius: 20px;
+    box-shadow: 0 16px 48px -8px rgba(0, 0, 0, 0.18);
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.demo-screen-back {
+    transform: rotate(-2deg);
+}
+
+.demo-screen-front {
+    transform: rotate(2deg);
+}
+
+/* CTA section */
+.demo-cta-section {
+    text-align: center;
+    padding: 5rem 0 6rem;
+}
+
+.demo-cta-heading {
     font-family: var(--font-title);
-    font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     font-weight: 800;
-    color: var(--black);
-    margin-bottom: 0.625rem;
-    line-height: 1.2;
+    margin-bottom: 1rem;
     letter-spacing: -0.01em;
 }
 
-.demo-why-item p {
-    font-size: 1rem;
+.demo-cta-text {
+    font-size: 1.15rem;
     color: var(--gray-dark);
-    line-height: 1.6;
-    margin: 0;
-    max-width: 56ch;
+    margin-bottom: 2.5rem;
+    max-width: 44ch;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.55;
 }
 
-.demo-cta {
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.demo-cta .btn-primary {
+.demo-cta-section .btn-primary {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
 }
 
+/* Demo responsive */
 @media (max-width: 900px) {
-    .demo-why-item {
-        padding: 1.5rem 0;
+    .demo-feature {
+        padding: 4rem 0;
+    }
+    .demo-feature-grid {
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .demo-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .demo-feature-visual {
+        order: -1;
+    }
+    .demo-screens {
+        max-width: 340px;
     }
 }
 
 @media (max-width: 600px) {
     .demo-page {
-        padding: 100px 0 4rem;
+        padding-top: 100px;
     }
     .demo-video-wrap {
         margin-bottom: 3.5rem;
         border-radius: 14px;
+    }
+    .demo-feature {
+        padding: 3rem 0;
     }
 }
