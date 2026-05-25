@@ -2799,37 +2799,63 @@ body {
     line-height: 1.55;
 }
 
-.demo-video-wrap {
-    max-width: 1100px;
-    margin: 0 auto 5rem;
-    background: var(--black);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.35), 0 12px 30px -10px rgba(0, 0, 0, 0.25);
-    aspect-ratio: 16 / 9;
+/* Video showcase: copy + portrait phone video side by side */
+.demo-showcase-section {
+    background: var(--sand);
+    padding: 5rem 0;
 }
 
-.demo-video-landscape { display: block; }
-.demo-video-portrait { display: none; }
+.demo-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.demo-showcase-heading {
+    font-family: var(--font-title);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+}
+
+.demo-showcase-text {
+    font-size: 1.1rem;
+    color: var(--gray-dark);
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+    max-width: 48ch;
+}
+
+.demo-showcase-video {
+    display: flex;
+    justify-content: center;
+}
+
+.demo-video-phone {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.35), 0 12px 30px -10px rgba(0, 0, 0, 0.25);
+}
 
 @media (max-width: 768px) {
-    .demo-video-landscape { display: none; }
-    .demo-video-portrait {
-        display: block;
-        aspect-ratio: 460 / 720;
-        max-width: min(90vw, calc(75vh * 460 / 720));
-        max-height: 75vh;
-        margin: 0 auto 3.5rem;
-        border-radius: 18px;
+    .demo-showcase {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
-}
-
-.demo-video {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    background: var(--black);
+    .demo-showcase-video {
+        order: -1;
+    }
+    .demo-video-phone {
+        max-width: 260px;
+    }
 }
 
 /* Feature sections */

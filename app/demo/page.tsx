@@ -25,46 +25,48 @@ export default function DemoPage() {
         <div className="container">
           <header className="demo-hero">
             <h1 className="demo-title">See STREET in action</h1>
-            <p className="demo-tagline">
-              A 60-second tour of how STREET connects your shop to London
-              customers with instant delivery.
-            </p>
           </header>
-
-          <div className="demo-video-wrap demo-video-landscape">
-            <video
-              className="demo-video"
-              controls
-              playsInline
-              preload="metadata"
-              poster="/demo/poster.jpg"
-            >
-              <source src="/demo/demo.mp4" type="video/mp4" />
-              Your browser does not support HTML5 video.{' '}
-              <a href="/demo/demo.mp4">Download the demo</a>.
-            </video>
-          </div>
-
-          <div className="demo-video-wrap demo-video-portrait">
-            <video
-              className="demo-video"
-              controls
-              playsInline
-              preload="metadata"
-              poster="/demo/poster-portrait.jpg"
-            >
-              <source src="/demo/demo-portrait.mp4" type="video/mp4" />
-              Your browser does not support HTML5 video.{' '}
-              <a href="/demo/demo-portrait.mp4">Download the demo</a>.
-            </video>
-          </div>
         </div>
+
+        <section className="demo-showcase-section">
+          <div className="container">
+            <div className="demo-showcase">
+              <div className="demo-showcase-content">
+                <h2 className="demo-showcase-heading">
+                  The complete customer journey
+                </h2>
+                <p className="demo-showcase-text">
+                  Watch a customer browse local shops, pick a product, check
+                  out, and track their delivery in real time. The whole
+                  experience takes under a minute.
+                </p>
+                <ul className="demo-feature-list">
+                  <li>Browse stores near any London address</li>
+                  <li>Full product details with live stock levels</li>
+                  <li>Checkout in seconds, delivered in under an hour</li>
+                  <li>Live map tracking from store to door</li>
+                </ul>
+              </div>
+              <div className="demo-showcase-video">
+                <video
+                  className="demo-video-phone"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster="/demo/poster-new.jpg"
+                >
+                  <source src="/demo/demo-new.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section className="demo-feature">
           <div className="container demo-feature-grid">
             <div className="demo-feature-visual">
               <Image
-                src="/img/demo/shopping.png"
+                src="/img/demo/shopping-v2.png"
                 alt="Two phones showing the STREET app: browsing a store page with real storefront photography and viewing a product with sizes and pricing"
                 width={1920}
                 height={1440}
@@ -110,7 +112,7 @@ export default function DemoPage() {
             <div className="demo-feature-visual">
               <div className="demo-screens">
                 <Image
-                  src="/img/demo/retailer-incoming.png"
+                  src="/img/demo/retailer-incoming-v2.png"
                   alt="Retailer app showing an incoming order with a five-minute countdown timer, item details, and accept or decline buttons"
                   width={1290}
                   height={2796}
@@ -134,7 +136,7 @@ export default function DemoPage() {
           <div className="container demo-feature-grid">
             <div className="demo-feature-visual">
               <Image
-                src="/img/demo/tracking.png"
+                src="/img/demo/tracking-v2.png"
                 alt="Phone showing live order tracking with a map of central London, courier location, and real-time delivery status updates"
                 width={1920}
                 height={1440}
