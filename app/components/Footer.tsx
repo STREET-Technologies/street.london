@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-brand">
             <h3 className="logo-footer">STREET</h3>
-            <p>Your high street, instantly</p>
+            <p>Your high street, <span style={{ color: 'var(--primary)' }}>instantly</span></p>
           </div>
           <div className="footer-links">
             <div className="footer-column">
