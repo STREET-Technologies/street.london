@@ -26,8 +26,8 @@ export default function FirstVisitGateway() {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const imgTimer = useRef<ReturnType<typeof setInterval>>();
-  const taglineTimer = useRef<ReturnType<typeof setInterval>>();
+  const imgTimer = useRef<ReturnType<typeof setInterval>>(undefined);
+  const taglineTimer = useRef<ReturnType<typeof setInterval>>(undefined);
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
