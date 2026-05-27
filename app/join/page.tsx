@@ -1,4 +1,4 @@
-import JoinFlashSequence from '../components/JoinFlashSequence';
+import FirstVisitGateway from '../components/FirstVisitGateway';
 
 export const metadata = {
   title: 'Get Early Access to STREET',
@@ -23,5 +23,5 @@ export const metadata = {
 };
 
 export default function JoinPage() {
-  return <JoinFlashSequence />;
+  return <FirstVisitGateway />;
 }

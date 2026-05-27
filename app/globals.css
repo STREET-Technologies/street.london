@@ -1975,442 +1975,225 @@ body {
 }
 
 /* ===================================
-   MYSTERY LANDING PAGE
+   FIRST-VISIT GATEWAY (/join)
    =================================== */
-.mystery-container {
+
+.gateway {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(ellipse at 50% 40%, rgba(198, 255, 0, 0.07) 0%, #000 70%);
+    inset: 0;
+    background: var(--cream);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.mystery-flash-image {
+/* Crossfading background images */
+.gateway-bg {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+    z-index: 0;
+}
+
+.gateway-bg-img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(60%) contrast(1.2);
-    transition: opacity 0.1s ease;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mystery-static {
+.gateway-bg-img.is-active {
+    opacity: 1;
+}
+
+.gateway-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 10;
-    image-rendering: auto;
+    inset: 0;
+    background: rgba(253, 251, 247, 0.52);
+    z-index: 1;
 }
 
-.mystery-content {
+/* Content — always visible from frame 1 */
+.gateway-content {
     position: relative;
-    z-index: 20;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    text-align: center;
     padding: 2rem;
-}
-
-.mystery-logo {
-    font-family: var(--font-title);
-    font-size: clamp(3rem, 12vw, 6rem);
-    color: #fff;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 20px rgba(198, 255, 0, 0.5), 0 0 60px rgba(198, 255, 0, 0.25), 0 0 120px rgba(198, 255, 0, 0.1);
-}
-
-.mystery-tagline {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 1.125rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
-}
-
-.sequence-reveal-form {
     width: 100%;
-    max-width: 320px;
+    max-width: 420px;
 }
 
-.mystery-form {
+.gateway-logo {
+    font-family: var(--font-title);
+    font-size: clamp(3.5rem, 14vw, 7rem);
+    color: var(--black);
+    letter-spacing: 0.08em;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+/* Rotating taglines — stacked in same position */
+.gateway-tagline-wrap {
+    position: relative;
+    height: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.gateway-tagline {
+    position: absolute;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--gray-dark);
+    letter-spacing: 0.02em;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    white-space: nowrap;
+}
+
+.gateway-tagline.is-active {
+    opacity: 1;
+}
+
+/* Signup form */
+.gateway-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
     width: 100%;
 }
 
-.mystery-input {
-    background: rgba(26, 26, 26, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 1rem 1.25rem;
+.gateway-input {
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 0.875rem 1rem;
     font-family: var(--font-body);
     font-size: 1rem;
-    color: #fff;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+    color: var(--black);
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.mystery-input::placeholder {
-    color: rgba(255, 255, 255, 0.4);
+.gateway-input::placeholder {
+    color: var(--gray);
 }
 
-.mystery-input:focus {
+.gateway-input:focus {
     outline: none;
-    border-color: var(--primary);
-    background: rgba(26, 26, 26, 1);
-    box-shadow: 0 0 15px rgba(198, 255, 0, 0.08);
+    border-color: var(--black);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
 }
 
-.mystery-input:disabled {
+.gateway-input:disabled {
     opacity: 0.6;
     cursor: not-allowed;
 }
 
-.mystery-submit {
-    background: var(--primary);
-    color: #000;
+.gateway-submit {
+    background: var(--black);
+    color: var(--white);
     border: none;
-    padding: 1rem 2rem;
-    font-family: var(--font-title);
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
+    padding: 0.875rem 2rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    margin-top: 0.5rem;
-    box-shadow: 0 0 20px rgba(198, 255, 0, 0.15);
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 0.25rem;
 }
 
-.mystery-submit:hover:not(:disabled) {
-    background: #d4ff33;
-    transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(198, 255, 0, 0.4);
+.gateway-submit:hover:not(:disabled) {
+    background: var(--primary);
+    color: var(--black);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
 }
 
-.mystery-submit:disabled {
+.gateway-submit:disabled {
     opacity: 0.6;
     cursor: not-allowed;
 }
 
-.mystery-error {
-    color: #ff4444;
+.gateway-error {
+    color: #c0392b;
     font-size: 0.875rem;
     text-align: center;
     margin: 0;
 }
 
-.mystery-success {
-    text-align: center;
-}
-
-.mystery-success p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.25rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-}
-
-/* --- Cinematic Sequence Animations --- */
-
-/* Fade in, hold, fade out — for pain-point lines that disappear */
-@keyframes beatInOut {
-    0% { opacity: 0; transform: translateY(8px); }
-    20% { opacity: 1; transform: translateY(0); }
-    80% { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; transform: translateY(-4px); }
-}
-
-/* Fade in and stay — for brand reveal elements */
-@keyframes beatIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hook container — holds pain-point lines in overlapping position */
-.sequence-hook {
-    position: relative;
-    height: 3em;
-    width: 100%;
+.gateway-success {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
+    gap: 1.5rem;
 }
 
-.sequence-line {
-    position: absolute;
-    color: #fff;
-    font-size: 1.5rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    opacity: 0;
-    white-space: nowrap;
-}
-
-.sequence-line-4 {
-    font-size: 1.75rem;
+.gateway-success-text {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
     font-weight: 600;
-    color: #fff;
-    letter-spacing: 0.22em;
+    color: var(--black);
 }
 
-/* Pending state (SSR default — hidden until JS decides play vs skip) */
-.sequence-pending .sequence-line,
-.sequence-pending .sequence-reveal {
-    opacity: 0;
+/* Explore STREET link */
+.gateway-explore {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--gray-dark);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    padding: 0.5rem 1rem;
 }
 
-/* Play state — pain-point lines cycle in same position, then brand reveals */
-.sequence-play .sequence-line,
-.sequence-play .sequence-reveal {
-    opacity: 0;
+.gateway-explore:hover {
+    color: var(--black);
 }
 
-/* Pain-point lines: each ~1.5s total (fade in, hold, fade out) */
-.sequence-play .sequence-line-1 {
-    animation: beatInOut 1.5s ease-in-out 0.8s forwards;
-}
-.sequence-play .sequence-line-2 {
-    animation: beatInOut 1.5s ease-in-out 2.5s forwards;
-}
-.sequence-play .sequence-line-3 {
-    animation: beatInOut 1.5s ease-in-out 4.2s forwards;
-}
-.sequence-play .sequence-line-4 {
-    animation: beatInOut 1.8s ease-in-out 5.9s forwards;
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .gateway-content {
+        padding: 1.5rem;
+    }
+
+    .gateway-tagline {
+        font-size: 1rem;
+    }
+
+    .gateway-submit {
+        padding: 1rem;
+    }
 }
 
-/* Hide hook container after pain-point lines finish */
-.sequence-play .sequence-hook {
-    animation: beatInOut 0.01s linear 8s forwards;
-}
-
-/* Brand reveal: fade in and stay */
-.sequence-play .sequence-reveal-logo {
-    animation: beatIn 1.5s ease-out 8s forwards;
-}
-.sequence-play .sequence-reveal-tagline {
-    animation: beatIn 0.8s ease-out 9.5s forwards;
-}
-.sequence-play .sequence-reveal-form {
-    animation: beatIn 0.8s ease-out 10.3s forwards;
-}
-
-/* Skip state (returning visitor — brand visible, hook hidden) */
-.sequence-skip .sequence-hook {
-    display: none;
-}
-.sequence-skip .sequence-reveal {
-    opacity: 1;
-}
-
-/* ===================================
-   REDUCED MOTION - Accessibility
-   Users who prefer reduced motion see a complete
-   static experience: dark background, heading,
-   tagline, and working form — no animations.
-   =================================== */
+/* Reduced motion — static background, no crossfade or tagline rotation */
 @media (prefers-reduced-motion: reduce) {
-    .mystery-static {
-        display: none;
+    .gateway-bg-img {
+        transition: none;
     }
 
-    .mystery-flash-image {
-        display: none;
-    }
-
-    .mystery-container {
-        background: #0a0a0a;
-    }
-
-    .mystery-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
-
-    .mystery-logo {
-        color: #fff;
-        text-shadow: none;
-    }
-
-    .mystery-tagline {
-        color: rgba(255, 255, 255, 0.85);
-    }
-
-    /* Belt-and-suspenders: ensure sequence content visible even if JS fails */
-    .sequence-play .sequence-line,
-    .sequence-play .sequence-reveal,
-    .sequence-pending .sequence-line,
-    .sequence-pending .sequence-reveal {
-        animation: none !important;
+    .gateway-bg-img:first-child {
         opacity: 1;
     }
 
-    .sequence-hook {
-        display: none;
+    .gateway-tagline {
+        transition: none;
     }
-}
 
-/* ===================================
-   JOIN PAGE — IMAGE FLASH SEQUENCE
-   =================================== */
-
-.join-root {
-    position: fixed;
-    inset: 0;
-    background: #000;
-    overflow: hidden;
-}
-
-/* Full-screen image — locked to 4:5 portrait, center-cropped to fit.
-   Normalises any source AR so all images appear at the same size. */
-.join-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    display: block;
-}
-
-/* Scrim — fades in with the form at Act 3 so images play vivid during Acts 1–2 */
-.join-scrim {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    pointer-events: none;
-    z-index: 3;
-    opacity: 0;
-    transition: opacity 1.4s ease;
-}
-
-.join-scrim.is-visible {
-    opacity: 1;
-}
-
-/* Form overlay — hidden until Act 3, then fades in */
-.join-form-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    z-index: 4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.join-form-overlay.is-visible {
-    animation: joinFormReveal 1.4s ease forwards;
-    pointer-events: auto;
-}
-
-@keyframes joinFormReveal {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
-.join-form-inner {
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
-}
-
-.join-eyebrow {
-    font-family: var(--font-title);
-    color: var(--primary);
-    font-size: 0.7rem;
-    letter-spacing: 0.35em;
-    margin-bottom: 0.75rem;
-    opacity: 0.7;
-}
-
-.join-headline {
-    font-family: var(--font-title);
-    color: #fff;
-    font-size: clamp(2.2rem, 9vw, 4.5rem);
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: -0.01em;
-    margin-bottom: 2.5rem;
-}
-
-/* Skip button — barely visible, appears bottom-right after 2s */
-.join-skip {
-    position: fixed;
-    bottom: 1.75rem;
-    right: 1.75rem;
-    background: transparent;
-    border: none;
-    color: rgba(255, 255, 255, 0.3);
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 0.5rem;
-    animation: joinSkipFadeIn 0.6s ease forwards;
-    z-index: 10;
-}
-
-@keyframes joinSkipFadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-.join-skip:hover {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* "Explore STREET" link beneath the form — very understated */
-.join-site-link {
-    display: inline-block;
-    margin-top: 2rem;
-    color: rgba(255, 255, 255, 0.25);
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: color 0.2s;
-}
-
-.join-site-link:hover {
-    color: rgba(255, 255, 255, 0.55);
-}
-
-@media (max-width: 768px) {
-    .join-image {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .join-phase-fadeout .join-image {
-        animation: none;
-        opacity: 0;
-    }
-    .join-form-overlay {
-        animation: none;
+    .gateway-tagline:first-child {
+        opacity: 1;
     }
 }
 
