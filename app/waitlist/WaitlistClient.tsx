@@ -84,7 +84,7 @@ export default function WaitlistClient() {
         <div className="container">
           <div className="waitlist-hero">
             <h1 className="waitlist-title">
-              WE ARE <span className="highlight">speeding up</span> SHOPPING!
+              Instant Delivery London — <span className="highlight">Join the Waitlist</span>
             </h1>
             <h2 className="page-tagline">
               Join the waitlist for early access to instant delivery in London

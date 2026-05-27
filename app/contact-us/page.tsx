@@ -22,6 +22,36 @@ export const metadata: Metadata = {
   },
 };
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://street.london/#localbusiness",
+  "name": "STREET Technologies",
+  "url": "https://street.london",
+  "email": "hi@street.london",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "62 Sutherland Avenue",
+    "addressLocality": "London",
+    "postalCode": "W9 2QU",
+    "addressCountry": "GB"
+  },
+  "sameAs": [
+    "https://www.instagram.com/st.reet.app/",
+    "https://www.linkedin.com/company/street-london/",
+    "https://find-and-update.company-information.service.gov.uk/company/16248225"
+  ],
+  "parentOrganization": { "@id": "https://street.london/#organization" }
+};
+
 export default function ContactUsPage() {
-  return <ContactUsClient />;
+  return (
+    <>
+      <ContactUsClient />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+    </>
+  );
 }

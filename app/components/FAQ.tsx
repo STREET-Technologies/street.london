@@ -34,11 +34,11 @@ const FAQS: FAQItem[] = [
   {
     question: 'When does STREET launch?',
     answer:
-      'STREET is in pre-launch. Sign up to the waitlist for the earliest access. Waitlist members get notified first when STREET goes live in their area.',
+      'STREET is launching in London in 2026. Coverage expands neighbourhood by neighbourhood as retailers go live. Sign up to the waitlist with your postcode to get notified the moment STREET reaches your area — waitlist members get first access.',
   },
 ];
 
-const HELP_CENTRE_URL = 'https://intercom.help/street-london/en';
+const HELP_CENTRE_URL = '/contact-us';
 
 export default function FAQ() {
   const structuredData = {
@@ -78,11 +78,9 @@ export default function FAQ() {
           Still have questions?{' '}
           <a
             href={HELP_CENTRE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="faq-cta-link"
           >
-            Visit our help centre <ArrowUpRight size={16} />
+            Get in touch <ArrowUpRight size={16} />
           </a>
         </p>
       </div>

@@ -86,6 +86,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": "https://street.london/#organization",
             "name": "STREET",
             "alternateName": "STREET London",
             "url": "https://street.london",
@@ -101,8 +102,37 @@ export default function RootLayout({
             },
             "sameAs": [
               "https://www.instagram.com/st.reet.app/",
-              "https://www.linkedin.com/company/street-london/"
+              "https://www.linkedin.com/company/street-london/",
+              "https://find-and-update.company-information.service.gov.uk/company/16248225"
             ]
+          })}}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://street.london/#website",
+            "name": "STREET",
+            "url": "https://street.london",
+            "publisher": { "@id": "https://street.london/#organization" }
+          })}}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MobileApplication",
+            "name": "STREET",
+            "operatingSystem": "iOS, Android",
+            "applicationCategory": "ShoppingApplication",
+            "description": "Shop London's high street and get it delivered in under an hour.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "GBP"
+            },
+            "publisher": { "@id": "https://street.london/#organization" }
           })}}
         />
       </head>

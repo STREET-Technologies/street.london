@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server';
 // Search engine crawlers, social card scrapers, and AI search bots.
 // These see the canonical homepage instead of the first-visit /join redirect
 // so the homepage's metadata, content, and structured data get indexed properly.
-const BOT_UA_REGEX = /(googlebot|google-extended|bingbot|adidxbot|duckduckbot|slurp|baiduspider|yandexbot|applebot|facebookexternalhit|facebot|twitterbot|linkedinbot|whatsapp|telegrambot|discordbot|slackbot|ahrefsbot|semrushbot|mj12bot|dotbot|petalbot|gptbot|chatgpt-user|claude-web|claudebot|claude-searchbot|perplexitybot|perplexity-user|ccbot|amazonbot|anthropic-ai|cohere-ai)/i;
+const BOT_UA_REGEX = /(googlebot|google-extended|bingbot|adidxbot|duckduckbot|slurp|baiduspider|yandexbot|applebot|applebot-extended|facebookexternalhit|facebot|twitterbot|linkedinbot|whatsapp|telegrambot|discordbot|slackbot|ahrefsbot|semrushbot|mj12bot|dotbot|petalbot|gptbot|chatgpt-user|oai-searchbot|claude-web|claudebot|claude-searchbot|perplexitybot|perplexity-user|ccbot|amazonbot|anthropic-ai|cohere-ai|meta-externalagent|bytespider)/i;
 
 export function proxy(request: NextRequest) {
   const ua = request.headers.get('user-agent') || '';

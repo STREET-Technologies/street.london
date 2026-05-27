@@ -6,6 +6,10 @@ export const metadata = {
   alternates: {
     canonical: 'https://street.london/join',
   },
+  robots: {
+    index: false,
+    follow: true,
+  },
   openGraph: {
     title: 'Get Early Access to STREET',
     description: 'Be the first to experience STREET in London. Join the waitlist for early access to instant delivery from your favourite local shops.',

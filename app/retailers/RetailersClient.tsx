@@ -94,7 +94,7 @@ export default function RetailersClient() {
       <main className="retailers-page">
         <div className="container">
           <div className="retailers-hero">
-            <h1 className="retailers-title">Become one of our retail partners</h1>
+            <h1 className="retailers-title">London Retail Partners — Sell on STREET</h1>
             <h2 className="page-tagline">
               Sell on STREET. Reach London customers with instant delivery.
             </h2>
