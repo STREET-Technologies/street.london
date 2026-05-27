@@ -823,94 +823,129 @@ body {
 }
 
 /* ===================================
-   JOIN SECTION
+   JOIN CLOSER — black-and-lime page ender
    =================================== */
-.join-section {
-    padding: 6rem 0;
-    background: var(--sand);
+.join-closer {
+    background: #0a0a0a;
+    padding: 6rem 2rem;
 }
 
-.join-hero {
-    text-align: center;
-    margin-bottom: 6rem;
-    padding: 4rem 2rem;
-    background: var(--white);
-    border-radius: 24px;
-    box-shadow: var(--shadow-md);
+.join-closer-grid {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    padding-top: 1rem;
 }
 
-.join-hero .section-title {
+/* Left — waitlist CTA */
+.join-closer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.join-closer-title {
+    font-family: var(--font-title);
+    font-size: clamp(2.2rem, 5vw, 3.25rem);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
     margin-bottom: 1rem;
 }
 
-.join-hero .section-subtitle {
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.join-note {
-    margin-top: 1.5rem;
-    font-size: 0.875rem;
-    color: var(--gray-dark);
-}
-
-.join-options-title {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-}
-
-.join-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    max-width: 64rem;
-    margin: 0 auto;
-}
-
-.join-option {
-    display: block;
-    padding: 2rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
-    color: var(--black);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.join-option:hover {
-    color: var(--gray-dark);
-}
-
-.join-option:hover .join-option-cta {
-    transform: translateX(4px);
-}
-
-.join-option h4 {
-    font-family: var(--font-title);
-    font-size: 1.75rem;
-    font-weight: 800;
-    margin-bottom: 0.75rem;
-    letter-spacing: -0.01em;
-}
-
-.join-option p {
-    color: var(--gray-dark);
-    margin-bottom: 1.25rem;
+.join-closer-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.55);
     line-height: 1.6;
-    max-width: 26rem;
+    margin-bottom: 2rem;
+    max-width: 400px;
 }
 
-.join-option-cta {
+.join-closer-cta {
     display: inline-block;
+    background: var(--primary);
+    color: #000;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.join-closer-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(198, 255, 0, 0.3);
+}
+
+.join-closer-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    opacity: 0.4;
+    filter: grayscale(100%) invert(1);
+    transition: opacity 0.3s ease;
+}
+
+.join-closer-badges:hover {
+    opacity: 0.7;
+}
+
+.join-closer-badges img {
+    display: block;
+    height: 36px;
+    width: auto;
+}
+
+/* Right — community routing */
+.join-closer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.join-closer-card {
+    display: block;
+    padding: 1.5rem 1.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.join-closer-card:hover {
+    border-color: rgba(198, 255, 0, 0.3);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.join-closer-card-title {
+    font-family: var(--font-title);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.join-closer-card-text {
+    font-family: var(--font-body);
     font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.join-closer-card-cta {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
     font-weight: 600;
-    color: var(--black);
-    border-bottom: 1px solid var(--black);
-    padding-bottom: 2px;
-    transition: transform 0.2s;
+    color: var(--primary);
 }
 
 /* ===================================
@@ -1131,11 +1166,6 @@ body {
         font-size: 2rem;
     }
 
-    .join-grid {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
     .footer-content {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1171,9 +1201,6 @@ body {
         font-size: 1.75rem;
     }
 
-    .join-hero {
-        padding: 2rem 1.5rem;
-    }
 }
 
 /* ===================================
@@ -2528,88 +2555,30 @@ body {
     }
 }
 
-/* ─────────────────────────────────────────────────────────────────
-   App Download — homepage "coming soon" badges
-   ───────────────────────────────────────────────────────────────── */
-.app-download {
-    background: var(--white);
-    padding: 5rem 0 6rem;
-    text-align: center;
-}
-
-.app-download .section-title {
-    margin-bottom: 0.75rem;
-}
-
-.app-download .section-intro {
-    margin-bottom: 2.5rem;
-}
-
-.app-download-badges {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.app-download-badge {
-    display: inline-block;
-    transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease;
-    opacity: 0.55;
-    filter: grayscale(100%);
-}
-
-.app-download-badge:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-    transform: translateY(-2px);
-}
-
-.app-download-badge img {
-    display: block;
-    width: auto;
-}
-
-/* Apple's badge content fills its frame more tightly than Google's
-   (even after the Google PNG was cropped). Apple gets a slightly
-   smaller intrinsic height so the two render at visually balanced size. */
-.app-download-badge--apple img {
-    height: 46px;
-}
-
-.app-download-badge--google img {
-    height: 54px;
-}
-
-.app-download-note {
-    margin: 1.5rem 0 0;
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gray);
-}
-
+/* Mobile adjustments — join closer */
 @media (max-width: 768px) {
-    .app-download {
-        padding: 4rem 0;
+    .join-closer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
-    .app-download-badge--apple img {
-        height: 40px;
+
+    .join-closer-left {
+        align-items: center;
+        text-align: center;
     }
-    .app-download-badge--google img {
-        height: 48px;
+
+    .join-closer-subtitle {
+        max-width: none;
+    }
+
+    .join-closer-badges {
+        justify-content: center;
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .app-download-badge {
-        transition: none;
-    }
-    .app-download-badge:hover {
-        transform: none;
+@media (max-width: 480px) {
+    .join-closer {
+        padding: 4rem 1.5rem;
     }
 }
 
