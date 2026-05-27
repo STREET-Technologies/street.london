@@ -21,6 +21,7 @@ export default function Footer() {
               <Link href="/privacy-policy">Privacy Policy</Link>
               <Link href="/user-terms">User Terms</Link>
               <Link href="/contact-us">Contact Us</Link>
+              <Link href="/support">Support & Help</Link>
             </div>
             <div className="footer-column">
               <h4>Connect</h4>
