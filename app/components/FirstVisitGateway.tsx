@@ -16,7 +16,7 @@ const TAGLINES = [
   'Delivered to your door in minutes.',
 ];
 
-const CROSSFADE_INTERVAL = 5000;
+const CROSSFADE_INTERVAL = 3000;
 const TAGLINE_INTERVAL = 4000;
 
 export default function FirstVisitGateway() {
