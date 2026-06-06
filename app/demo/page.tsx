@@ -17,52 +17,66 @@ export const metadata: Metadata = {
   alternates: { canonical: undefined },
 };
 
+const JOURNEY = [
+  { n: '1', title: 'Browse', text: 'Discover stores near any London address.' },
+  { n: '2', title: 'Choose', text: 'Full product details with live stock levels.' },
+  { n: '3', title: 'Checkout', text: 'Pay in seconds, delivered in under an hour.' },
+  { n: '4', title: 'Track', text: 'Live map from the store to the door.' },
+];
+
 export default function DemoPage() {
   return (
     <>
       <Navigation />
       <main className="demo-page">
-        <div className="container">
-          <header className="demo-hero">
-            <h1 className="demo-title">See STREET in action</h1>
-          </header>
-        </div>
-
-        <section className="demo-showcase-section">
-          <div className="container">
-            <div className="demo-showcase">
-              <div className="demo-showcase-content">
-                <h2 className="demo-showcase-heading">
-                  The complete customer journey
-                </h2>
-                <p className="demo-showcase-text">
-                  Watch a customer browse local shops, pick a product, check
-                  out, and track their delivery in real time. The whole
-                  experience takes under a minute.
-                </p>
-                <ul className="demo-feature-list">
-                  <li>Browse stores near any London address</li>
-                  <li>Full product details with live stock levels</li>
-                  <li>Checkout in seconds, delivered in under an hour</li>
-                  <li>Live map tracking from store to door</li>
-                </ul>
-              </div>
-              <div className="demo-showcase-video">
-                <video
-                  className="demo-video-phone"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  poster="/demo/poster-new.jpg"
-                >
-                  <source src="/demo/demo-new.mp4" type="video/mp4" />
-                </video>
-              </div>
+        {/* Hero — value prop + the customer-journey video as the money shot */}
+        <section className="demo-hero">
+          <div className="container demo-hero-grid">
+            <div className="demo-hero-content">
+              <h1 className="demo-title">See STREET in action</h1>
+              <p className="demo-hero-subtitle">
+                Watch a customer browse local shops, check out, and track
+                delivery to the door. The whole journey takes under a minute.
+              </p>
+              <Link href="/retailers" className="demo-cta-button">
+                Join STREET <ArrowRight size={18} strokeWidth={2.5} />
+              </Link>
+            </div>
+            <div className="demo-hero-visual">
+              <video
+                className="demo-video-phone"
+                controls
+                playsInline
+                preload="metadata"
+                poster="/demo/poster-new.jpg"
+              >
+                <source src="/demo/demo-new.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </section>
 
-        <section className="demo-feature">
+        {/* Customer journey — 4-step hairline row (no cards) */}
+        <section className="demo-journey">
+          <div className="container">
+            <div className="demo-section-head">
+              <h2>The complete customer journey</h2>
+              <p>Everything your customer sees, from the first tap to the doorstep.</p>
+            </div>
+            <div className="demo-journey-grid">
+              {JOURNEY.map((step) => (
+                <div className="demo-journey-step" key={step.n}>
+                  <span className="demo-journey-num" aria-hidden="true">{step.n}</span>
+                  <h3>{step.title}</h3>
+                  <p>{step.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Feature — visual left, content right */}
+        <section className="demo-feature demo-feature-sand">
           <div className="container demo-feature-grid">
             <div className="demo-feature-visual">
               <Image
@@ -75,9 +89,7 @@ export default function DemoPage() {
               />
             </div>
             <div className="demo-feature-content">
-              <h2 className="demo-feature-heading">
-                Your shop, in every pocket
-              </h2>
+              <h2 className="demo-feature-heading">Your shop, in every pocket</h2>
               <p className="demo-feature-text">
                 Customers discover your store and browse your full product range
                 through the STREET app. Your storefront, your products, your
@@ -92,62 +104,46 @@ export default function DemoPage() {
           </div>
         </section>
 
-        <section className="demo-feature demo-feature-sand">
-          <div className="container demo-feature-grid">
-            <div className="demo-feature-content">
-              <h2 className="demo-feature-heading">
-                Orders that manage themselves
-              </h2>
-              <p className="demo-feature-text">
-                When a customer places an order, you get an instant notification
-                with a countdown timer. Review the items, confirm stock, pack
-                the bag, hand it to our courier. The whole flow takes minutes.
-              </p>
-              <ul className="demo-feature-list">
-                <li>Instant push notification with full order details</li>
-                <li>Built-in packing checklist for accuracy</li>
-                <li>No spreadsheets, no phone calls, no manual entry</li>
-              </ul>
+        {/* Orders — centered (the two tall retailer phones, breaks the split run) */}
+        <section className="demo-feature demo-feature-center">
+          <div className="container">
+            <h2 className="demo-feature-heading">Orders that manage themselves</h2>
+            <p className="demo-feature-text">
+              When a customer places an order, you get an instant notification
+              with a countdown timer. Review the items, confirm stock, pack the
+              bag, hand it to our courier. The whole flow takes minutes.
+            </p>
+            <div className="demo-screens">
+              <Image
+                src="/img/demo/retailer-incoming-v2.png"
+                alt="Retailer app showing an incoming order with a five-minute countdown timer, item details, and accept or decline buttons"
+                width={1290}
+                height={2796}
+                className="demo-screen demo-screen-back"
+                sizes="(max-width: 768px) 45vw, 210px"
+              />
+              <Image
+                src="/img/demo/retailer-packing.png"
+                alt="Retailer app packing screen with items being checked off as available and placed in the bag"
+                width={1290}
+                height={2796}
+                className="demo-screen demo-screen-front"
+                sizes="(max-width: 768px) 45vw, 210px"
+              />
             </div>
-            <div className="demo-feature-visual">
-              <div className="demo-screens">
-                <Image
-                  src="/img/demo/retailer-incoming-v2.png"
-                  alt="Retailer app showing an incoming order with a five-minute countdown timer, item details, and accept or decline buttons"
-                  width={1290}
-                  height={2796}
-                  className="demo-screen demo-screen-back"
-                  sizes="(max-width: 768px) 40vw, 20vw"
-                />
-                <Image
-                  src="/img/demo/retailer-packing.png"
-                  alt="Retailer app packing screen with items being checked off as available and placed in the bag"
-                  width={1290}
-                  height={2796}
-                  className="demo-screen demo-screen-front"
-                  sizes="(max-width: 768px) 40vw, 20vw"
-                />
-              </div>
-            </div>
+            <ul className="demo-points">
+              <li>Instant push notifications</li>
+              <li>Built-in packing checklist</li>
+              <li>No spreadsheets or phone calls</li>
+            </ul>
           </div>
         </section>
 
-        <section className="demo-feature demo-feature-dark">
+        {/* Tracking — split: content left, scene image right */}
+        <section className="demo-feature demo-feature-sand">
           <div className="container demo-feature-grid">
-            <div className="demo-feature-visual">
-              <Image
-                src="/img/demo/tracking-v2.png"
-                alt="Phone showing live order tracking with a map of central London, courier location, and real-time delivery status updates"
-                width={1920}
-                height={1440}
-                className="demo-feature-img"
-                sizes="(max-width: 768px) 90vw, 50vw"
-              />
-            </div>
             <div className="demo-feature-content">
-              <h2 className="demo-feature-heading">
-                From your store to their door
-              </h2>
+              <h2 className="demo-feature-heading">From your store to their door</h2>
               <p className="demo-feature-text">
                 Your customer tracks their order in real time from the moment
                 you hand it off. Live map, courier details, every status update
@@ -159,9 +155,20 @@ export default function DemoPage() {
                 <li>Average delivery time under 45 minutes</li>
               </ul>
             </div>
+            <div className="demo-feature-visual">
+              <Image
+                src="/img/demo/tracking-v2.png"
+                alt="Phone showing live order tracking with a map of central London, courier location, and real-time delivery status updates"
+                width={1920}
+                height={1440}
+                className="demo-feature-img demo-feature-img--device"
+                sizes="(max-width: 768px) 90vw, 50vw"
+              />
+            </div>
           </div>
         </section>
 
+        {/* CTA */}
         <section className="demo-cta-section">
           <div className="container">
             <h2 className="demo-cta-heading">Ready to join STREET?</h2>
@@ -169,7 +176,7 @@ export default function DemoPage() {
               Join London&apos;s fastest-growing local delivery platform. No
               upfront costs, no platform fees on your first orders.
             </p>
-            <Link href="/retailers" className="btn-primary btn-large">
+            <Link href="/retailers" className="demo-cta-button">
               Join STREET <ArrowRight size={18} strokeWidth={2.5} />
             </Link>
           </div>

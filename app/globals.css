@@ -2708,69 +2708,74 @@ body {
     }
 }
 
-/* ---------- /demo page ---------- */
-
+/* ===================================
+   /demo — light showcase, cohesive with the main site
+   (cream / sand / white family, black Hanson, lime accents)
+   =================================== */
 .demo-page {
-    min-height: 100dvh;
-    padding-top: 120px;
     background: var(--cream);
+    color: var(--black);
+    min-height: 100dvh;
+    padding-top: 96px;
 }
 
+/* --- Hero (cream; the demo video is re-rendered with a matching cream bg) --- */
 .demo-hero {
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto 3rem;
+    padding: 4rem 0 5rem;
+}
+
+.demo-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.demo-hero-content {
+    max-width: 36rem;
 }
 
 .demo-title {
     font-family: var(--font-title);
-    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1rem;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
     color: var(--black);
-    letter-spacing: -0.01em;
-}
-
-.demo-tagline {
-    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-    color: var(--gray-dark);
-    line-height: 1.55;
-}
-
-/* Video showcase: copy + portrait phone video side by side */
-.demo-showcase-section {
-    background: var(--sand);
-    padding: 5rem 0;
-}
-
-.demo-showcase {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.demo-showcase-heading {
-    font-family: var(--font-title);
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-    font-weight: 800;
-    line-height: 1.15;
     margin-bottom: 1.25rem;
-    letter-spacing: -0.01em;
 }
 
-.demo-showcase-text {
-    font-size: 1.1rem;
+.demo-hero-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
     color: var(--gray-dark);
-    line-height: 1.65;
-    margin-bottom: 1.75rem;
-    max-width: 48ch;
+    max-width: 34ch;
+    margin-bottom: 2rem;
 }
 
-.demo-showcase-video {
+.demo-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 1rem 2.25rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.demo-cta-button:hover {
+    background: var(--primary);
+    color: var(--black);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.demo-hero-visual {
     display: flex;
     justify-content: center;
 }
@@ -2780,35 +2785,86 @@ body {
     max-width: 300px;
     height: auto;
     display: block;
-    border-radius: 24px;
-    box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.35), 0 12px 30px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 28px;
+    background: var(--cream);
+    box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.28),
+                0 12px 30px -10px rgba(0, 0, 0, 0.16);
 }
 
-@media (max-width: 768px) {
-    .demo-showcase {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .demo-showcase-video {
-        order: -1;
-    }
-    .demo-video-phone {
-        max-width: 260px;
-    }
+/* --- Section heads --- */
+.demo-section-head {
+    max-width: 44rem;
+    margin-bottom: 3rem;
 }
 
-/* Feature sections */
+.demo-section-head h2 {
+    font-family: var(--font-title);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+}
+
+.demo-section-head p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--gray-dark);
+    max-width: 48ch;
+}
+
+/* --- Customer journey: 4-step hairline grid on white --- */
+.demo-journey {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.demo-journey-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.demo-journey-step {
+    padding: 0 1.75rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.demo-journey-step:first-child {
+    padding-left: 0;
+    border-left: none;
+}
+
+.demo-journey-num {
+    display: block;
+    font-family: var(--font-title);
+    font-size: 2.25rem;
+    line-height: 1;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.demo-journey-step h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.demo-journey-step p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--gray-dark);
+}
+
+/* --- Feature sections: alternating light surfaces --- */
 .demo-feature {
     padding: 6rem 0;
+    background: var(--white);
 }
 
 .demo-feature-sand {
     background: var(--sand);
-}
-
-.demo-feature-dark {
-    background: #0c0c0e;
-    color: var(--white);
 }
 
 .demo-feature-grid {
@@ -2828,6 +2884,16 @@ body {
     height: auto;
     display: block;
     border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Transparent device PNGs (e.g. tracking phone): no card box —
+   the rounded-rectangle box-shadow would frame the empty transparent
+   margins. Use a drop-shadow that follows the phone silhouette. */
+.demo-feature-img--device {
+    border-radius: 0;
+    box-shadow: none;
+    filter: drop-shadow(0 24px 36px rgba(0, 0, 0, 0.22));
 }
 
 .demo-feature-heading {
@@ -2835,20 +2901,17 @@ body {
     font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     font-weight: 800;
     line-height: 1.15;
-    margin-bottom: 1.25rem;
     letter-spacing: -0.01em;
+    color: var(--black);
+    margin-bottom: 1.25rem;
 }
 
 .demo-feature-text {
     font-size: 1.1rem;
-    color: var(--gray-dark);
     line-height: 1.65;
+    color: var(--gray-dark);
+    max-width: 46ch;
     margin-bottom: 1.75rem;
-    max-width: 48ch;
-}
-
-.demo-feature-dark .demo-feature-text {
-    color: rgba(255, 255, 255, 0.65);
 }
 
 .demo-feature-list {
@@ -2858,10 +2921,10 @@ body {
 }
 
 .demo-feature-list li {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 1.75rem;
     font-size: 1rem;
     line-height: 1.5;
-    padding: 0.45rem 0 0.45rem 1.5rem;
-    position: relative;
     color: var(--gray-dark);
 }
 
@@ -2869,104 +2932,153 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    top: 0.85rem;
-    width: 7px;
-    height: 7px;
+    top: 0.95rem;
+    width: 8px;
+    height: 8px;
     background: var(--primary);
     border-radius: 50%;
 }
 
-.demo-feature-dark .demo-feature-list li {
-    color: rgba(255, 255, 255, 0.65);
+/* --- Centered feature variant (Orders: two tall retailer phones) --- */
+.demo-feature-center {
+    text-align: center;
 }
 
-/* Retailer screenshot pair */
+.demo-feature-center .demo-feature-heading {
+    margin-bottom: 1rem;
+}
+
+.demo-feature-center .demo-feature-text {
+    max-width: 52ch;
+    margin: 0 auto 2.5rem;
+}
+
 .demo-screens {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    max-width: 440px;
-    margin: 0 auto;
+    gap: 1.25rem;
+    max-width: 420px;
+    margin: 0 auto 2.5rem;
 }
 
 .demo-screen {
-    border-radius: 20px;
-    box-shadow: 0 16px 48px -8px rgba(0, 0, 0, 0.18);
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
 }
 
-.demo-screen-back {
-    transform: rotate(-2deg);
+.demo-screen-back { transform: rotate(-2deg); }
+.demo-screen-front { transform: rotate(2deg); }
+
+/* Centered inline points (lime dots) */
+.demo-points {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2.5rem;
+    padding: 0;
 }
 
-.demo-screen-front {
-    transform: rotate(2deg);
+.demo-points li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--black);
 }
 
-/* CTA section */
+.demo-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+/* --- CTA on cream --- */
 .demo-cta-section {
+    padding: 6rem 0 7rem;
+    background: var(--cream);
     text-align: center;
-    padding: 5rem 0 6rem;
 }
 
 .demo-cta-heading {
     font-family: var(--font-title);
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
-    margin-bottom: 1rem;
     letter-spacing: -0.01em;
+    color: var(--black);
+    margin-bottom: 1rem;
 }
 
 .demo-cta-text {
     font-size: 1.15rem;
-    color: var(--gray-dark);
-    margin-bottom: 2.5rem;
-    max-width: 44ch;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 1.55;
+    color: var(--gray-dark);
+    max-width: 46ch;
+    margin: 0 auto 2.5rem;
 }
 
-.demo-cta-section .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
+.demo-cta-section .demo-cta-button {
+    font-size: 1.1rem;
+    padding: 1.1rem 2.75rem;
 }
 
-/* Demo responsive */
+/* --- Responsive --- */
 @media (max-width: 900px) {
-    .demo-feature {
-        padding: 4rem 0;
+    .demo-journey-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2.5rem;
     }
-    .demo-feature-grid {
-        gap: 2.5rem;
+    .demo-journey-step:nth-child(3) {
+        padding-left: 0;
+        border-left: none;
     }
 }
 
 @media (max-width: 768px) {
+    .demo-page { padding-top: 88px; }
+    .demo-hero { padding: 2.5rem 0 3rem; }
+    .demo-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .demo-feature,
+    .demo-journey { padding: 4rem 0; }
     .demo-feature-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    .demo-feature-visual {
+    .demo-feature-grid .demo-feature-visual {
         order: -1;
     }
-    .demo-screens {
-        max-width: 340px;
+    .demo-screens { max-width: 320px; }
+    .demo-points {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
     }
 }
 
 @media (max-width: 600px) {
-    .demo-page {
-        padding-top: 100px;
+    .demo-journey-grid {
+        grid-template-columns: 1fr;
+        row-gap: 0;
     }
-    .demo-video-wrap {
-        margin-bottom: 3.5rem;
-        border-radius: 14px;
+    .demo-journey-step {
+        padding: 1.5rem 0 0;
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
     }
-    .demo-feature {
-        padding: 3rem 0;
+    .demo-journey-step:first-child {
+        padding-top: 0;
+        border-top: none;
     }
 }
