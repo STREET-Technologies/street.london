@@ -69,24 +69,29 @@ export default function Benefits() {
             </div>
           </div>
 
-          {/* Benefit 3 */}
-          <div className="benefit-card" data-aos="fade-up" data-aos-delay="200">
-            <div className="benefit-image">
-              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/30.jpg)' }} />
-              <div className="benefit-collage-secondary" style={{ backgroundImage: 'url(/img/street/26.jpg)' }} />
-            </div>
-            <div className="benefit-content">
-              <h3 className="benefit-title">Instant Delivery</h3>
-              <p className="benefit-description">
-                Not next day. Not same day. <strong>Right now.</strong> Get your shopping delivered straight to your door in minutes.
-              </p>
-              <ul className="benefit-list">
-                <li>Delivery in under 60 minutes</li>
-                <li>Track in real-time</li>
-                <li>Straight to your door, every time</li>
-              </ul>
-            </div>
-          </div>
+        </div>
+      </div>
+
+      {/* Benefit 3 — full-width media band (breaks the zigzag, climaxes the section) */}
+      <div
+        className="benefit-band"
+        data-aos="fade-up"
+        style={{ backgroundImage: 'url(/img/street/30.jpg)' }}
+      >
+        <div className="benefit-band-scrim" aria-hidden="true" />
+        <div className="container benefit-band-inner">
+          <h3 className="benefit-band-title">Instant Delivery</h3>
+          <p className="benefit-band-statement">
+            Not next day. Not same day. <strong>Right now.</strong>
+          </p>
+          <p className="benefit-band-description">
+            Your shopping collected from the store and delivered straight to your door in minutes.
+          </p>
+          <ul className="benefit-band-points">
+            <li>Under 60 minutes</li>
+            <li>Track in real time</li>
+            <li>Door to door, every time</li>
+          </ul>
         </div>
       </div>
     </section>
