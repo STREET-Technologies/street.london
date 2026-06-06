@@ -592,7 +592,6 @@ body {
 .benefit-image {
     position: relative;
     aspect-ratio: 5 / 6;
-    overflow: hidden;
 }
 
 .benefit-collage-primary,
