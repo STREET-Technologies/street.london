@@ -149,7 +149,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background: var(--white);
     z-index: 9999;
     transform: translateX(-100%);
@@ -295,10 +295,10 @@ body {
    HERO SECTION - Shopping Focus
    =================================== */
 .hero {
-    min-height: 90vh;
+    min-height: 90dvh;
     display: flex;
     align-items: center;
-    padding-top: 120px;
+    padding-top: 96px;
     padding-bottom: 4rem;
     position: relative;
     overflow: hidden;
@@ -611,26 +611,6 @@ body {
 
 .benefit-img-3 {
     background: linear-gradient(135deg, #e5dce5 0%, #d5c9d8 100%);
-}
-
-.benefit-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: flex-end;
-    padding: 2rem;
-}
-
-.benefit-badge {
-    background: var(--white);
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    box-shadow: var(--shadow-md);
 }
 
 .benefit-content {
@@ -1057,7 +1037,7 @@ body {
     .hero {
         padding-top: 80px;
         padding-bottom: 3rem;
-        min-height: 56vh;
+        min-height: 56dvh;
         align-items: flex-start;
     }
 
@@ -1207,7 +1187,7 @@ body {
    RETAILERS PAGE
    =================================== */
 .retailers-page {
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 120px 0 4rem;
     background: var(--cream);
 }
@@ -1434,6 +1414,18 @@ body {
 @media (prefers-reduced-motion: no-preference) {
     html {
         scroll-behavior: smooth;
+    }
+}
+
+/* Reduced motion — reveal content instantly, no fade/translate */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    [data-aos] {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
 
@@ -1675,7 +1667,7 @@ body {
 .waitlist-page {
     background: var(--cream);
     padding: 6rem 0 4rem;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100dvh - 80px);
 }
 
 .waitlist-hero {
@@ -1744,7 +1736,7 @@ body {
 .contact-page {
     background: var(--cream);
     padding: 6rem 0 4rem;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100dvh - 80px);
 }
 
 .contact-layout {
@@ -1883,7 +1875,7 @@ body {
 .legal-page {
     background: var(--cream);
     padding: 6rem 0 4rem;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100dvh - 80px);
 }
 
 .legal-page .container {
@@ -2376,7 +2368,7 @@ body {
 .support-page {
     background: var(--cream);
     padding: 8rem 0 6rem;
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .support-section {
@@ -2435,7 +2427,7 @@ body {
    ───────────────────────────────────────────────────────────────── */
 .not-found {
     background: var(--cream);
-    min-height: calc(100vh - 200px);
+    min-height: calc(100dvh - 200px);
     padding: 6rem 0;
     display: flex;
     align-items: center;
@@ -2585,7 +2577,7 @@ body {
 /* ---------- /demo page ---------- */
 
 .demo-page {
-    min-height: 100vh;
+    min-height: 100dvh;
     padding-top: 120px;
     background: var(--cream);
 }

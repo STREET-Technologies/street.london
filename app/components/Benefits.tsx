@@ -34,11 +34,7 @@ export default function Benefits() {
           {/* Benefit 1 */}
           <div className="benefit-card" data-aos="fade-up">
             <div className="benefit-image">
-              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/31.jpg)' }}>
-                <div className="benefit-overlay">
-                  <span className="benefit-badge">Made for You</span>
-                </div>
-              </div>
+              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/31.jpg)' }} />
               <div className="benefit-collage-secondary" style={{ backgroundImage: 'url(/img/street/10.jpg)' }} />
             </div>
             <div className="benefit-content">
@@ -68,11 +64,7 @@ export default function Benefits() {
               </ul>
             </div>
             <div className="benefit-image">
-              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/28.jpg)' }}>
-                <div className="benefit-overlay">
-                  <span className="benefit-badge">Your High Street</span>
-                </div>
-              </div>
+              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/28.jpg)' }} />
               <div className="benefit-collage-secondary" style={{ backgroundImage: 'url(/img/street/16.jpg)' }} />
             </div>
           </div>
@@ -80,11 +72,7 @@ export default function Benefits() {
           {/* Benefit 3 */}
           <div className="benefit-card" data-aos="fade-up" data-aos-delay="200">
             <div className="benefit-image">
-              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/30.jpg)' }}>
-                <div className="benefit-overlay">
-                  <span className="benefit-badge">Lightning Fast</span>
-                </div>
-              </div>
+              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/30.jpg)' }} />
               <div className="benefit-collage-secondary" style={{ backgroundImage: 'url(/img/street/26.jpg)' }} />
             </div>
             <div className="benefit-content">
