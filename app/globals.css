@@ -530,9 +530,11 @@ body {
     background: var(--black);
     color: var(--primary);
     font-family: var(--font-title);
-    font-size: 1.875rem;
+    font-size: 2.25rem;
     line-height: 1;
-    letter-spacing: 0.02em;
+    /* Single digit centres symmetrically; small downward nudge compensates
+       Hanson's high ink. */
+    padding-top: 0.1em;
 }
 
 .step-title {

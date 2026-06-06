@@ -32,21 +32,21 @@ export default function HowItWorks() {
         </div>
         <ol className="steps-timeline">
           <li className="step" data-aos="fade-up">
-            <span className="step-node" aria-hidden="true">01</span>
+            <span className="step-node" aria-hidden="true">1</span>
             <h3 className="step-title">Browse Local Shops</h3>
             <p className="step-description">
               Explore products from all your favourite high street stores in one beautiful app.
             </p>
           </li>
           <li className="step" data-aos="fade-up" data-aos-delay="100">
-            <span className="step-node" aria-hidden="true">02</span>
+            <span className="step-node" aria-hidden="true">2</span>
             <h3 className="step-title">Pick Your Store &amp; Order</h3>
             <p className="step-description">
               Found something you love? Order directly from the store and checkout in seconds.
             </p>
           </li>
           <li className="step" data-aos="fade-up" data-aos-delay="200">
-            <span className="step-node" aria-hidden="true">03</span>
+            <span className="step-node" aria-hidden="true">3</span>
             <h3 className="step-title">Receive Instantly</h3>
             <p className="step-description">
               Your order is collected from the store and delivered to your door in minutes, not days.
