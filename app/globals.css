@@ -555,7 +555,10 @@ body {
    BENEFITS SECTION
    =================================== */
 .benefits {
-    padding: 6rem 0;
+    /* No bottom padding: the full-width .benefit-band is the last child and
+       sits flush against the next section. Bottom padding would show as a
+       stray sand strip below the band. */
+    padding: 6rem 0 0;
     background: var(--sand);
 }
 
@@ -1208,15 +1211,11 @@ body {
         gap: 2.5rem;
     }
 
-    /* Vertical connector linking the stacked nodes on mobile */
+    /* Drop the connector on mobile: stacked centre-aligned steps would have
+       the vertical line running straight through the title/description text.
+       The numbered nodes already convey sequence. */
     .steps-timeline::before {
-        top: 42px;
-        bottom: 42px;
-        left: 50%;
-        right: auto;
-        width: 2px;
-        height: auto;
-        transform: translateX(-50%);
+        display: none;
     }
 
     .benefit-card,
