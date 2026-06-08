@@ -76,20 +76,18 @@ export default function Benefits() {
       <div
         className="benefit-band"
         data-aos="fade-up"
-        style={{ backgroundImage: 'url(/img/street/30.jpg)' }}
+        style={{ backgroundImage: 'url(/img/street/instant-delivery.jpg)' }}
       >
         <div className="benefit-band-scrim" aria-hidden="true" />
         <div className="container benefit-band-inner">
-          <h3 className="benefit-band-title">Instant Delivery</h3>
-          <p className="benefit-band-statement">
-            Not next day. Not same day. <strong>Right now.</strong>
-          </p>
+          <h3 className="benefit-band-title">Right now.</h3>
+          <p className="benefit-band-statement">Not next day. Not same day.</p>
           <p className="benefit-band-description">
-            Your shopping collected from the store and delivered straight to your door in minutes.
+            Collected from the shop and delivered to your door while you carry on with your day.
           </p>
           <ul className="benefit-band-points">
-            <li>Under 60 minutes</li>
-            <li>Track in real time</li>
+            <li>In under an hour</li>
+            <li>Track it in real time</li>
             <li>Door to door, every time</li>
           </ul>
         </div>
