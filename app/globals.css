@@ -2867,6 +2867,19 @@ body {
     background: var(--sand);
 }
 
+/* Dark band variant (Tracking): the tracking phone PNG is cropped at the
+   bottom; a light background exposes that hard cut, a dark one hides it.
+   One deliberate colour block, pragmatically chosen over theme purity. */
+.demo-feature-dark {
+    background: #0b0b0d;
+}
+.demo-feature-dark .demo-feature-heading { color: var(--white); }
+.demo-feature-dark .demo-feature-text { color: rgba(255, 255, 255, 0.66); }
+.demo-feature-dark .demo-feature-list li { color: rgba(255, 255, 255, 0.66); }
+.demo-feature-dark .demo-feature-img--device {
+    filter: drop-shadow(0 24px 44px rgba(0, 0, 0, 0.5));
+}
+
 .demo-feature-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2939,26 +2952,12 @@ body {
     border-radius: 50%;
 }
 
-/* --- Centered feature variant (Orders: two tall retailer phones) --- */
-.demo-feature-center {
-    text-align: center;
-}
-
-.demo-feature-center .demo-feature-heading {
-    margin-bottom: 1rem;
-}
-
-.demo-feature-center .demo-feature-text {
-    max-width: 52ch;
-    margin: 0 auto 2.5rem;
-}
-
 .demo-screens {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
     max-width: 420px;
-    margin: 0 auto 2.5rem;
+    margin: 0 auto;
 }
 
 .demo-screen {
@@ -2971,36 +2970,6 @@ body {
 
 .demo-screen-back { transform: rotate(-2deg); }
 .demo-screen-front { transform: rotate(2deg); }
-
-/* Centered inline points (lime dots) */
-.demo-points {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem 2.5rem;
-    padding: 0;
-}
-
-.demo-points li {
-    position: relative;
-    padding-left: 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--black);
-}
-
-.demo-points li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 8px;
-    height: 8px;
-    background: var(--primary);
-    border-radius: 50%;
-}
 
 /* --- CTA on cream --- */
 .demo-cta-section {
@@ -3060,11 +3029,6 @@ body {
         order: -1;
     }
     .demo-screens { max-width: 320px; }
-    .demo-points {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.75rem;
-    }
 }
 
 @media (max-width: 600px) {

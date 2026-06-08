@@ -104,44 +104,60 @@ export default function DemoPage() {
           </div>
         </section>
 
-        {/* Orders — centered (the two tall retailer phones, breaks the split run) */}
-        <section className="demo-feature demo-feature-center">
-          <div className="container">
-            <h2 className="demo-feature-heading">Orders that manage themselves</h2>
-            <p className="demo-feature-text">
-              When a customer places an order, you get an instant notification
-              with a countdown timer. Review the items, confirm stock, pack the
-              bag, hand it to our courier. The whole flow takes minutes.
-            </p>
-            <div className="demo-screens">
-              <Image
-                src="/img/demo/retailer-incoming-v2.png"
-                alt="Retailer app showing an incoming order with a five-minute countdown timer, item details, and accept or decline buttons"
-                width={1290}
-                height={2796}
-                className="demo-screen demo-screen-back"
-                sizes="(max-width: 768px) 45vw, 210px"
-              />
-              <Image
-                src="/img/demo/retailer-packing.png"
-                alt="Retailer app packing screen with items being checked off as available and placed in the bag"
-                width={1290}
-                height={2796}
-                className="demo-screen demo-screen-front"
-                sizes="(max-width: 768px) 45vw, 210px"
-              />
+        {/* Orders — compact split: content left, retailer screens right */}
+        <section className="demo-feature">
+          <div className="container demo-feature-grid">
+            <div className="demo-feature-content">
+              <h2 className="demo-feature-heading">Orders that manage themselves</h2>
+              <p className="demo-feature-text">
+                When a customer places an order, you get an instant notification
+                with a countdown timer. Review the items, confirm stock, pack the
+                bag, hand it to our courier. The whole flow takes minutes.
+              </p>
+              <ul className="demo-feature-list">
+                <li>Instant push notification with full order details</li>
+                <li>Built-in packing checklist for accuracy</li>
+                <li>No spreadsheets, no phone calls, no manual entry</li>
+              </ul>
             </div>
-            <ul className="demo-points">
-              <li>Instant push notifications</li>
-              <li>Built-in packing checklist</li>
-              <li>No spreadsheets or phone calls</li>
-            </ul>
+            <div className="demo-feature-visual">
+              <div className="demo-screens">
+                <Image
+                  src="/img/demo/retailer-incoming-v2.png"
+                  alt="Retailer app showing an incoming order with a five-minute countdown timer, item details, and accept or decline buttons"
+                  width={1290}
+                  height={2796}
+                  className="demo-screen demo-screen-back"
+                  sizes="(max-width: 768px) 40vw, 20vw"
+                />
+                <Image
+                  src="/img/demo/retailer-packing.png"
+                  alt="Retailer app packing screen with items being checked off as available and placed in the bag"
+                  width={1290}
+                  height={2796}
+                  className="demo-screen demo-screen-front"
+                  sizes="(max-width: 768px) 40vw, 20vw"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Tracking — split: content left, scene image right */}
-        <section className="demo-feature demo-feature-sand">
+        {/* Tracking — dark band: phone left, content right.
+            The tracking phone PNG is cropped at the bottom; a dark background
+            hides that cut (cream exposed it). One deliberate colour block. */}
+        <section className="demo-feature demo-feature-dark">
           <div className="container demo-feature-grid">
+            <div className="demo-feature-visual">
+              <Image
+                src="/img/demo/tracking-v2.png"
+                alt="Phone showing live order tracking with a map of central London, courier location, and real-time delivery status updates"
+                width={1920}
+                height={1440}
+                className="demo-feature-img demo-feature-img--device"
+                sizes="(max-width: 768px) 90vw, 50vw"
+              />
+            </div>
             <div className="demo-feature-content">
               <h2 className="demo-feature-heading">From your store to their door</h2>
               <p className="demo-feature-text">
@@ -154,16 +170,6 @@ export default function DemoPage() {
                 <li>Automatic status updates at every stage</li>
                 <li>Average delivery time under 45 minutes</li>
               </ul>
-            </div>
-            <div className="demo-feature-visual">
-              <Image
-                src="/img/demo/tracking-v2.png"
-                alt="Phone showing live order tracking with a map of central London, courier location, and real-time delivery status updates"
-                width={1920}
-                height={1440}
-                className="demo-feature-img demo-feature-img--device"
-                sizes="(max-width: 768px) 90vw, 50vw"
-              />
             </div>
           </div>
         </section>
