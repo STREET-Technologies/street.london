@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { CheckCircle } from 'lucide-react';
+import Link from 'next/link';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -94,7 +95,7 @@ export default function RetailersClient() {
       <main className="retailers-page">
         <div className="container">
           <div className="retailers-hero">
-            <h1 className="retailers-title">London Retail Partners — Sell on STREET</h1>
+            <h1 className="retailers-title">London Retail Partners</h1>
             <h2 className="page-tagline">
               Sell on STREET. Reach London customers with instant delivery.
             </h2>
@@ -102,6 +103,9 @@ export default function RetailersClient() {
               Let us bring shoppers to you virtually and increase your exposure! Sign up to hear more and be one of the
               first brands onboard!
             </p>
+            <Link href="/demo" className="retailers-demo-link">
+              See STREET in action <ArrowRight size={18} strokeWidth={2.5} />
+            </Link>
           </div>
 
           <form className="retailers-form" onSubmit={handleSubmit}>

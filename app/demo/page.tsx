@@ -5,16 +5,26 @@ import { ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+const TITLE = 'See STREET in Action: The Retailer Demo';
+const DESCRIPTION =
+  'A short product tour for London shops. See how customers browse your store, check out, and get their order delivered in under an hour, and how you manage it all from the retailer app.';
+
 export const metadata: Metadata = {
-  title: 'STREET Retailer Demo',
-  description: 'A short tour of how STREET works for London retailers.',
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-    googleBot: { index: false, follow: false, noimageindex: true },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: 'https://street.london/demo' },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: 'https://street.london/demo',
+    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'STREET. See how London shops sell and deliver.' }],
   },
-  alternates: { canonical: undefined },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ['/img/og-image.jpg'],
+  },
 };
 
 const JOURNEY = [

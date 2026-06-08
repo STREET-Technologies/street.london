@@ -27,6 +27,9 @@ export default function Navigation() {
               <Link href="/#faq" className="nav-link">
                 FAQ
               </Link>
+              <Link href="/retailers" className="nav-link">
+                For Retailers
+              </Link>
               <Link href="/waitlist" className="btn-primary-sm">Join the Waitlist</Link>
             </div>
             <button
@@ -61,6 +64,9 @@ export default function Navigation() {
           </Link>
           <Link href="/#faq" className="mobile-nav-link" onClick={closeMenu}>
             FAQ
+          </Link>
+          <Link href="/retailers" className="mobile-nav-link" onClick={closeMenu}>
+            For Retailers
           </Link>
           <Link href="/waitlist" className="btn-primary btn-large" onClick={closeMenu}>
             Join the Waitlist

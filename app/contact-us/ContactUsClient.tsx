@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Instagram, Linkedin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -108,16 +108,18 @@ export default function ContactUsClient() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-button"
+                    aria-label="STREET on LinkedIn"
                   >
-                    LinkedIn
+                    <Linkedin size={20} strokeWidth={2} />
                   </a>
                   <a
                     href="https://www.instagram.com/st.reet.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-button"
+                    aria-label="STREET on Instagram"
                   >
-                    Instagram
+                    <Instagram size={20} strokeWidth={2} />
                   </a>
                 </div>
               </div>

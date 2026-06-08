@@ -1347,6 +1347,30 @@ body {
     line-height: 1.6;
 }
 
+/* Secondary CTA into the product tour, sits under the hero subtitle */
+.retailers-demo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.5rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 2px;
+    transition: var(--transition);
+}
+
+.retailers-demo-link svg {
+    transition: transform 0.3s ease;
+}
+
+.retailers-demo-link:hover svg {
+    transform: translateX(4px);
+}
+
 .retailers-form {
     max-width: 800px;
     margin: 0 auto;
@@ -1941,19 +1965,27 @@ body {
     gap: 1rem;
 }
 
+/* Secondary social actions: compact circular icon buttons (ghost style) so
+   they sit below the form CTA in the hierarchy. 44px = min touch target. */
 .social-button {
-    padding: 0.75rem 1.5rem;
-    background: var(--black);
-    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    color: var(--black);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
     transition: var(--transition);
 }
 
 .social-button:hover {
     background: var(--primary);
+    border-color: var(--primary);
     color: var(--black);
+    transform: translateY(-1px);
 }
 
 .contact-form-wrapper {
@@ -2719,12 +2751,36 @@ body {
     padding-top: 96px;
 }
 
-/* --- Hero (cream; the demo video is re-rendered with a matching cream bg) --- */
+/* --- Hero: full-bleed golden-hour photo, cream wash keeps the headline
+   readable on the left, the demo video floats as the key element. --- */
 .demo-hero {
+    position: relative;
     padding: 4rem 0 5rem;
+    overflow: hidden;
+    background-image: url('/img/demo/hero-bg.jpg');
+    background-size: cover;
+    background-position: center 42%;
+}
+
+/* Cream wash — keeps the headline legible on the left, then fades out so the
+   photograph bleeds edge-to-edge across the right (no dead cream space). */
+.demo-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(253, 251, 247, 0.92) 0%,
+        rgba(253, 251, 247, 0.70) 28%,
+        rgba(253, 251, 247, 0.18) 50%,
+        rgba(253, 251, 247, 0) 66%
+    );
+    z-index: 0;
 }
 
 .demo-hero-grid {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 4rem;
@@ -2787,8 +2843,6 @@ body {
     display: block;
     border-radius: 28px;
     background: var(--cream);
-    box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.28),
-                0 12px 30px -10px rgba(0, 0, 0, 0.16);
 }
 
 /* --- Section heads --- */
@@ -3015,6 +3069,15 @@ body {
 @media (max-width: 768px) {
     .demo-page { padding-top: 88px; }
     .demo-hero { padding: 2.5rem 0 3rem; }
+    /* Stacked: wash from the top so the headline stays readable over the photo */
+    .demo-hero::before {
+        background: linear-gradient(
+            180deg,
+            rgba(253, 251, 247, 0.94) 0%,
+            rgba(253, 251, 247, 0.72) 50%,
+            rgba(253, 251, 247, 0.30) 100%
+        );
+    }
     .demo-hero-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
