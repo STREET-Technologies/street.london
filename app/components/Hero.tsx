@@ -48,9 +48,6 @@ export default function Hero() {
         <h2 className="hero-tagline">
           Instant delivery from London&apos;s local shops in under an hour
         </h2>
-        <p className="hero-subtitle">
-          Discover your favourite local shops, all in one place. Browse, buy, and get it delivered in minutes.
-        </p>
         <div className="hero-cta">
           <Link href="/waitlist" className="btn-primary btn-large">
             Join the Waitlist

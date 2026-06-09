@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/`, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${base}/waitlist`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/retailers`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/demo`, changeFrequency: 'monthly', priority: 0.8 },
     // /rider hidden 2026-05-16 — couriers not yet onboarded; page still accessible but unlisted (noindex). Restore when ready.
     { url: `${base}/doers`, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/support`, changeFrequency: 'monthly', priority: 0.7 },

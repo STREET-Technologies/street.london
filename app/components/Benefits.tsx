@@ -34,11 +34,7 @@ export default function Benefits() {
           {/* Benefit 1 */}
           <div className="benefit-card" data-aos="fade-up">
             <div className="benefit-image">
-              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/31.jpg)' }}>
-                <div className="benefit-overlay">
-                  <span className="benefit-badge">Made for You</span>
-                </div>
-              </div>
+              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/31.jpg)' }} />
               <div className="benefit-collage-secondary" style={{ backgroundImage: 'url(/img/street/10.jpg)' }} />
             </div>
             <div className="benefit-content">
@@ -68,37 +64,32 @@ export default function Benefits() {
               </ul>
             </div>
             <div className="benefit-image">
-              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/28.jpg)' }}>
-                <div className="benefit-overlay">
-                  <span className="benefit-badge">Your High Street</span>
-                </div>
-              </div>
+              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/28.jpg)' }} />
               <div className="benefit-collage-secondary" style={{ backgroundImage: 'url(/img/street/16.jpg)' }} />
             </div>
           </div>
 
-          {/* Benefit 3 */}
-          <div className="benefit-card" data-aos="fade-up" data-aos-delay="200">
-            <div className="benefit-image">
-              <div className="benefit-collage-primary" style={{ backgroundImage: 'url(/img/street/30.jpg)' }}>
-                <div className="benefit-overlay">
-                  <span className="benefit-badge">Lightning Fast</span>
-                </div>
-              </div>
-              <div className="benefit-collage-secondary" style={{ backgroundImage: 'url(/img/street/26.jpg)' }} />
-            </div>
-            <div className="benefit-content">
-              <h3 className="benefit-title">Instant Delivery</h3>
-              <p className="benefit-description">
-                Not next day. Not same day. <strong>Right now.</strong> Get your shopping delivered straight to your door in minutes.
-              </p>
-              <ul className="benefit-list">
-                <li>Delivery in under 60 minutes</li>
-                <li>Track in real-time</li>
-                <li>Straight to your door, every time</li>
-              </ul>
-            </div>
-          </div>
+        </div>
+      </div>
+
+      {/* Benefit 3 — full-width media band (breaks the zigzag, climaxes the section) */}
+      <div
+        className="benefit-band"
+        data-aos="fade-up"
+        style={{ backgroundImage: 'url(/img/street/instant-delivery.jpg)' }}
+      >
+        <div className="benefit-band-scrim" aria-hidden="true" />
+        <div className="container benefit-band-inner">
+          <h3 className="benefit-band-title">Right now.</h3>
+          <p className="benefit-band-statement">Not next day. Not same day.</p>
+          <p className="benefit-band-description">
+            Collected from the shop and delivered to your door while you carry on with your day.
+          </p>
+          <ul className="benefit-band-points">
+            <li>In under an hour</li>
+            <li>Track it in real time</li>
+            <li>Door to door, every time</li>
+          </ul>
         </div>
       </div>
     </section>
