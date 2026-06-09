@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     images: ['/img/og-image.jpg'],
   },
   alternates: {
-    canonical: 'https://street.london',
+    canonical: 'https://street.london/',
   },
   robots: {
     index: true,

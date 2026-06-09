@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Support & Help | STREET',
+  title: 'Support & Help',
   description:
     'Get answers to common questions about ordering, delivery, payments, returns, and your STREET account. Contact our support team for help.',
   alternates: { canonical: 'https://street.london/support' },
