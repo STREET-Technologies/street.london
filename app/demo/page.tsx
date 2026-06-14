@@ -162,8 +162,8 @@ export default function DemoPage() {
               <Image
                 src="/img/demo/tracking.png"
                 alt="Phone showing live order tracking: a map of Soho with the courier en route, the delivery PIN, the courier's name, and real-time status from order placed to on the way"
-                width={1920}
-                height={1440}
+                width={1367}
+                height={1423}
                 className="demo-feature-img demo-feature-img--device"
                 sizes="(max-width: 768px) 90vw, 50vw"
               />
