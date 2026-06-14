@@ -3006,24 +3006,36 @@ body {
     border-radius: 50%;
 }
 
-.demo-screens {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-    max-width: 420px;
-    margin: 0 auto;
-}
-
-.demo-screen {
+/* Orders section: layered device combo — iPad (incoming order) behind,
+   phone (packing) overlapping the lower-right corner. Both PNGs are
+   transparent, so drop-shadow follows the device silhouette (a box-shadow
+   would frame the empty transparent canvas). */
+.demo-combo {
+    position: relative;
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-    box-shadow: var(--shadow-lg);
+    max-width: 560px;
+    margin: 0 auto;
+    /* the phone is taller than the tablet and extends below it — reserve space */
+    padding-bottom: 11%;
 }
 
-.demo-screen-back { transform: rotate(-2deg); }
-.demo-screen-front { transform: rotate(2deg); }
+.demo-combo-tablet {
+    display: block;
+    width: 80%;
+    height: auto;
+    /* nudge the tablet down so the taller foreground phone reads as balanced */
+    margin-top: 7%;
+    filter: drop-shadow(0 22px 40px rgba(0, 0, 0, 0.16));
+}
+
+.demo-combo-phone {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 42%;
+    height: auto;
+    filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.26));
+}
 
 /* --- CTA on cream --- */
 .demo-cta-section {
@@ -3091,7 +3103,7 @@ body {
     .demo-feature-grid .demo-feature-visual {
         order: -1;
     }
-    .demo-screens { max-width: 320px; }
+    .demo-combo { max-width: 440px; }
 }
 
 @media (max-width: 600px) {

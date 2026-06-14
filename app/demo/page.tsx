@@ -131,22 +131,22 @@ export default function DemoPage() {
               </ul>
             </div>
             <div className="demo-feature-visual">
-              <div className="demo-screens">
+              <div className="demo-combo">
                 <Image
-                  src="/img/demo/retailer-incoming-v2.png"
-                  alt="Retailer app showing an incoming order with a five-minute countdown timer, item details, and accept or decline buttons"
-                  width={1290}
-                  height={2796}
-                  className="demo-screen demo-screen-back"
-                  sizes="(max-width: 768px) 40vw, 20vw"
+                  src="/img/demo/retailer-incoming.png"
+                  alt="STREET retailer app on an iPad showing an incoming order with a live countdown timer, the customer's items and total, and accept or decline buttons"
+                  width={1867}
+                  height={1350}
+                  className="demo-combo-tablet"
+                  sizes="(max-width: 768px) 88vw, 44vw"
                 />
                 <Image
                   src="/img/demo/retailer-packing.png"
-                  alt="Retailer app packing screen with items being checked off as available and placed in the bag"
-                  width={1290}
-                  height={2796}
-                  className="demo-screen demo-screen-front"
-                  sizes="(max-width: 768px) 40vw, 20vw"
+                  alt="STREET retailer app on a phone showing the packing checklist, each item ticked off before the bag is marked ready for the courier"
+                  width={700}
+                  height={1418}
+                  className="demo-combo-phone"
+                  sizes="(max-width: 768px) 30vw, 15vw"
                 />
               </div>
             </div>
@@ -160,8 +160,8 @@ export default function DemoPage() {
           <div className="container demo-feature-grid">
             <div className="demo-feature-visual">
               <Image
-                src="/img/demo/tracking-v2.png"
-                alt="Phone showing live order tracking with a map of central London, courier location, and real-time delivery status updates"
+                src="/img/demo/tracking.png"
+                alt="Phone showing live order tracking: a map of Soho with the courier en route, the delivery PIN, the courier's name, and real-time status from order placed to on the way"
                 width={1920}
                 height={1440}
                 className="demo-feature-img demo-feature-img--device"
