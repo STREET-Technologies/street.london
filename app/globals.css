@@ -2958,6 +2958,7 @@ body {
    the rounded-rectangle box-shadow would frame the empty transparent
    margins. Use a drop-shadow that follows the phone silhouette. */
 .demo-feature-img--device {
+    width: 82%;
     border-radius: 0;
     box-shadow: none;
     filter: drop-shadow(0 24px 36px rgba(0, 0, 0, 0.22));
