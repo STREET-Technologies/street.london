@@ -14,6 +14,7 @@ const SITE_DESCRIPTION = "Shop London's high street and get it delivered in unde
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://street.london'),
+  applicationName: 'STREET',
   title: {
     default: SITE_TITLE,
     template: '%s | STREET',
