@@ -3,10 +3,25 @@ import type { Metadata } from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+const TITLE = 'User Terms & Conditions';
+const DESCRIPTION = "STREET's terms of use for shoppers. Read the full agreement covering orders, payments, deliveries, returns, and platform conduct.";
+
 export const metadata: Metadata = {
-  title: 'User Terms & Conditions',
-  description: "STREET's terms of use for shoppers. Read the full agreement covering orders, payments, deliveries, returns, and platform conduct.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: 'https://street.london/user-terms' },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: 'https://street.london/user-terms',
+    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'STREET user terms and conditions.' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ['/img/og-image.jpg'],
+  },
 };
 
 export default function UserTermsPage() {

@@ -1,0 +1,24 @@
+# STREET
+
+> STREET is a same-day local delivery marketplace for London. Customers shop retail, fashion, beauty, and lifestyle products from independent London shops and get them delivered in under an hour. STREET currently operates in London Zone 1 and parts of Zone 2. STREET does not deliver food.
+
+Key facts:
+- Customers order through the STREET app (iOS and Android), pay per store via Shopify checkout, and track their rider live on a map.
+- Retailers join by connecting their Shopify store. Products, stock levels, and orders sync automatically.
+- Delivery is point to point from the shop to the customer, typically in under an hour.
+- STREET is based in London, United Kingdom. Contact: support@street.london.
+
+## Pages
+
+- [Home](https://street.london/): What STREET is and how it works, with FAQs.
+- [For Retailers](https://street.london/retailers): How London shops sell and deliver on STREET.
+- [Retailer Demo](https://street.london/demo): Product tour of the customer and retailer experience.
+- [Waitlist](https://street.london/waitlist): Sign up for customer access.
+- [Doers](https://street.london/doers): Riding and delivering for STREET.
+- [Support](https://street.london/support): Full FAQ covering ordering, delivery, payments, returns, and accounts.
+- [Contact](https://street.london/contact-us): Contact details and business information.
+
+## Policies
+
+- [Privacy Policy](https://street.london/privacy-policy): How STREET handles personal data.
+- [User Terms](https://street.london/user-terms): Terms of use for shoppers.

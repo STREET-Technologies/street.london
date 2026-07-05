@@ -3,11 +3,26 @@ import { Plus, ArrowUpRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+const TITLE = 'Support & Help';
+const DESCRIPTION =
+  'Get answers to common questions about ordering, delivery, payments, returns, and your STREET account. Contact our support team for help.';
+
 export const metadata: Metadata = {
-  title: 'Support & Help',
-  description:
-    'Get answers to common questions about ordering, delivery, payments, returns, and your STREET account. Contact our support team for help.',
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: 'https://street.london/support' },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: 'https://street.london/support',
+    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'STREET support and help centre.' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ['/img/og-image.jpg'],
+  },
 };
 
 type FAQItem = { question: string; answer: string };

@@ -3,10 +3,25 @@ import type { Metadata } from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+const TITLE = 'Privacy Policy';
+const DESCRIPTION = 'How STREET collects, uses, and protects personal data. Your privacy rights, data retention, and contact details for data requests.';
+
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description: 'How STREET collects, uses, and protects personal data. Your privacy rights, data retention, and contact details for data requests.',
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: 'https://street.london/privacy-policy' },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: 'https://street.london/privacy-policy',
+    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'STREET privacy policy.' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ['/img/og-image.jpg'],
+  },
 };
 
 export default function PrivacyPolicyPage() {
