@@ -34,7 +34,7 @@ const FAQS: FAQItem[] = [
   {
     question: 'When does STREET launch?',
     answer:
-      'STREET is launching in London in 2026. Coverage expands neighbourhood by neighbourhood as retailers go live. Sign up to the waitlist with your postcode to get notified the moment STREET reaches your area — waitlist members get first access.',
+      'STREET is launching in London in 2026. Coverage expands neighbourhood by neighbourhood as retailers go live. Sign up to the waitlist with your postcode to get notified the moment STREET reaches your area. Waitlist members get first access.',
   },
 ];
 

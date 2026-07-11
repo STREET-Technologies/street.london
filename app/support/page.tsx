@@ -39,12 +39,12 @@ const SECTIONS: FAQSection[] = [
       {
         question: 'Who are we?',
         answer:
-          "We're STREET — born in London, raised on hustle. We connect local shops, riders, and customers to bring anything you need, instantly — not tomorrow, not later today.",
+          "We're STREET. Born in London, raised on hustle. We connect local shops, riders, and customers to bring you what you need in minutes, not days.",
       },
       {
         question: 'What do we do?',
         answer:
-          'We make getting what you need fast and effortless. STREET connects local shops, riders, and users to deliver what you want — without waiting days, without stress.',
+          "You order from a local London shop in the app, a rider collects it, and it's at your door in minutes. No waiting days, no delivery windows.",
       },
       {
         question: 'Where do we work?',
@@ -69,7 +69,7 @@ const SECTIONS: FAQSection[] = [
       {
         question: 'How do I create an account?',
         answer:
-          'You can sign up using your phone number, Google account, or Apple ID. If you choose to sign up with your phone, we\'ll send you a one-time verification code (OTP). Once entered, your account will be activated instantly — no password needed.',
+          'You can sign up using your phone number, Google account, or Apple ID. If you choose to sign up with your phone, we\'ll send you a one-time verification code (OTP). Once entered, your account will be activated instantly. No password needed.',
       },
       {
         question: "What should I do if I can't receive the OTP?",
@@ -78,7 +78,7 @@ const SECTIONS: FAQSection[] = [
       },
       {
         question:
-          'I signed up with a phone number — can I add my email later (or vice versa)?',
+          'I signed up with a phone number. Can I add my email later (or vice versa)?',
         answer:
           'Yes. You can add or update your email (or phone number) via Profile → Account Information. Verification may be required to confirm the new contact method.',
       },
@@ -162,7 +162,7 @@ const SECTIONS: FAQSection[] = [
         question:
           'Can I specify delivery instructions (e.g., leave with neighbour, safe place)?',
         answer:
-          'Yes — you can add instructions at checkout. Riders will follow them, and you accept the associated risk if leaving the item unattended.',
+          'Yes. You can add instructions at checkout. Riders will follow them, and you accept the associated risk if leaving the item unattended.',
       },
     ],
   },
@@ -217,7 +217,7 @@ const SECTIONS: FAQSection[] = [
       {
         question: 'Why should I join STREET?',
         answer:
-          "STREET makes it simple to reach new customers instantly without worrying about delivery logistics. You focus on your products while we handle the rest — from order collection to drop-off. It's an easy way to increase sales and grow your business with minimal effort.",
+          'You reach nearby customers who want their order today, not in three working days. You pack it, a STREET rider delivers it, and you track every step in the STREET Partner app. No delivery logistics to build or manage.',
       },
       {
         question: 'How do pay-outs work?',
@@ -242,7 +242,7 @@ const SECTIONS: FAQSection[] = [
       {
         question: 'Can I delete my account?',
         answer:
-          'Yes — log in to the app, go to your profile, scroll to the bottom, and delete your account. All your data will be permanently removed.',
+          'Yes. Log in to the app, go to your profile, scroll to the bottom, and delete your account. All your data will be permanently removed.',
       },
       {
         question: 'Are you 24/7?',
@@ -308,8 +308,7 @@ export default function SupportPage() {
               <a href="mailto:support@STREET.london" className="support-link">
                 support@STREET.london
               </a>
-              . We&apos;re here to make sure your experience is smooth and
-              hassle-free.
+              . We usually reply within one business day.
             </p>
             <a href="/contact-us" className="faq-cta-link">
               Get in touch <ArrowUpRight size={16} />

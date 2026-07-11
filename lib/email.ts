@@ -39,7 +39,7 @@ const CONTENT: Record<FormType, EmailContent> = {
     body:
       "We've received your application to become a STREET courier. Our team will review the details and be in touch shortly with next steps.<br/><br/>" +
       "If you have any questions in the meantime, just reply to this email.<br/><br/>" +
-      "And don't forget — refer your friends and earn rewards once we're live.",
+      "One more thing. Refer your friends and earn rewards once we're live.",
   },
   doers: {
     subject: 'Welcome to the STREET squad',
@@ -51,10 +51,10 @@ const CONTENT: Record<FormType, EmailContent> = {
   },
   contact: {
     subject: 'We got your message',
-    preheader: "Thanks for reaching out — we'll respond shortly.",
+    preheader: "Thanks for reaching out. We'll respond shortly.",
     heading: 'We got your message.',
     body:
-      "Thanks for getting in touch. Someone from the STREET team will read your message and respond as soon as possible — usually within one business day.<br/><br/>" +
+      "Thanks for getting in touch. Someone from the STREET team will read your message and respond as soon as possible, usually within one business day.<br/><br/>" +
       "If your enquiry is urgent, you can reach us directly at <a href=\"mailto:hi@street.london\" style=\"color:#000;text-decoration:underline;\">hi@street.london</a>.",
   },
 };
@@ -97,7 +97,7 @@ function renderHtml({ heading, body, preheader, name }: { heading: string; body:
         </tr>
         <tr>
           <td style="padding:32px 40px 40px;">
-            <p style="margin:0;font-size:16px;line-height:1.6;color:#000;font-weight:600;">— Team STREET</p>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:#000;font-weight:600;">Team STREET</p>
           </td>
         </tr>
       </table>
@@ -119,7 +119,7 @@ function renderHtml({ heading, body, preheader, name }: { heading: string; body:
 function renderText({ heading, body, name }: { heading: string; body: string; name?: string }): string {
   const greeting = name ? `Hi ${name.split(' ')[0]},` : 'Hi,';
   const plainBody = body.replace(/<br\/?>/g, '\n').replace(/<[^>]+>/g, '');
-  return `STREET\n\n${heading}\n\n${greeting}\n\n${plainBody}\n\n— Team STREET\n\n--\nSTREET Technologies\n62 Sutherland Avenue, London W9 2QU\nhttps://street.london`;
+  return `STREET\n\n${heading}\n\n${greeting}\n\n${plainBody}\n\nTeam STREET\n\n--\nSTREET Technologies\n62 Sutherland Avenue, London W9 2QU\nhttps://street.london`;
 }
 
 function escapeHtml(s: string): string {
