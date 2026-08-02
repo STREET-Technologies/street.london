@@ -1056,7 +1056,7 @@ body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1.5fr 2fr;
+    grid-template-columns: 1fr 2.5fr;
     gap: 4rem;
     margin-bottom: 3rem;
 }
@@ -1079,10 +1079,12 @@ body {
     font-size: 0.95rem;
 }
 
+/* auto-fit rather than a fixed count: columns come and go as the site grows
+   (Explore added with the shopping guides) and this needs no breakpoint edit. */
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
 }
 
 .footer-column {
