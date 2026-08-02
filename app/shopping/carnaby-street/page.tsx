@@ -256,6 +256,20 @@ export default function CarnabyStreetPage() {
                 Join the waitlist
               </Link>
             </section>
+
+            <section className="guide-section">
+              <h2>Nearby guides</h2>
+              <p>
+                <Link href="/shopping/marylebone-high-street" className="guide-area-link">
+                  Marylebone High Street
+                </Link>{' '}
+                is fifteen minutes north and a great deal calmer.{' '}
+                <Link href="/shopping/kings-road" className="guide-area-link">
+                  Kings Road
+                </Link>{' '}
+                is the long walk if you have the afternoon.
+              </p>
+            </section>
           </div>
         </div>
       </main>

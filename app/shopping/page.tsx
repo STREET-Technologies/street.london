@@ -37,28 +37,28 @@ const AREAS = [
   },
   {
     name: 'Kings Road, Chelsea',
-    href: null,
+    href: '/shopping/kings-road',
     blurb:
       'Two fashion revolutions started on this road. Mary Quant opened Bazaar here in 1955 and put London on the map for the miniskirt. Twenty years later, punk was assembled at number 430. Today the eastern end near Sloane Square is the polished half, and it gets more independent the further west you walk.',
     bestFor: 'A long linear walk, mainstream fashion at the Sloane Square end, and Duke of York Square for a break.',
   },
   {
     name: 'Notting Hill',
-    href: null,
+    href: '/shopping/notting-hill',
     blurb:
       'Portobello Road is the reason to come, and Saturday is the only day the whole market runs. Antiques at the southern end, vintage clothing under the Westway, and the further north you push toward Golborne Road the less the neighbourhood is performing for visitors.',
     bestFor: 'Antiques, vintage, and the boutiques on Westbourne Grove and Ledbury Road if you want the shopping without the crowds.',
   },
   {
     name: 'Kensington High Street',
-    href: null,
+    href: '/shopping/kensington-high-street',
     blurb:
       'This street was once the most glamorous shopping in London. Biba occupied a seven-storey Art Deco department store here, with a roof garden of a garden and a half acres, flamingos included. That era ended in the seventies and the street has been more ordinary since.',
     bestFor: 'Efficient mainstream shopping in one straight line, and the best architecture of any street on this list.',
   },
   {
     name: 'Marylebone High Street',
-    href: null,
+    href: '/shopping/marylebone-high-street',
     blurb:
       'The quietest street here and, for many people, the best. In the mid-nineties a third of the shops were empty. The estate that owns the street rebuilt it deliberately around independents and specialists rather than chains, and it worked.',
     bestFor: "Bookshops, food, homeware, and a Sunday farmers' market. The most pleasant place in central London to spend two unhurried hours.",
