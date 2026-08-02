@@ -29,13 +29,28 @@ export const metadata: Metadata = {
 // SLT session. Retail turnover here is high; confirm every tenancy before this ships.
 // Partner exclusions (do not add): Percival, Nobody's Child.
 // See docs/planning/shopping-street-guides.md
-const SHOPS = [
-  { name: "Annie's Ibiza", address: '3 Newburgh Street', note: 'Vintage and party-wear, styled like a dressing-up box for adults.' },
-  { name: 'Aubin', address: '15 Newburgh Street', note: 'British menswear and womenswear, relaxed tailoring, denim done properly.' },
-  { name: 'Soho Home', address: "31 Foubert's Place", note: 'Homeware and furniture lifted straight from the Soho House interiors.' },
-  { name: 'Shinola', address: "28 Foubert's Place", note: 'Detroit-built watches, leather goods, journals and bicycles.' },
-  { name: 'Mark Powell', address: 'Marshall Street', note: 'Bespoke Soho tailoring with a sharp, unmistakably British cut.' },
-  { name: 'Peckham Rye', address: 'Newburgh Street', note: 'Silk ties, scarves and pocket squares from a family business dating to 1799.' },
+// Street numbers appear only where a source confirms them. Names without a
+// number are confirmed as trading on the street but the door number is not.
+const ROUTE = [
+  {
+    street: 'Newburgh Street',
+    shops: [
+      { name: "Annie's Ibiza", at: '', note: 'Vintage and party dresses, arranged like a dressing-up box for adults.' },
+      { name: 'Aubin', at: '', note: 'British heritage clothing, relaxed tailoring, denim done properly.' },
+      { name: 'RRL', at: '', note: "Ralph Lauren's selvedge denim and vintage workwear line." },
+      { name: 'Mark Powell', at: '', note: 'Bespoke Soho tailoring with a sharp, unmistakably British cut.' },
+      { name: 'Metal Morphosis', at: '', note: 'Piercing and jewellery, thirty years in the same trade on the same street.' },
+      { name: 'The White Horse', at: '', note: 'A pub on this corner since the 1930s, which tells you what kind of street it is.' },
+    ],
+  },
+  {
+    street: "Foubert's Place",
+    shops: [
+      { name: 'Soho Home', at: 'No. 31', note: 'Homeware and furniture lifted straight from the Soho House interiors.' },
+      { name: 'Shinola', at: 'No. 28', note: 'Detroit-built watches, leather goods, journals and bicycles.' },
+      { name: 'Zahter', at: 'No. 30 to 32', note: 'Turkish cooking, and the best reason to stop before you reach Carnaby Street.' },
+    ],
+  },
 ];
 
 export default function CarnabyStreetPage() {
@@ -124,15 +139,37 @@ export default function CarnabyStreetPage() {
                 <figcaption>Newburgh Street, where the premises are too small for chains to bother with.</figcaption>
               </figure>
 
-              <ul className="guide-shops">
-                {SHOPS.map((shop) => (
-                  <li key={shop.name} className="guide-shop">
-                    <h3>{shop.name}</h3>
-                    <p className="guide-shop-address">{shop.address}</p>
-                    <p className="guide-shop-note">{shop.note}</p>
+              <p>
+                Walk it in this order and you will not double back. Start at the north end of Newburgh Street
+                and finish on Foubert&apos;s Place, which puts you back on Carnaby Street when you are done.
+              </p>
+
+              <ol className="route">
+                {ROUTE.map((leg) => (
+                  <li className="route-leg" key={leg.street}>
+                    <h3 className="route-street">{leg.street}</h3>
+                    <ul className="route-stops">
+                      {leg.shops.map((shop) => (
+                        <li className="route-stop" key={shop.name}>
+                          <p className="route-stop-name">
+                            {shop.name}
+                            {shop.at ? <span className="route-stop-at">{shop.at}</span> : null}
+                          </p>
+                          <p className="route-stop-note">{shop.note}</p>
+                        </li>
+                      ))}
+                    </ul>
                   </li>
                 ))}
-              </ul>
+              </ol>
+
+              <p className="route-credit">
+                Shops on Newburgh Street cross-checked against{' '}
+                <a href="https://www.thisissoho.co.uk/every-street-has-a-story/newburgh-street/" target="_blank" rel="noopener noreferrer">
+                  This Is Soho
+                </a>
+                , who know the street better than we do.
+              </p>
 
               <p>This is the part of the neighbourhood that rewards a slow walk rather than a list.</p>
             </section>
@@ -174,22 +211,22 @@ export default function CarnabyStreetPage() {
             </section>
 
             <section className="guide-section">
-              <h2>Practical</h2>
+              <h2>How do I get there?</h2>
               <dl className="guide-facts">
                 <div>
                   <dt>Nearest tube</dt>
                   <dd>Oxford Circus, three minutes&apos; walk, on the Central, Bakerloo and Victoria lines. Piccadilly Circus is a similar distance from the southern end.</dd>
                 </div>
                 <div>
-                  <dt>Best time to go</dt>
+                  <dt>When to go</dt>
                   <dd>Weekday mornings for browsing, late afternoons for the courtyard. Saturdays are for people who enjoy crowds.</dd>
                 </div>
                 <div>
-                  <dt>Give it</dt>
+                  <dt>How long you need</dt>
                   <dd>Two hours to do the main street and Newburgh Quarter properly. Half a day if you are eating.</dd>
                 </div>
                 <div>
-                  <dt>Nearby</dt>
+                  <dt>What else is close</dt>
                   <dd>Regent Street is one block west, Soho proper begins immediately south across Beak Street, and Oxford Street is two minutes north if you need a chain.</dd>
                 </div>
               </dl>

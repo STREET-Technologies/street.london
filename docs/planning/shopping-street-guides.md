@@ -80,6 +80,60 @@ must not contradict the sales conversation.
 - Specificity is the whole game. "Independent menswear on Newburgh Street" beats "a range
   of quality retailers".
 
+## The shop list is a walk, not a directory
+
+Locked on the Carnaby page. Shops are listed **in the order you meet them**, grouped by
+street, hung off a route spine with numbered waypoints. The markup is `.route` /
+`.route-leg` / `.route-stop`, shared by every guide.
+
+Two patterns were tried and rejected, both for being the obvious AI answer:
+
+- **Card grid.** A `repeat(auto-fit, minmax(240px, 1fr))` grid of boxes with a
+  `border-left: 3px solid` accent. The Impeccable skill bans both by name: side-stripe
+  borders ("never intentional") and identical card grids.
+- **Ruled editorial index.** Display type, small tracked labels, hairline rules. This is
+  the *second-order* trap: the skill lists "editorial-typographic" as a saturated
+  reflex-reject lane, so the magazine answer is only one tier less generic than the cards.
+
+The walk is right because the page describes a walk. Numbering is real sequence, which is
+the only condition under which the skill permits numbered markers.
+
+## Sourcing and attribution
+
+**Facts yes, prose never.** Which shops trade on a street, their door numbers, and what
+they sell are facts and are not copyrightable. Sentences describing them are, and crediting
+the source does not change that. Read the source, take the facts, write our own copy, link
+out.
+
+Street numbers appear **only where a source confirms them**. A name without a number means
+the shop is confirmed on the street but the door number is not. Do not invent precision.
+
+Carnaby's Newburgh Street list is cross-checked against
+[This Is Soho](https://www.thisissoho.co.uk/every-street-has-a-story/newburgh-street/),
+credited in the page. That check corrected one error already: Mark Powell is on Newburgh
+Street, not Marshall Street. Find the equivalent local authority for each remaining area.
+
+## Imagery and licensing
+
+**Facts and photographs are governed differently. Do not apply the sourcing rule above to
+images.** A credit line is not a licence. Republishing a third party's photograph without
+permission is infringement whether or not we name them, and these are public, indexed,
+commercial pages.
+
+Permitted sources, in order of preference:
+
+1. **Our own photography.** The real answer, and the same shoot feeds Instagram and TikTok.
+2. **Explicit permission.** Worth asking This Is Soho directly; a credit-and-link
+   arrangement with a local Soho authority is plausible and may open a partnership.
+3. **Properly licensed stock.** Unsplash permits commercial use with no attribution
+   required. **Verify every URL resolves before shipping it** — guessed photo IDs look
+   plausible and render as broken images. Unsplash blocks automated fetching, so IDs must
+   be collected by hand in a browser.
+
+Placeholders are a temporary state, not a design choice. Drop files at
+`public/img/shopping/<area>-hero.jpg` and `<area>-inline.jpg` and swap the
+`.guide-figure-placeholder` div for `next/image`.
+
 ## Verify before publishing
 
 Named shop tenancies must be checked against current reality. Retail turnover on these
