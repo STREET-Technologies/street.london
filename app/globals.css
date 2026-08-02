@@ -3475,3 +3475,38 @@ body {
     color: var(--black);
     border-bottom-color: var(--primary);
 }
+
+/* Pull quote. A change of shape to break a dense run, not decoration.
+   No side rule, no serif italic, no quotation-mark ornament: the brand
+   display face and whitespace carry it. */
+.guide-quote {
+    margin: 2.5rem 0;
+    padding: 0;
+    border: 0;
+}
+
+.guide-quote::before {
+    content: '';
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    background: var(--primary);
+    margin-bottom: 1.25rem;
+}
+
+.guide-quote p {
+    font-family: var(--font-title);
+    font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+    line-height: 1.25;
+    color: var(--black) !important;
+    margin-bottom: 0.9rem !important;
+    max-width: 20ch;
+    text-wrap: balance;
+}
+
+.guide-quote cite {
+    font-style: normal;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    color: var(--gray);
+}

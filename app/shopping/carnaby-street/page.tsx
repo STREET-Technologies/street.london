@@ -96,12 +96,12 @@ export default function CarnabyStreetPage() {
             <section className="guide-section">
               <h2>A short history, because it explains the layout</h2>
               <p>
-                Carnaby made its name in the 1960s on menswear. John Stephen opened His Clothes at 5 Carnaby
-                Street in 1957, having been burned out of his original Beak Street premises the year before.
-                By 1967 he ran fifteen shops on the street and the press had taken to calling him the King of
-                Carnaby Street. He dressed the mods who made the place a destination and, briefly, a synonym
-                for London itself. By 1965 the Small Faces, the Who, the Kinks and the Rolling Stones were all
-                regulars.
+                Carnaby made its name in the 1960s on menswear. <strong>John Stephen</strong> opened His
+                Clothes at 5 Carnaby Street in 1957, having been burned out of his original Beak Street
+                premises the year before. By 1967 he ran fifteen shops on the street and the press had taken
+                to calling him the King of Carnaby Street. He dressed the mods who made the place a
+                destination and, briefly, a synonym for London itself. By 1965 the Small Faces, the Who, the
+                Kinks and the Rolling Stones were all regulars.
               </p>
               <p>
                 That history matters for a practical reason. The area was built as a warren of small premises
@@ -112,13 +112,19 @@ export default function CarnabyStreetPage() {
               <p>
                 In October 1973 the Greater London Council closed the street to traffic between 11am and 8pm,
                 along with several side roads including Foubert&apos;s Place and Ganton Street, and paved the
-                surface in nylon printed with geometric patterns. The Daily Mirror called it the bathroom of
-                some trendy giant. The nylon is long gone. The pedestrians stayed, and footfall rose by about
-                30 percent.
+                surface in nylon printed with geometric patterns.
               </p>
+
+              <blockquote className="guide-quote">
+                <p>Like the bathroom of some trendy giant.</p>
+                <cite>Daily Mirror, on the new Carnaby Street, 1973</cite>
+              </blockquote>
+
               <p>
-                The wider estate is owned and managed today as a single portfolio by Shaftesbury Capital,
-                which is why the tenant mix feels curated rather than accidental.
+                The nylon is long gone. The pedestrians stayed, and footfall rose by about 30 percent. The
+                wider estate is owned and managed today as a single portfolio by{' '}
+                <strong>Shaftesbury Capital</strong>, which is why the tenant mix feels curated rather than
+                accidental.
               </p>
             </section>
 
