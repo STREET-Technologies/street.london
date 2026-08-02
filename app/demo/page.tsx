@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 const TITLE = 'See STREET in Action: The Retailer Demo';
 const DESCRIPTION =
-  'A short product tour for London shops. See how customers browse your store, check out, and get their order delivered in under an hour, and how you manage it all from the retailer app.';
+  'A short product tour for London shops. See how customers browse, buy and get delivery in under an hour, and how you run it all from the retailer app.';
 
 export const metadata: Metadata = {
   title: TITLE,
