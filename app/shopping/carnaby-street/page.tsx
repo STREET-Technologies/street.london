@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -72,14 +73,19 @@ export default function CarnabyStreetPage() {
             That stretch is the least interesting part of it.
           </p>
 
-          {/* PLACEHOLDER — awaiting own photography. Do not ship with placeholders visible.
-              Replace with <Image /> once the Carnaby shoot lands. Same shoot feeds social. */}
           <figure className="guide-figure guide-figure-hero">
-            <div className="guide-figure-placeholder">
-              <span className="guide-figure-label">Carnaby Street photography</span>
-              <span className="guide-figure-hint">Hero image, 16:9</span>
-            </div>
-            <figcaption>The pedestrianised run between Great Marlborough Street and Broadwick Street.</figcaption>
+            <Image
+              src="/img/shopping/carnaby-hero.jpg"
+              alt="The Welcome to Carnaby Street arch spanning the pedestrianised street, painted shopfronts either side."
+              width={1800}
+              height={1200}
+              priority
+              sizes="(max-width: 860px) 100vw, 820px"
+            />
+            <figcaption>
+              The arch everyone photographs, at the Great Marlborough Street end. Photograph by Anthony
+              Delanoix on Unsplash.
+            </figcaption>
           </figure>
 
           <div className="guide-content">
@@ -131,13 +137,8 @@ export default function CarnabyStreetPage() {
                 of Oxford Circus.
               </p>
 
-              <figure className="guide-figure">
-                <div className="guide-figure-placeholder">
-                  <span className="guide-figure-label">Newburgh Quarter photography</span>
-                  <span className="guide-figure-hint">Inline image, 3:2</span>
-                </div>
-                <figcaption>Newburgh Street, where the premises are too small for chains to bother with.</figcaption>
-              </figure>
+              {/* No Newburgh Quarter image yet. One decisive photo beats one photo plus a grey
+                  box, so this slot stays out until our own shoot lands. */}
 
               <p>
                 Walk it in this order and you will not double back. Start at the north end of Newburgh Street
