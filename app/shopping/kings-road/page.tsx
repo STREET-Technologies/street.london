@@ -221,14 +221,14 @@ export default function KingsRoadPage() {
             <section className="guide-section">
               <h2>Nearby guides</h2>
               <p>
+                <Link href="/shopping/battersea-power-station" className="guide-area-link">
+                  Battersea Power Station
+                </Link>{' '}
+                is over the bridge and the closest of the others.{' '}
                 <Link href="/shopping/kensington-high-street" className="guide-area-link">
                   Kensington High Street
                 </Link>{' '}
-                is fifteen minutes north.{' '}
-                <Link href="/shopping/notting-hill" className="guide-area-link">
-                  Notting Hill
-                </Link>{' '}
-                is the next one worth a Saturday.
+                is fifteen minutes north if you want to be finished quickly.
               </p>
             </section>
           </div>

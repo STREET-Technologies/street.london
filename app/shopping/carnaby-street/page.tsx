@@ -275,10 +275,10 @@ export default function CarnabyStreetPage() {
                   Marylebone High Street
                 </Link>{' '}
                 is fifteen minutes north and a great deal calmer.{' '}
-                <Link href="/shopping/kings-road" className="guide-area-link">
-                  Kings Road
+                <Link href="/shopping/battersea-power-station" className="guide-area-link">
+                  Battersea Power Station
                 </Link>{' '}
-                is the long walk if you have the afternoon.
+                is the opposite kind of place in every way: one building, designed, and indoors.
               </p>
             </section>
           </div>
