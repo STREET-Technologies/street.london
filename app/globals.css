@@ -3512,3 +3512,19 @@ body {
     letter-spacing: 0.03em;
     color: var(--gray);
 }
+
+/* Portrait figure. A tall image in an 820px column runs ~1000px high and
+   wrecks the reading rhythm, so cap it by viewport height and centre it.
+   The image keeps its aspect ratio; only the display box is constrained. */
+.guide-figure-portrait img {
+    max-height: 78vh;
+    width: auto;
+    margin: 0 auto;
+}
+
+.guide-figure-portrait figcaption {
+    text-align: center;
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+}

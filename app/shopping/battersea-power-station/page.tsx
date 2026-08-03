@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -82,6 +83,21 @@ export default function BatterseaPowerStationPage() {
             Station is the newest retail address in London and the only one where you can see exactly what it
             was built to be.
           </p>
+
+          <figure className="guide-figure guide-figure-hero">
+            <Image
+              src="/img/shopping/battersea-power-station-hero.jpg"
+              alt="The restored interior of Battersea Power Station: twin staircases and escalators either side of a glass-fronted jewellery hall, brick columns rising several storeys above."
+              width={1800}
+              height={1137}
+              priority
+              sizes="(max-width: 860px) 100vw, 820px"
+            />
+            <figcaption>
+              Inside Turbine Hall A. The brick and steel were restored rather than replaced, which is the
+              whole argument for coming. Photograph by Richard Harris on Pexels.
+            </figcaption>
+          </figure>
 
           <div className="guide-content">
             <section className="guide-section">
