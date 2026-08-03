@@ -86,9 +86,9 @@ export default function NottingHillPage() {
 
           <h1 className="guide-title">Notting Hill Shops: Where to Shop on Portobello Road and Beyond</h1>
           <p className="guide-standfirst">
-            Come on a Saturday or do not come at all. Portobello Road runs five separate markets along its
-            length and Saturday is the only day all of them trade. On a Tuesday you are walking down a
-            pleasant residential street wondering what the fuss was about.
+            Portobello Road runs five separate markets along its length, and Saturday is the only day all of
+            them trade. Come then for the whole thing and expect crowds. Come midweek and you get a calmer
+            street with fewer stalls, which suits a lot of people better.
           </p>
 
           <figure className="guide-figure guide-figure-hero">
@@ -119,8 +119,8 @@ export default function NottingHillPage() {
                 between them, and more than a hundred thousand people come through on a Friday or Saturday.
               </p>
               <p>
-                The 1999 film did the rest. The crowds it created are now the single biggest thing standing
-                between you and a good morning here. Start early.
+                The 1999 film did the rest, and the crowds it brought are the thing to plan around rather
+                than be surprised by. Start early and you get the market at its best.
               </p>
             </section>
 

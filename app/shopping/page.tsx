@@ -133,7 +133,7 @@ export default function ShoppingPage() {
               <p>If you want one street and one afternoon, go to Marylebone.</p>
               <p>If you want variety within a short walk, go to Carnaby.</p>
               <p>If you want to cover distance and see how London changes as you walk it, go to Kings Road.</p>
-              <p>If it is Saturday, go to Portobello. If it is not Saturday, do not go to Portobello.</p>
+              <p>If it is Saturday, go to Portobello for the full market. Any other day it is a quieter street with fewer stalls, which plenty of people prefer.</p>
               <p>If you want to shop and be finished quickly, go to Kensington High Street.</p>
               <p>If it is raining, go to Battersea Power Station. It is the only one of these that is indoors.</p>
             </section>

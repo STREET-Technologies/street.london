@@ -169,7 +169,7 @@ export default function KensingtonHighStreetPage() {
                 </div>
                 <div>
                   <dt>When to go</dt>
-                  <dd>Any weekday. This is not a street that rewards a special trip on a Saturday.</dd>
+                  <dd>Any weekday, when it is calm and you can move at your own pace. Saturdays are busier and the street is much the same either way.</dd>
                 </div>
                 <div>
                   <dt>How long you need</dt>
@@ -183,7 +183,7 @@ export default function KensingtonHighStreetPage() {
             </section>
 
             <section className="guide-section guide-cta">
-              <h2>Go, if you are passing</h2>
+              <h2>Go, and give it an hour</h2>
               <p>
                 Kensington High Street is the most efficient shopping in west London and the handsomest street
                 to do it on. Both of those are worth something.

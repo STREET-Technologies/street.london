@@ -18,9 +18,14 @@ So: one consumer-facing editorial engine. Retailer acquisition rides on its visi
 
 ## Architecture
 
-Hub and spoke. Pillar links down to all five spokes; each spoke links up to the pillar and
-sideways to two neighbours. The internal linking is what makes the cluster rank as a unit
-rather than six orphans.
+Hub and spoke. Pillar links down to all six spokes; each spoke links up to the pillar and
+sideways to two neighbours, so every spoke has exactly three inbound links and two outbound.
+That balance is what makes the cluster rank as a unit rather than seven orphans.
+
+**Check inbound counts whenever a spoke is added.** Battersea shipped with one inbound link
+against three or four for the others, because a new page gets its outbound links written
+while you are looking at it and its inbound links live in files you are not editing. The
+newest page is always the most under-linked, regardless of its value.
 
 | Route | Target | Vol/mo | KD |
 |---|---|---|---|
@@ -30,6 +35,7 @@ rather than six orphans.
 | `/shopping/notting-hill` | notting hill shops · shopping in notting hill | ~4,910 | 0 |
 | `/shopping/kensington-high-street` | kensington high street shops | ~4,610 | 0–1 |
 | `/shopping/marylebone-high-street` | marylebone high street shops · marylebone shops | ~4,290 | 0 |
+| `/shopping/battersea-power-station` | battersea power station shops · battersea shops | **~13,490** | 0–6 |
 
 **No Chelsea page.** `chelsea shopping london` is 140/mo; `kings road shops` alone is
 5,400. A borough page would cannibalise the street page carrying the volume. Search
@@ -76,7 +82,7 @@ when someone clicks from one to the other. Current split:
 | Carnaby | Go, if you have the afternoon | Time |
 | Kings Road | Go, and walk the whole mile | Distance |
 | Notting Hill | Go, if you have the Saturday | The market runs one day a week |
-| Kensington | Go, if you are passing | Two hours of tube for an hour of shopping |
+| Kensington | Go, and give it an hour | Two hours of tube for an hour of shopping |
 | Marylebone | Go, if you have the morning | It only works unhurried |
 
 This is not just tone. A guide that ends "skip the visit, order online" undercuts the 900
@@ -107,6 +113,32 @@ The resolution, applied throughout:
 Approved vocabulary to reach for: connected, culture, seamless, access, modern, local,
 convenience, retail, city, experience, fashion, lifestyle, stores, boutiques, curated,
 premium.
+
+## Never tell the reader not to go
+
+**Hard rule.** Early drafts carried a gatekeeping tone: "Come on a Saturday or do not come
+at all", "If it is not Saturday, do not go to Portobello", "Saturdays are for people who
+enjoy crowds", "You go deliberately or not at all". All removed 2026-08-03.
+
+Two reasons it was wrong, and the second is the serious one:
+
+1. It reads as bossy, which is off-brand for a company positioned as inviting and premium.
+2. It hands the reader a reason to disengage completely. A visitor told "don't go on a
+   Saturday" who only *has* Saturdays concludes "not worth it either way" and leaves. And
+   these are the streets whose retailers we are recruiting; "don't bother visiting" is the
+   last message that should appear on a STREET page.
+
+**The pattern that replaces it:** encourage the visit, then be honest about the trade-off,
+always leaving the door open.
+
+- Not "don't go on Saturday" but "Saturdays are busy and loud, and good fun if that is the
+  mood you are in."
+- Not "on a Tuesday you wonder what the fuss was about" but "come midweek and you get a
+  calmer street with fewer stalls, which suits a lot of people better."
+- Not "you go deliberately or not at all" but "it works better as a plan than a detour."
+
+Warning about crowds, noise and timing is useful and stays. Deciding for the reader that a
+trip is not worth making does not.
 
 ## Editorial rules
 

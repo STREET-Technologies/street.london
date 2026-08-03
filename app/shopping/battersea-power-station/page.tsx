@@ -221,7 +221,7 @@ export default function BatterseaPowerStationPage() {
                 the retail sits inside it, and there is nowhere else in the city where those two things are
                 the same visit.
               </p>
-              <p>It is also south of the river and on the way to nothing. You go deliberately or not at all.</p>
+              <p>It is also south of the river and on the way to nothing, so it works better as a plan than a detour.</p>
               <p>
                 STREET connects you to the same stores from wherever you are. Browse what London&apos;s local
                 stores actually have on the shelf, buy from the ones nearest you, and have it with you the
