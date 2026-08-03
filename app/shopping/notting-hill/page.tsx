@@ -32,16 +32,16 @@ export const metadata: Metadata = {
 const ROUTE = [
   {
     street: 'Portobello Road',
-    shops: [
+    stores: [
       { name: 'The antiques run', at: 'Chepstow Villas to Elgin Crescent', note: 'The famous stretch, and the reason most people come. Saturdays only if you want the dealers out.' },
       { name: 'Fresh produce', at: 'Elgin Crescent to Talbot Road', note: 'Where the market still does the job it was built for in the 1700s.' },
-      { name: 'Vintage clothing', at: 'Talbot Road to the Westway', note: 'The best of the clothing, and busier than the antiques by mid-morning.' },
+      { name: 'Vintage clothing', at: 'Talbot Road to the Westway', note: 'The strongest of the clothing, and busier than the antiques by mid-morning.' },
       { name: 'Second-hand goods', at: 'Westway to Golborne Road', note: 'Cheaper, scruffier, and the part locals actually shop.' },
     ],
   },
   {
     street: 'Westbourne Grove',
-    shops: [
+    stores: [
       { name: 'Wild at Heart', at: '', note: 'A florist with a shopfront half of Instagram has photographed.' },
       { name: 'RIXO', at: '', note: 'Hand-painted prints, and quieter here than on the Kings Road.' },
       { name: 'Sézane', at: '', note: 'French staples, and a shop that rewards going in with nothing in mind.' },
@@ -49,13 +49,13 @@ const ROUTE = [
   },
   {
     street: 'Ledbury Road',
-    shops: [
+    stores: [
       { name: 'Caramel', at: '', note: 'Lifestyle and childrenswear with a vintage sensibility. Baskets, blankets, crockery, candles.' },
     ],
   },
   {
     street: 'Golborne Road',
-    shops: [
+    stores: [
       { name: 'The vintage furniture run', at: '', note: 'Most of a street given over to it, and the least performed part of the neighbourhood.' },
     ],
   },
@@ -125,7 +125,7 @@ export default function NottingHillPage() {
                   <li className="route-leg" key={leg.street}>
                     <h3 className="route-street">{leg.street}</h3>
                     <ul className="route-stops">
-                      {leg.shops.map((shop) => (
+                      {leg.stores.map((shop) => (
                         <li className="route-stop" key={shop.name}>
                           <p className="route-stop-name">
                             {shop.name}
@@ -194,8 +194,8 @@ export default function NottingHillPage() {
               </p>
               <p>But the market runs one day a week, and most of us are busy on it.</p>
               <p>
-                STREET brings the neighbourhood&apos;s shops to your door the other six days. Browse what
-                London&apos;s independent shops actually have on the shelf, buy from the ones nearest you, and
+                STREET brings the neighbourhood&apos;s stores to your door the other six days. Browse what
+                London&apos;s independent stores actually have on the shelf, buy from the ones nearest you, and
                 have it delivered the same day. Notting Hill is in our first launch area.
               </p>
               <p className="guide-cta-line">Go when you can. We will cover the weeks you cannot.</p>

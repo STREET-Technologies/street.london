@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const TITLE = "London Shopping Areas: A Guide to the City's Shopping Streets";
 const DESCRIPTION =
-  'Where to shop in London, street by street. Carnaby, Kings Road, Notting Hill, Kensington High Street and Marylebone, and what each is actually good for.';
+  'Where to shop in London, street by street. Carnaby, Kings Road, Notting Hill, Kensington, Marylebone and Battersea Power Station, and what each is good for.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -32,36 +32,43 @@ const AREAS = [
     name: 'Carnaby Street and Soho',
     href: '/shopping/carnaby-street',
     blurb:
-      'Menswear built this neighbourhood in the 1960s and the bones never changed. The main pedestrianised run is the famous part and the least interesting one. The shopping worth the trip sits in Newburgh Quarter, a pocket of small independent shops immediately east, where the premises are too small for chains to bother with.',
-    bestFor: 'Considered menswear, contemporary womenswear, denim, footwear, and eating in Kingly Court afterwards.',
+      'Menswear built this neighbourhood in the 1960s and the bones never changed. The main pedestrianised run is the famous part and the least interesting one. The shopping worth the trip sits in Newburgh Quarter, a pocket of small independent stores immediately east, where the premises are too small for chains to bother with.',
+    goodFor: 'Considered menswear, contemporary womenswear, denim, footwear, and eating in Kingly Court afterwards.',
   },
   {
     name: 'Kings Road, Chelsea',
     href: '/shopping/kings-road',
     blurb:
       'Two fashion revolutions started on this road. Mary Quant opened Bazaar here in 1955 and put London on the map for the miniskirt. Twenty years later, punk was assembled at number 430. Today the eastern end near Sloane Square is the polished half, and it gets more independent the further west you walk.',
-    bestFor: 'A long linear walk, mainstream fashion at the Sloane Square end, and Duke of York Square for a break.',
+    goodFor: 'A long linear walk, mainstream fashion at the Sloane Square end, and Duke of York Square for a break.',
   },
   {
     name: 'Notting Hill',
     href: '/shopping/notting-hill',
     blurb:
       'Portobello Road is the reason to come, and Saturday is the only day the whole market runs. Antiques at the southern end, vintage clothing under the Westway, and the further north you push toward Golborne Road the less the neighbourhood is performing for visitors.',
-    bestFor: 'Antiques, vintage, and the boutiques on Westbourne Grove and Ledbury Road if you want the shopping without the crowds.',
+    goodFor: 'Antiques, vintage, and the boutiques on Westbourne Grove and Ledbury Road if you want the shopping without the crowds.',
   },
   {
     name: 'Kensington High Street',
     href: '/shopping/kensington-high-street',
     blurb:
       'This street was once the most glamorous shopping in London. Biba occupied a seven-storey Art Deco department store here, with a roof garden of a garden and a half acres, flamingos included. That era ended in the seventies and the street has been more ordinary since.',
-    bestFor: 'Efficient mainstream shopping in one straight line, and the best architecture of any street on this list.',
+    goodFor: 'Efficient mainstream shopping in one straight line, and the handsomest architecture of any address on this list.',
   },
   {
     name: 'Marylebone High Street',
     href: '/shopping/marylebone-high-street',
     blurb:
-      'The quietest street here and, for many people, the best. In the mid-nineties a third of the shops were empty. The estate that owns the street rebuilt it deliberately around independents and specialists rather than chains, and it worked.',
-    bestFor: "Bookshops, food, homeware, and a Sunday farmers' market. The most pleasant place in central London to spend two unhurried hours.",
+      'The quietest street here, and the one people keep coming back to. In the mid-nineties a third of the stores were empty. The estate that owns the street rebuilt it deliberately around independents and specialists rather than chains, and it worked.',
+    goodFor: "Bookshops, food, homeware, and a Sunday farmers' market. The most pleasant place in central London to spend two unhurried hours.",
+  },
+  {
+    name: 'Battersea Power Station',
+    href: '/shopping/battersea-power-station',
+    blurb:
+      'Every other destination here happened slowly. This one was designed. The Art Deco turbine halls were restored rather than gutted, the old coal yard is now a pedestrianised high street called Electric Boulevard, and there are more than 140 stores, bars and restaurants on the site. It opened to the public in 2022, for the first time in its history.',
+    goodFor: 'Scale, weather protection, and interiors nowhere else in London can match. Come for the building; the brands you can find anywhere.',
   },
 ];
 
@@ -84,7 +91,7 @@ export default function ShoppingPage() {
                 three are well documented and easy to find, and they are not what this guide is about.
               </p>
               <p>
-                The streets below are the ones where London still shops for itself. Each has a distinct
+                The streets below are the ones where London still stores for itself. Each has a distinct
                 character, most of it earned over a century or more, and each rewards a different kind of visit.
               </p>
             </section>
@@ -94,7 +101,7 @@ export default function ShoppingPage() {
                 <h2>{area.name}</h2>
                 <p>{area.blurb}</p>
                 <p>
-                  <strong>Best for:</strong> {area.bestFor}
+                  <strong>Good for:</strong> {area.goodFor}
                 </p>
                 {area.href ? (
                   <Link href={area.href} className="guide-area-link">
@@ -113,6 +120,7 @@ export default function ShoppingPage() {
               <p>If you want to cover distance and see how London changes as you walk it, go to Kings Road.</p>
               <p>If it is Saturday, go to Portobello. If it is not Saturday, do not go to Portobello.</p>
               <p>If you want to shop and be finished quickly, go to Kensington High Street.</p>
+              <p>If it is raining, go to Battersea Power Station. It is the only one of these that is indoors.</p>
             </section>
 
             <section className="guide-section guide-cta">
@@ -123,7 +131,7 @@ export default function ShoppingPage() {
               </p>
               <p>Most weeks have room for none of them.</p>
               <p>
-                STREET brings the same shops to your door. Browse what London&apos;s independent shops actually
+                STREET brings the same stores to your door. Browse what London&apos;s independent stores actually
                 have on the shelf, buy from the ones nearest you, and have it delivered the same day. Every
                 street on this page is in our first launch area.
               </p>

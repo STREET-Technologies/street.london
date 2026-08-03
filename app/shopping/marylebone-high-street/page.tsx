@@ -32,27 +32,27 @@ export const metadata: Metadata = {
 const ROUTE = [
   {
     street: 'Marylebone High Street',
-    shops: [
+    stores: [
       { name: 'Daunt Books', at: 'No. 83 to 84', note: 'An Edwardian bookshop from 1912 with oak galleries and a long skylight, shelved by country rather than genre. Worth the visit even if you buy nothing.' },
       { name: 'The Ginger Pig', at: '', note: 'A butcher with its own farm in North Yorkshire. People cross London for the sausages.' },
     ],
   },
   {
     street: 'Moxon Street',
-    shops: [
+    stores: [
       { name: 'La Fromagerie', at: '', note: "Patricia Michelson's cheese room, with a tasting café attached. Go in cold and ask." },
     ],
   },
   {
     street: 'Marylebone Lane',
-    shops: [
+    stores: [
       { name: 'V V Rouleaux', at: '', note: 'Ribbons, trimmings and braid, in a shop that should not still exist and thankfully does.' },
     ],
   },
   {
     street: 'Cramer Street car park',
-    shops: [
-      { name: 'Marylebone Farmers Market', at: 'Sundays', note: 'Around forty producers of British seasonal food, every Sunday since 2003. The best reason to come at the weekend.' },
+    stores: [
+      { name: 'Marylebone Farmers Market', at: 'Sundays', note: 'Around forty producers of British seasonal food, every Sunday since 2003. The reason to come at the weekend.' },
     ],
   },
 ];
@@ -71,7 +71,7 @@ export default function MaryleboneHighStreetPage() {
 
           <h1 className="guide-title">Marylebone High Street Shops: A Village Shopping Guide</h1>
           <p className="guide-standfirst">
-            The quietest shopping street in central London, and for a lot of people the best. Fifteen minutes
+            The quietest shopping street in central London, and a lot of people would call it the finest. Fifteen minutes
             from Oxford Street and it does not feel like the same city.
           </p>
 
@@ -100,7 +100,7 @@ export default function MaryleboneHighStreetPage() {
               </p>
               <p>
                 Most of what you see was built around 1900, when the estate rebuilt the street as old leases
-                fell in. Then it went wrong. By the mid 1990s roughly a third of the shops on the high street
+                fell in. Then it went wrong. By the mid 1990s roughly a third of the stores on the high street
                 stood empty.
               </p>
               <p>
@@ -117,7 +117,7 @@ export default function MaryleboneHighStreetPage() {
             <section className="guide-section">
               <h2>Walking it</h2>
               <p>
-                The high street is the spine, but three of the four best shops are round the corners off it.
+                The high street is the spine, but three of the four you actually came for are round the corners off it.
                 Take the side streets.
               </p>
 
@@ -126,7 +126,7 @@ export default function MaryleboneHighStreetPage() {
                   <li className="route-leg" key={leg.street}>
                     <h3 className="route-street">{leg.street}</h3>
                     <ul className="route-stops">
-                      {leg.shops.map((shop) => (
+                      {leg.stores.map((shop) => (
                         <li className="route-stop" key={shop.name}>
                           <p className="route-stop-name">
                             {shop.name}
@@ -144,7 +144,7 @@ export default function MaryleboneHighStreetPage() {
             <section className="guide-section">
               <h2>Come for the food</h2>
               <p>
-                Marylebone is the best food shopping in central London and it is not particularly close. A
+                Marylebone has the finest food shopping in central London and it is not particularly close. A
                 butcher with its own farm, a cheese room with a tasting café, and forty producers in a car
                 park every Sunday. You can do a genuine week&apos;s shop here from people who can tell you
                 where everything came from.
@@ -181,7 +181,7 @@ export default function MaryleboneHighStreetPage() {
               </p>
               <p>Which is exactly what most weeks do not have room for.</p>
               <p>
-                STREET brings the same shops to your door. Browse what London&apos;s independent shops
+                STREET brings the same stores to your door. Browse what London&apos;s independent stores
                 actually have on the shelf, buy from the ones nearest you, and have it delivered the same day.
                 Marylebone is in our first launch area.
               </p>

@@ -32,13 +32,13 @@ export const metadata: Metadata = {
 const ROUTE = [
   {
     street: 'The Barkers building',
-    shops: [
+    stores: [
       { name: 'Whole Foods Market', at: '', note: 'The largest branch in the country, in the Art Deco shell of a department store that ran for 135 years.' },
     ],
   },
   {
     street: 'The main run, east to west',
-    shops: [
+    stores: [
       { name: 'Urban Outfitters', at: '', note: 'The anchor at the younger end of the street.' },
       { name: 'Reiss', at: '', note: 'Tailoring that behaves itself.' },
       { name: 'The Kooples', at: '', note: 'Parisian, and a reliable stop for a jacket.' },
@@ -119,7 +119,7 @@ export default function KensingtonHighStreetPage() {
                   <li className="route-leg" key={leg.street}>
                     <h3 className="route-street">{leg.street}</h3>
                     <ul className="route-stops">
-                      {leg.shops.map((shop) => (
+                      {leg.stores.map((shop) => (
                         <li className="route-stop" key={shop.name}>
                           <p className="route-stop-name">
                             {shop.name}
@@ -143,7 +143,7 @@ export default function KensingtonHighStreetPage() {
             <section className="guide-section">
               <h2>Look up</h2>
               <p>
-                The best thing on Kensington High Street is free. The Derry &amp; Toms frontage, the Barkers
+                What is worth most on Kensington High Street costs nothing. The Derry &amp; Toms frontage, the Barkers
                 building, the metalwork and the relief panels are all still there above the shopfronts, and
                 almost nobody shopping below ever raises their eyes to them.
               </p>
@@ -179,7 +179,7 @@ export default function KensingtonHighStreetPage() {
               </p>
               <p>It is still an hour on a tube and an hour back.</p>
               <p>
-                STREET brings the same shops to your door. Browse what London&apos;s independent shops
+                STREET brings the same stores to your door. Browse what London&apos;s independent stores
                 actually have on the shelf, buy from the ones nearest you, and have it delivered the same day.
                 Kensington is in our first launch area.
               </p>

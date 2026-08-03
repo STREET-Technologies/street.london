@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const ROUTE = [
   {
     street: 'Duke of York Square',
-    shops: [
+    stores: [
       { name: 'Hayley Menzies', at: '', note: 'Two floors of maximalist print, silk dresses and statement knits.' },
       { name: 'Space NK', at: '', note: 'Beauty, and the branch people travel for.' },
       { name: 'Saturday food market', at: '', note: 'Traders fill the square every Saturday, which is the day to come.' },
@@ -40,7 +40,7 @@ const ROUTE = [
   },
   {
     street: 'Kings Road, the middle stretch',
-    shops: [
+    stores: [
       { name: 'RIXO', at: '', note: 'Hand-painted prints, and the label that put this stretch back on the map.' },
       { name: 'GANNI', at: '', note: 'Copenhagen tailoring with the volume turned up.' },
       { name: "Penhaligon's", at: '', note: 'British perfumery since 1870, and the packaging alone is worth the stop.' },
@@ -49,7 +49,7 @@ const ROUTE = [
   },
   {
     street: "World's End",
-    shops: [
+    stores: [
       { name: '430 Kings Road', at: 'No. 430', note: "The shop that has been Paradise Garage, SEX, Seditionaries and World's End. Punk was assembled behind this door." },
     ],
   },
@@ -114,7 +114,7 @@ export default function KingsRoadPage() {
               </p>
               <p>
                 Number 430 is still trading, under its fourth or fifth name. The Kings Road has roughly 160
-                shops now and none of the others have that on their record.
+                stores now and none of the others have that on their record.
               </p>
             </section>
 
@@ -130,7 +130,7 @@ export default function KingsRoadPage() {
                   <li className="route-leg" key={leg.street}>
                     <h3 className="route-street">{leg.street}</h3>
                     <ul className="route-stops">
-                      {leg.shops.map((shop) => (
+                      {leg.stores.map((shop) => (
                         <li className="route-stop" key={shop.name}>
                           <p className="route-stop-name">
                             {shop.name}
@@ -161,7 +161,7 @@ export default function KingsRoadPage() {
             <section className="guide-section">
               <h2>Where it gets interesting</h2>
               <p>
-                West of the Town Hall the rents drop and the shops loosen up. This is the stretch that still
+                West of the Town Hall the rents drop and the stores loosen up. This is the stretch that still
                 has vintage, odd homeware and the occasional shop you cannot categorise. Most visitors turn
                 back before they reach it, which is exactly why it is worth the extra twenty minutes.
               </p>
@@ -176,7 +176,7 @@ export default function KingsRoadPage() {
                 </div>
                 <div>
                   <dt>When to go</dt>
-                  <dd>Saturday for the Duke of York Square market. Weekday afternoons if you want the shops to yourself.</dd>
+                  <dd>Saturday for the Duke of York Square market. Weekday afternoons if you want the stores to yourself.</dd>
                 </div>
                 <div>
                   <dt>How long you need</dt>
@@ -197,7 +197,7 @@ export default function KingsRoadPage() {
               </p>
               <p>That is a proper walk. Not every week has one in it.</p>
               <p>
-                STREET brings the same shops to your door. Browse what London&apos;s independent shops
+                STREET brings the same stores to your door. Browse what London&apos;s independent stores
                 actually have on the shelf, buy from the ones nearest you, and have it delivered the same day.
                 Chelsea is in our first launch area.
               </p>

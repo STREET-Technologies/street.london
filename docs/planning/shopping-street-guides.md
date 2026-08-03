@@ -84,6 +84,30 @@ words above it, and reads to any shop owner who finds the page as a threat to fo
 Retailers will find these pages, and the retailer pitch is reach, not replacement. The copy
 must not contradict the sales conversation.
 
+## Brand vocabulary, and the one deliberate exception
+
+`street-design/marketing/STREET Marketing.md` lists words to avoid. Two of them collide
+head-on with the search demand these pages exist to capture: **"shops"** and **"best"**.
+
+The resolution, applied throughout:
+
+- **Titles, H1s and meta keep "shops."** `battersea power station shops` is 9,900/mo,
+  `carnaby street shops` 6,600, `kings road shops` 5,400. You cannot rank for a query on a
+  page that refuses to say it. This is search language, not brand voice, and the avoid-list
+  governs how STREET talks about itself, not how a customer types a query.
+- **Body copy says "stores" and "boutiques"**, both on the approved list. Rendered body text
+  is clean: one instance of "shops" per page, and it is the H1.
+- **"Best" is gone entirely**, replaced with something specific in every case. It was lazy
+  writing as well as off-brand. The pillar's label is "Good for", not "Best for".
+- **"Street"** on the avoid-list means the generic noun diluting the brand term. Street
+  names are proper nouns and unavoidable.
+- Never used, and never to be used: instant, delivery app, courier, dispatch, errands,
+  logistics, transactional, stylish, fashionable, digital first. Audited at zero.
+
+Approved vocabulary to reach for: connected, culture, seamless, access, modern, local,
+convenience, retail, city, experience, fashion, lifestyle, stores, boutiques, curated,
+premium.
+
 ## Editorial rules
 
 - **No em dashes. No AI-isms.** Plain, confident, specific.

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 const ROUTE = [
   {
     street: 'Newburgh Street',
-    shops: [
+    stores: [
       { name: "Annie's Ibiza", at: '', note: 'Vintage and party dresses, arranged like a dressing-up box for adults.' },
       { name: 'Aubin', at: '', note: 'British heritage clothing, relaxed tailoring, denim done properly.' },
       { name: 'RRL', at: '', note: "Ralph Lauren's selvedge denim and vintage workwear line." },
@@ -46,10 +46,10 @@ const ROUTE = [
   },
   {
     street: "Foubert's Place",
-    shops: [
+    stores: [
       { name: 'Soho Home', at: 'No. 31', note: 'Homeware and furniture lifted straight from the Soho House interiors.' },
       { name: 'Shinola', at: 'No. 28', note: 'Detroit-built watches, leather goods, journals and bicycles.' },
-      { name: 'Zahter', at: 'No. 30 to 32', note: 'Turkish cooking, and the best reason to stop before you reach Carnaby Street.' },
+      { name: 'Zahter', at: 'No. 30 to 32', note: 'Turkish cooking, and the reason to stop before you reach Carnaby Street.' },
     ],
   },
 ];
@@ -98,7 +98,7 @@ export default function CarnabyStreetPage() {
               <p>
                 Carnaby made its name in the 1960s on menswear. <strong>John Stephen</strong> opened His
                 Clothes at 5 Carnaby Street in 1957, having been burned out of his original Beak Street
-                premises the year before. By 1967 he ran fifteen shops on the street and the press had taken
+                premises the year before. By 1967 he ran fifteen stores on the street and the press had taken
                 to calling him the King of Carnaby Street. He dressed the mods who made the place a
                 destination and, briefly, a synonym for London itself. By 1965 the Small Faces, the Who, the
                 Kinks and the Rolling Stones were all regulars.
@@ -106,7 +106,7 @@ export default function CarnabyStreetPage() {
               <p>
                 That history matters for a practical reason. The area was built as a warren of small premises
                 rather than department-store footprints, and it never got rebuilt. The result is that
-                independent shops can still afford a door here, which is why the neighbourhood has aged better
+                independent stores can still afford a door here, which is why the neighbourhood has aged better
                 than Oxford Street two minutes north.
               </p>
               <p>
@@ -137,8 +137,8 @@ export default function CarnabyStreetPage() {
               </p>
               <p>
                 The mix skews toward considered menswear, contemporary womenswear, denim specialists and
-                footwear, with a handful of skate and streetwear shops that have been there long enough to
-                have outlasted several waves of fashion. Shops are small. Stock is edited rather than piled.
+                footwear, with a handful of skate and streetwear stores that have been there long enough to
+                have outlasted several waves of fashion. Stores are small. Stock is edited rather than piled.
                 Staff generally know what they are selling, which is increasingly rare within walking distance
                 of Oxford Circus.
               </p>
@@ -156,7 +156,7 @@ export default function CarnabyStreetPage() {
                   <li className="route-leg" key={leg.street}>
                     <h3 className="route-street">{leg.street}</h3>
                     <ul className="route-stops">
-                      {leg.shops.map((shop) => (
+                      {leg.stores.map((shop) => (
                         <li className="route-stop" key={shop.name}>
                           <p className="route-stop-name">
                             {shop.name}
@@ -171,7 +171,7 @@ export default function CarnabyStreetPage() {
               </ol>
 
               <p className="route-credit">
-                Shops on Newburgh Street cross-checked against{' '}
+                Stores on Newburgh Street cross-checked against{' '}
                 <a href="https://www.thisissoho.co.uk/every-street-has-a-story/newburgh-street/" target="_blank" rel="noopener noreferrer">
                   This Is Soho
                 </a>
@@ -247,7 +247,7 @@ export default function CarnabyStreetPage() {
               </p>
               <p>Most of us do not have the afternoon.</p>
               <p>
-                STREET brings the same shops to your door. Browse what London&apos;s independent shops actually
+                STREET brings the same stores to your door. Browse what London&apos;s independent stores actually
                 have on the shelf, buy from the ones nearest you, and have it delivered the same day. Carnaby
                 and the wider Soho estate are in our first launch area.
               </p>
