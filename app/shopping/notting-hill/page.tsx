@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -79,6 +80,20 @@ export default function NottingHillPage() {
             pleasant residential street wondering what the fuss was about.
           </p>
 
+          <figure className="guide-figure guide-figure-hero">
+            <Image
+              src="/img/shopping/notting-hill-hero.jpg"
+              alt="The Notting Hill Bookshop with its navy fascia, beside a mint-green doughnut shop, both with people outside."
+              width={1800}
+              height={1200}
+              priority
+              sizes="(max-width: 860px) 100vw, 820px"
+            />
+            <figcaption>
+              Shopfronts off Portobello Road, and the queue that comes with them. Photograph by Norali Nayla on Unsplash.
+            </figcaption>
+          </figure>
+
           <div className="guide-content">
             <section className="guide-section">
               <h2>The market is older than the neighbourhood</h2>
@@ -93,9 +108,8 @@ export default function NottingHillPage() {
                 between them, and more than a hundred thousand people come through on a Friday or Saturday.
               </p>
               <p>
-                The 1999 film did the rest. It is worth knowing that the bookshop in it was invented, and that
-                the crowds it created are the single biggest thing standing between you and a good morning
-                here. Start early.
+                The 1999 film did the rest. The crowds it created are now the single biggest thing standing
+                between you and a good morning here. Start early.
               </p>
             </section>
 

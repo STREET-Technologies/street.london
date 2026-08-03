@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -64,6 +65,20 @@ export default function KensingtonHighStreetPage() {
             This was once the most glamorous shopping street in London. It is now a very good high street in
             the shell of something grander, and knowing that is the key to enjoying it.
           </p>
+
+          <figure className="guide-figure guide-figure-hero">
+            <Image
+              src="/img/shopping/kensington-high-street-hero.jpg"
+              alt="A green-painted florist shopfront and a small gallery in a white stucco Kensington terrace."
+              width={1800}
+              height={1200}
+              priority
+              sizes="(max-width: 860px) 100vw, 820px"
+            />
+            <figcaption>
+              Kensington shopfronts a few streets off the main run, where the independents sit. Photograph by Tom McCarten on Pexels.
+            </figcaption>
+          </figure>
 
           <div className="guide-content">
             <section className="guide-section">

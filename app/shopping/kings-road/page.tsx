@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -72,6 +73,20 @@ export default function KingsRoadPage() {
             Walk it east to west and you get the whole story: polished at Sloane Square, stranger by the time
             you reach the other end.
           </p>
+
+          <figure className="guide-figure guide-figure-hero">
+            <Image
+              src="/img/shopping/kings-road-hero.jpg"
+              alt="A terrace of pastel-painted Chelsea townhouses behind street trees in blossom."
+              width={1800}
+              height={1200}
+              priority
+              sizes="(max-width: 860px) 100vw, 820px"
+            />
+            <figcaption>
+              Chelsea off the main road. The Kings Road itself is one long straight run; the streets either side look like this. Photograph by Anthony Delanoix on Unsplash.
+            </figcaption>
+          </figure>
 
           <div className="guide-content">
             <section className="guide-section">

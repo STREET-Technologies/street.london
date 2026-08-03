@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -73,6 +74,20 @@ export default function MaryleboneHighStreetPage() {
             The quietest shopping street in central London, and for a lot of people the best. Fifteen minutes
             from Oxford Street and it does not feel like the same city.
           </p>
+
+          <figure className="guide-figure guide-figure-hero">
+            <Image
+              src="/img/shopping/marylebone-high-street-hero.jpg"
+              alt="Independent shopfronts in Marylebone: a newsagent with a striped awning, a menswear shop and a gallery, with tables on the pavement."
+              width={1800}
+              height={1200}
+              priority
+              sizes="(max-width: 860px) 100vw, 820px"
+            />
+            <figcaption>
+              Marylebone shopfronts. Small premises, one trade each, which is the whole character of the place. Photograph by Benjamin Cheng on Unsplash.
+            </figcaption>
+          </figure>
 
           <div className="guide-content">
             <section className="guide-section">
