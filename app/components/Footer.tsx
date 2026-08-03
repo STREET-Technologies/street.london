@@ -24,6 +24,10 @@ export default function Footer() {
               <Link href="/support">Support & Help</Link>
             </div>
             <div className="footer-column">
+              <h4>Explore</h4>
+              <Link href="/shopping">London Shopping Guides</Link>
+            </div>
+            <div className="footer-column">
               <h4>Connect</h4>
               <a href="https://www.linkedin.com/company/street-london/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href="https://www.instagram.com/st.reet.app/" target="_blank" rel="noopener noreferrer">Instagram</a>

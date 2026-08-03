@@ -14,6 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/waitlist`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/retailers`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/demo`, changeFrequency: 'monthly', priority: 0.8 },
+    // Shopping street guides (TT-407): pillar plus six area spokes.
+    { url: `${base}/shopping`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/shopping/carnaby-street`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/shopping/kings-road`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/shopping/notting-hill`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/shopping/kensington-high-street`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/shopping/marylebone-high-street`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/shopping/battersea-power-station`, changeFrequency: 'monthly', priority: 0.8 },
     // /rider hidden 2026-05-16 — couriers not yet onboarded; page still accessible but unlisted (noindex). Restore when ready.
     { url: `${base}/doers`, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/support`, changeFrequency: 'monthly', priority: 0.7 },
