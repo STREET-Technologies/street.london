@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     url: 'https://street.london/shopping/battersea-power-station',
-    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'Shopping Battersea Power Station with STREET.' }],
+    images: [{ url: 'https://street.london/img/shopping/og/battersea-power-station.jpg', width: 1200, height: 630, alt: 'Shopping Battersea Power Station with STREET.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: ['/img/og-image.jpg'],
+    images: ['https://street.london/img/shopping/og/battersea-power-station.jpg'],
   },
 };
 
@@ -68,6 +68,17 @@ const ROUTE = [
 export default function BatterseaPowerStationPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "London shopping areas", "item": "https://street.london/shopping" },
+            { "@type": "ListItem", "position": 2, "name": "Battersea Power Station", "item": "https://street.london/shopping/battersea-power-station" }
+          ]
+        }) }}
+      />
       <Navigation />
       <main className="guide-page">
         <div className="container">

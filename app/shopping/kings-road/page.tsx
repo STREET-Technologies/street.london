@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     url: 'https://street.london/shopping/kings-road',
-    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'Shopping the Kings Road in Chelsea with STREET.' }],
+    images: [{ url: 'https://street.london/img/shopping/og/kings-road.jpg', width: 1200, height: 630, alt: 'Shopping the Kings Road in Chelsea with STREET.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: ['/img/og-image.jpg'],
+    images: ['https://street.london/img/shopping/og/kings-road.jpg'],
   },
 };
 
@@ -58,6 +58,17 @@ const ROUTE = [
 export default function KingsRoadPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "London shopping areas", "item": "https://street.london/shopping" },
+            { "@type": "ListItem", "position": 2, "name": "Kings Road", "item": "https://street.london/shopping/kings-road" }
+          ]
+        }) }}
+      />
       <Navigation />
       <main className="guide-page">
         <div className="container">

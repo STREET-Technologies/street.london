@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     url: 'https://street.london/shopping',
-    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: "A guide to London's shopping streets." }],
+    images: [{ url: 'https://street.london/img/shopping/og/carnaby-street.jpg', width: 1200, height: 630, alt: "A guide to London's shopping streets." }],
   },
   twitter: {
     card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: ['/img/og-image.jpg'],
+    images: ['https://street.london/img/shopping/og/carnaby-street.jpg'],
   },
 };
 
@@ -75,6 +75,21 @@ const AREAS = [
 export default function ShoppingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "London shopping areas",
+          "itemListOrder": "https://schema.org/ItemListUnordered",
+          "itemListElement": AREAS.map((area, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": area.name,
+            "url": `https://street.london${area.href}`
+          }))
+        }) }}
+      />
       <Navigation />
       <main className="guide-page">
         <div className="container">

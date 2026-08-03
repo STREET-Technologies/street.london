@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     url: 'https://street.london/shopping/marylebone-high-street',
-    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'Shopping Marylebone High Street with STREET.' }],
+    images: [{ url: 'https://street.london/img/shopping/og/marylebone-high-street.jpg', width: 1200, height: 630, alt: 'Shopping Marylebone High Street with STREET.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: ['/img/og-image.jpg'],
+    images: ['https://street.london/img/shopping/og/marylebone-high-street.jpg'],
   },
 };
 
@@ -60,6 +60,17 @@ const ROUTE = [
 export default function MaryleboneHighStreetPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "London shopping areas", "item": "https://street.london/shopping" },
+            { "@type": "ListItem", "position": 2, "name": "Marylebone High Street", "item": "https://street.london/shopping/marylebone-high-street" }
+          ]
+        }) }}
+      />
       <Navigation />
       <main className="guide-page">
         <div className="container">

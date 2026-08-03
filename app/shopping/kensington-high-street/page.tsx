@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     url: 'https://street.london/shopping/kensington-high-street',
-    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'Shopping Kensington High Street with STREET.' }],
+    images: [{ url: 'https://street.london/img/shopping/og/kensington-high-street.jpg', width: 1200, height: 630, alt: 'Shopping Kensington High Street with STREET.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: ['/img/og-image.jpg'],
+    images: ['https://street.london/img/shopping/og/kensington-high-street.jpg'],
   },
 };
 
@@ -51,6 +51,17 @@ const ROUTE = [
 export default function KensingtonHighStreetPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "London shopping areas", "item": "https://street.london/shopping" },
+            { "@type": "ListItem", "position": 2, "name": "Kensington High Street", "item": "https://street.london/shopping/kensington-high-street" }
+          ]
+        }) }}
+      />
       <Navigation />
       <main className="guide-page">
         <div className="container">
@@ -71,7 +82,7 @@ export default function KensingtonHighStreetPage() {
               src="/img/shopping/kensington-high-street-hero.jpg"
               alt="A green-painted florist shopfront and a small gallery in a white stucco Kensington terrace."
               width={1800}
-              height={1200}
+              height={1192}
               priority
               sizes="(max-width: 860px) 100vw, 820px"
             />
