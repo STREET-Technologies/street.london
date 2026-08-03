@@ -121,7 +121,7 @@ export default function ShoppingPage() {
                 Every street here is worth the journey. London shopping is a walking activity and no website
                 replaces turning a corner into a shop you did not know was there.
               </p>
-              <p>Most weeks, though, there is no afternoon to give it.</p>
+              <p>Most weeks have room for none of them.</p>
               <p>
                 STREET brings the same shops to your door. Browse what London&apos;s independent shops actually
                 have on the shelf, buy from the ones nearest you, and have it delivered the same day. Every

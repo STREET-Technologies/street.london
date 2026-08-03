@@ -190,12 +190,12 @@ export default function KingsRoadPage() {
             </section>
 
             <section className="guide-section guide-cta">
-              <h2>Go, if you have the afternoon</h2>
+              <h2>Go, and walk the whole mile</h2>
               <p>
-                The Kings Road is a walk before it is a shopping trip. A mile and a half of it, changing as
-                you go, and no map tells you which of the 160 shops is worth your time on the day.
+                The Kings Road only makes sense end to end. A mile and a half of it, changing as you go, and
+                the better half sits past the point where most people give up and turn back.
               </p>
-              <p>Most of us do not have the afternoon.</p>
+              <p>That is a proper walk. Not every week has one in it.</p>
               <p>
                 STREET brings the same shops to your door. Browse what London&apos;s independent shops
                 actually have on the shelf, buy from the ones nearest you, and have it delivered the same day.

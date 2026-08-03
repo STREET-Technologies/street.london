@@ -65,6 +65,20 @@ cannot make it. The pattern locked on the Carnaby draft:
 
 > Go when you can. We will cover the weeks you cannot.
 
+**Only that last line repeats.** The heading and the setup above it must be different on
+every page, because each street has its own reason you cannot get there. Carnaby and Kings
+Road originally shared "Go, if you have the afternoon" word for word, which reads badly
+when someone clicks from one to the other. Current split:
+
+| Page | Heading | The reason you cannot go |
+|---|---|---|
+| Pillar | Go when you can | No room for any of them |
+| Carnaby | Go, if you have the afternoon | Time |
+| Kings Road | Go, and walk the whole mile | Distance |
+| Notting Hill | Go, if you have the Saturday | The market runs one day a week |
+| Kensington | Go, if you are passing | Two hours of tube for an hour of shopping |
+| Marylebone | Go, if you have the morning | It only works unhurried |
+
 This is not just tone. A guide that ends "skip the visit, order online" undercuts the 900
 words above it, and reads to any shop owner who finds the page as a threat to footfall.
 Retailers will find these pages, and the retailer pitch is reach, not replacement. The copy
