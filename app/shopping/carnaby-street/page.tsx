@@ -201,8 +201,8 @@ export default function CarnabyStreetPage() {
                 to cover ground quickly.
               </p>
               <p>
-                Go on a weekday morning if you can. By Saturday afternoon the street is moving at a shuffle
-                and browsing stops being pleasant.
+                Weekday mornings are the calmest. By Saturday afternoon the street is moving at a shuffle,
+                which is its own kind of fun, but you will not be lingering in front of many windows.
               </p>
             </section>
 
@@ -237,7 +237,7 @@ export default function CarnabyStreetPage() {
                 </div>
                 <div>
                   <dt>When to go</dt>
-                  <dd>Weekday mornings for browsing, late afternoons for the courtyard. Saturdays are for people who enjoy crowds.</dd>
+                  <dd>Weekday mornings for browsing, late afternoons for the courtyard. Saturdays are busy and loud, and good fun if that is the mood you are in.</dd>
                 </div>
                 <div>
                   <dt>How long you need</dt>
