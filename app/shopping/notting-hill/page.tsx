@@ -222,10 +222,10 @@ export default function NottingHillPage() {
                   Kensington High Street
                 </Link>{' '}
                 is south of Holland Park.{' '}
-                <Link href="/shopping/marylebone-high-street" className="guide-area-link">
-                  Marylebone High Street
+                <Link href="/shopping/carnaby-street" className="guide-area-link">
+                  Carnaby Street
                 </Link>{' '}
-                is the calm to Portobello&apos;s noise.
+                is the same instinct for small premises, an hour east.
               </p>
             </section>
           </div>
