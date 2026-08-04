@@ -26,17 +26,17 @@ export const metadata: Metadata = {
   },
 };
 
-// PLACEHOLDER DATA — researched, not verified on the ground, EXCEPT
-// Scamp & Dude (verified in person 2026-07-31). Confirm every other
-// tenancy before production. Partner exclusions (do not add): Percival,
-// Nobody's Child. See docs/planning/shopping-street-guides.md
+// Tenancies cross-checked against batterseapowerstation.co.uk/shop
+// 2026-08-04 (Scamp & Dude also verified in person 2026-07-31). Hall/floor
+// placements are still approximate — confirm on the ground before claiming
+// locations. Partner exclusions (do not add): Percival, Nobody's Child.
+// See docs/planning/shopping-street-guides.md
 const ROUTE = [
   {
     street: 'Turbine Hall A and B',
     stores: [
       { name: 'Ralph Lauren', at: '', note: 'The Art Deco interiors do more for a shopfront than any fit-out could.' },
       { name: 'Mulberry', at: '', note: 'British leather, in a building that spent forty years derelict.' },
-      { name: 'Scamp & Dude', at: '', note: 'Independent British womenswear with a superhero streak. One of the few independents inside, and worth seeking out for exactly that reason.' },
       { name: 'Nike', at: '', note: 'Bigger than the average branch, and busier at weekends.' },
       { name: 'Theory', at: '', note: 'Clean tailoring for people who buy once and keep it.' },
     ],
@@ -45,7 +45,7 @@ const ROUTE = [
     street: 'Electric Boulevard',
     stores: [
       { name: 'Zara', at: '48,000 sq ft', note: 'Ground and upper ground. One of the largest branches in the country.' },
-      { name: 'Anthropologie', at: 'opened 2026', note: 'Lifestyle and homeware, and one of the newest arrivals here.' },
+      { name: 'Anthropologie', at: 'opening soon', note: 'Lifestyle and homeware, next through the doors.' },
       { name: 'Uniqlo', at: '', note: 'The basics run, done properly.' },
       { name: 'Mango', at: '', note: 'Spanish, and consistently better in person than online.' },
     ],
@@ -55,8 +55,17 @@ const ROUTE = [
     stores: [
       { name: 'Le Labo', at: '', note: 'Fragrance blended in front of you and labelled with your name.' },
       { name: 'Aesop', at: '', note: 'The interiors are designed per site, so this one is worth a look on its own.' },
-      { name: 'Jo Malone London', at: '', note: 'British scent, and the gifting answer when you have run out of ideas.' },
+      { name: 'Penhaligon\'s', at: '', note: 'British scent since 1870, and the gifting answer when you have run out of ideas.' },
       { name: 'Moida K-Beauty', at: 'opened 2026', note: 'Korean skincare, and the reason this corner now gets queues.' },
+    ],
+  },
+  {
+    street: 'The independents',
+    stores: [
+      { name: 'Scamp & Dude', at: '', note: 'Independent British womenswear with a superhero streak, in among the flagships.' },
+      { name: 'Curated Makers', at: '', note: 'More than forty local independent makers under one roof. If you came for the independents, start here.' },
+      { name: 'The Battersea General Store', at: '', note: 'The clue is in the name: the local store, not a national anybody.' },
+      { name: 'Postmark', at: '', note: 'An independent London card shop, for the thing you always remember on the way out.' },
     ],
   },
   {
