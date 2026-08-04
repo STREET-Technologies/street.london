@@ -190,7 +190,7 @@ export default function KensingtonHighStreetPage() {
               </p>
               <p>It is still an hour on a tube and an hour back.</p>
               <p>
-                STREET brings the same stores to your door. Browse what London&apos;s independent stores
+                STREET brings the street&apos;s independents to your door. Browse what they
                 actually have, buy from the ones nearest you, and it comes to you instead.
                 Kensington is in our first launch area.
               </p>

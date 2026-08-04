@@ -26,7 +26,8 @@ export const metadata: Metadata = {
   },
 };
 
-// PLACEHOLDER DATA — researched, not verified on the ground. Confirm every
+// PLACEHOLDER DATA — researched, not verified on the ground, EXCEPT
+// Scamp & Dude (verified in person 2026-07-31). Confirm every other
 // tenancy before production. Partner exclusions (do not add): Percival,
 // Nobody's Child. See docs/planning/shopping-street-guides.md
 const ROUTE = [
@@ -35,6 +36,7 @@ const ROUTE = [
     stores: [
       { name: 'Ralph Lauren', at: '', note: 'The Art Deco interiors do more for a shopfront than any fit-out could.' },
       { name: 'Mulberry', at: '', note: 'British leather, in a building that spent forty years derelict.' },
+      { name: 'Scamp & Dude', at: '', note: 'Independent British womenswear with a superhero streak. One of the few independents inside, and worth seeking out for exactly that reason.' },
       { name: 'Nike', at: '', note: 'Bigger than the average branch, and busier at weekends.' },
       { name: 'Theory', at: '', note: 'Clean tailoring for people who buy once and keep it.' },
     ],
@@ -223,8 +225,8 @@ export default function BatterseaPowerStationPage() {
               </p>
               <p>It is also south of the river and on the way to nothing, so it works better as a plan than a detour.</p>
               <p>
-                STREET connects you to the same stores from wherever you are. Browse what London&apos;s local
-                stores actually have, buy from the ones nearest you, and it comes to you instead.
+                STREET connects you to London&apos;s independents from wherever you are. Browse what
+                they actually have, buy from the ones nearest you, and it comes to you instead.
                 Battersea is in our first launch area.
               </p>
               <p className="guide-cta-line">Go when you can. We will cover the weeks you cannot.</p>

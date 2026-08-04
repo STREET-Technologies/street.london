@@ -208,7 +208,7 @@ export default function KingsRoadPage() {
               </p>
               <p>That is a proper walk. Not every week has one in it.</p>
               <p>
-                STREET brings the same stores to your door. Browse what London&apos;s independent stores
+                STREET brings the street&apos;s independents to your door. Browse what they
                 actually have, buy from the ones nearest you, and it comes to you instead.
                 Chelsea is in our first launch area.
               </p>

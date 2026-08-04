@@ -146,7 +146,7 @@ export default function ShoppingPage() {
               </p>
               <p>Most weeks have room for none of them.</p>
               <p>
-                STREET brings the same stores to your door. Browse what London&apos;s independent stores
+                STREET brings the independents from these streets to your door. Browse what they
                 actually have, buy from the ones nearest you, and it comes to you instead. Every
                 street on this page is in our first launch area.
               </p>

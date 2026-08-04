@@ -192,7 +192,7 @@ export default function MaryleboneHighStreetPage() {
               </p>
               <p>Which is exactly what most weeks do not have room for.</p>
               <p>
-                STREET brings the same stores to your door. Browse what London&apos;s independent stores
+                STREET brings the street&apos;s independents to your door. Browse what they
                 actually have, buy from the ones nearest you, and it comes to you instead.
                 Marylebone is in our first launch area.
               </p>
