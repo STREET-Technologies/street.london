@@ -28,7 +28,7 @@ export default function HowItWorks() {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">How STREET Works</h2>
-          <p className="section-intro">From browse to doorstep in under an hour</p>
+          <p className="section-intro">Your order leaves the store because you placed it</p>
         </div>
         <ol className="steps-timeline">
           <li className="step" data-aos="fade-up">
@@ -47,9 +47,9 @@ export default function HowItWorks() {
           </li>
           <li className="step" data-aos="fade-up" data-aos-delay="200">
             <span className="step-node" aria-hidden="true">3</span>
-            <h3 className="step-title">Receive Instantly</h3>
+            <h3 className="step-title">Straight to Your Door</h3>
             <p className="step-description">
-              Your order is collected from the store and delivered to your door in minutes, not days.
+              A courier collects from the shop and brings it to you while you carry on with your day.
             </p>
           </li>
         </ol>

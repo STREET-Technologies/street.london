@@ -224,8 +224,8 @@ export default function BatterseaPowerStationPage() {
               <p>It is also south of the river and on the way to nothing, so it works better as a plan than a detour.</p>
               <p>
                 STREET connects you to the same stores from wherever you are. Browse what London&apos;s local
-                stores actually have on the shelf, buy from the ones nearest you, and have it with you the
-                same day. Battersea is in our first launch area.
+                stores actually have, buy from the ones nearest you, and it comes to you instead.
+                Battersea is in our first launch area.
               </p>
               <p className="guide-cta-line">Go when you can. We will cover the weeks you cannot.</p>
               <Link href="/waitlist" className="btn btn-primary">

@@ -146,8 +146,8 @@ export default function ShoppingPage() {
               </p>
               <p>Most weeks have room for none of them.</p>
               <p>
-                STREET brings the same stores to your door. Browse what London&apos;s independent stores actually
-                have on the shelf, buy from the ones nearest you, and have it delivered the same day. Every
+                STREET brings the same stores to your door. Browse what London&apos;s independent stores
+                actually have, buy from the ones nearest you, and it comes to you instead. Every
                 street on this page is in our first launch area.
               </p>
               <p className="guide-cta-line">Go when you can. We will cover the weeks you cannot.</p>

@@ -11,9 +11,9 @@ const IMAGES = [
 ];
 
 const TAGLINES = [
-  'Your high street, instantly.',
+  'Your high street, delivered.',
   'Independent London shops, one app.',
-  'Delivered to your door in minutes.',
+  'From a shop nearby, not a warehouse.',
 ];
 
 const CROSSFADE_INTERVAL = 3000;

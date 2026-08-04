@@ -43,10 +43,10 @@ export default function Hero() {
       </div>
       <div className="container hero-content">
         <h1 className="hero-title">
-          Your high street, <span className="highlight">instantly</span>
+          Your high street, <span className="highlight">delivered</span>
         </h1>
         <h2 className="hero-tagline">
-          Instant delivery from London&apos;s local shops in under an hour
+          From London&apos;s local shops, straight to your door
         </h2>
         <div className="hero-cta">
           <Link href="/waitlist" className="btn-primary btn-large">

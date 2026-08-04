@@ -2,7 +2,7 @@ import FirstVisitGateway from '../components/FirstVisitGateway';
 
 export const metadata = {
   title: 'Get Early Access to STREET',
-  description: 'Be the first to experience STREET in London. Join the waitlist for early access to instant delivery from your favourite local shops.',
+  description: 'Be the first to experience STREET in London. Join the waitlist for early access to on-demand delivery from your favourite local shops.',
   alternates: {
     canonical: 'https://street.london/join',
   },
@@ -12,9 +12,9 @@ export const metadata = {
   },
   openGraph: {
     title: 'Get Early Access to STREET',
-    description: 'Be the first to experience STREET in London. Join the waitlist for early access to instant delivery from your favourite local shops.',
+    description: 'Be the first to experience STREET in London. Join the waitlist for early access to on-demand delivery from your favourite local shops.',
     url: 'https://street.london/join',
-    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'STREET. Your high street, instantly.' }],
+    images: [{ url: '/img/og-image.jpg', width: 1200, height: 630, alt: 'STREET. Your high street, delivered.' }],
   },
   twitter: {
     card: 'summary_large_image',

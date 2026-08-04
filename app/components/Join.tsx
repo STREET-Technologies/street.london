@@ -8,7 +8,7 @@ export default function Join() {
         <div className="join-closer-left">
           <h2 className="join-closer-title">Your High Street Awaits</h2>
           <p className="join-closer-subtitle">
-            Be the first to shop London&apos;s independent stores, delivered to your door in minutes.
+            Be the first to shop London&apos;s independent stores, delivered to your door on demand.
           </p>
           <Link href="/waitlist" className="join-closer-cta">Join the Waitlist</Link>
           <div className="join-closer-badges">

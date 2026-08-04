@@ -9,7 +9,12 @@ const FAQS: FAQItem[] = [
   {
     question: 'How fast is STREET delivery?',
     answer:
-      'STREET delivers in under 60 minutes. We use Stuart, a same-day courier network. Once a retailer accepts your order, a courier is dispatched immediately. There are no scheduled or next-day delivery options; everything is instant.',
+      'STREET is on-demand: your order goes straight to the shop, they accept and prepare it, and a Stuart courier brings it to your door. No scheduled rounds, no next-day vans, no delivery windows. Delivery is a flat £9.99, wherever the boutique is.',
+  },
+  {
+    question: 'Can I order from more than one shop?',
+    answer:
+      'Each shop on STREET is its own order with its own courier, the same way ordering from two restaurants means two riders. One shop, one order, one £9.99 delivery. Orders from different shops arrive separately.',
   },
   {
     question: 'Where in London does STREET deliver?',
@@ -24,17 +29,17 @@ const FAQS: FAQItem[] = [
   {
     question: 'How do returns work?',
     answer:
-      "Returns are managed by each retailer through Shopify, following their own returns policy. STREET handles cancellations before your order is accepted. If you cancel before the retailer prepares it, the payment hold is released instantly. Once an order is on its way, you'll arrange the return directly with the retailer.",
+      "Returns are managed by each retailer through Shopify, following their own returns policy. STREET handles cancellations before your order is accepted. If you cancel before the retailer prepares it, the payment hold is released straight away. Once an order is on its way, you'll arrange the return directly with the retailer.",
   },
   {
     question: 'How does payment work?',
     answer:
-      "Payment is handled through Shopify's secure checkout. Your card is authorised when you place an order; the charge is only completed once the retailer accepts. If you cancel before acceptance, or the retailer declines, the hold is released instantly and no money moves.",
+      "Payment is handled through Shopify's secure checkout. Your card is authorised when you place an order; the charge is only completed once the retailer accepts. If you cancel before acceptance, or the retailer declines, the hold is released straight away and no money moves.",
   },
   {
     question: 'When does STREET launch?',
     answer:
-      'STREET is launching in London in 2026. Coverage expands neighbourhood by neighbourhood as retailers go live. Sign up to the waitlist with your postcode to get notified the moment STREET reaches your area. Waitlist members get first access.',
+      'STREET is launching in London, and the date will be announced as soon as it is confirmed. Coverage expands neighbourhood by neighbourhood as retailers go live. Sign up to the waitlist with your postcode to get notified the moment STREET reaches your area. Waitlist members get first access.',
   },
 ];
 

@@ -39,12 +39,12 @@ const SECTIONS: FAQSection[] = [
       {
         question: 'Who are we?',
         answer:
-          "We're STREET. Born in London, raised on hustle. We connect local shops, riders, and customers to bring you what you need in minutes, not days.",
+          "We're STREET. Born in London, raised on hustle. We connect local shops, riders, and customers to bring your high street to your door.",
       },
       {
         question: 'What do we do?',
         answer:
-          "You order from a local London shop in the app, a rider collects it, and it's at your door in minutes. No waiting days, no delivery windows.",
+          "You order from a local London shop in the app, a rider collects it and brings it straight to your door. No waiting days, no delivery windows.",
       },
       {
         question: 'Where do we work?',
@@ -105,7 +105,7 @@ const SECTIONS: FAQSection[] = [
       {
         question: 'Can I schedule my order for later?',
         answer:
-          'Not at the moment. STREET currently focuses on instant delivery and does not support scheduled orders yet.',
+          'Not at the moment. STREET currently focuses on on-demand delivery and does not support scheduled orders yet.',
       },
       {
         question: 'Can I track my order?',
