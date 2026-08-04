@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 const TITLE = 'See STREET in Action: The Retailer Demo';
 const DESCRIPTION =
-  'A short product tour for London shops. See how customers browse, buy and get delivery in under an hour, and how you run it all from the retailer app.';
+  'A short product tour for London shops. See how customers browse, buy and get on-demand delivery, and how you run it all from the retailer app.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const JOURNEY = [
   { n: '1', title: 'Browse', text: 'Discover stores near any London address.' },
   { n: '2', title: 'Choose', text: 'Full product details with live stock levels.' },
-  { n: '3', title: 'Checkout', text: 'Pay in seconds, delivered in under an hour.' },
+  { n: '3', title: 'Checkout', text: 'Pay in seconds, delivered on demand.' },
   { n: '4', title: 'Track', text: 'Live map from the store to the door.' },
 ];
 

@@ -258,8 +258,8 @@ export default function CarnabyStreetPage() {
               </p>
               <p>Most of us do not have the afternoon.</p>
               <p>
-                STREET brings the same stores to your door. Browse what London&apos;s independent stores actually
-                have on the shelf, buy from the ones nearest you, and have it delivered the same day. Carnaby
+                STREET brings the street&apos;s independents to your door. Browse what they
+                actually have, buy from the ones nearest you, and it comes to you instead. Carnaby
                 and the wider Soho estate are in our first launch area.
               </p>
               <p className="guide-cta-line">Go when you can. We will cover the weeks you cannot.</p>

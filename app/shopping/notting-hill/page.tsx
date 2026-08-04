@@ -205,9 +205,9 @@ export default function NottingHillPage() {
               </p>
               <p>But the market runs one day a week, and most of us are busy on it.</p>
               <p>
-                STREET brings the neighbourhood&apos;s stores to your door the other six days. Browse what
-                London&apos;s independent stores actually have on the shelf, buy from the ones nearest you, and
-                have it delivered the same day. Notting Hill is in our first launch area.
+                STREET brings the neighbourhood&apos;s independents to your door the other six days.
+                Browse what they actually have, buy from the ones nearest you, and it comes
+                to you instead. Notting Hill is in our first launch area.
               </p>
               <p className="guide-cta-line">Go when you can. We will cover the weeks you cannot.</p>
               <Link href="/waitlist" className="btn btn-primary">

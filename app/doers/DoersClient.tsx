@@ -100,7 +100,7 @@ export default function DoersClient() {
               Become a STREET ambassador. Earn rewards for sharing London&apos;s high street.
             </h2>
             <p className="retailers-subtitle">
-              Be part of shaping London&apos;s instant delivery culture. Get early access, exclusive rewards, and be at the forefront of the movement.
+              Be part of shaping London&apos;s on-demand delivery culture. Get early access, exclusive rewards, and be at the forefront of the movement.
             </p>
             <div className="doers-benefits">
               <div className="benefit-pill">

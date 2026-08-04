@@ -26,9 +26,11 @@ export const metadata: Metadata = {
   },
 };
 
-// PLACEHOLDER DATA — researched, not verified on the ground. Confirm every
-// tenancy before production. Partner exclusions (do not add): Percival,
-// Nobody's Child. See docs/planning/shopping-street-guides.md
+// Tenancies cross-checked against batterseapowerstation.co.uk/shop
+// 2026-08-04 (Scamp & Dude also verified in person 2026-07-31). Hall/floor
+// placements are still approximate — confirm on the ground before claiming
+// locations. Partner exclusions (do not add): Percival, Nobody's Child.
+// See docs/planning/shopping-street-guides.md
 const ROUTE = [
   {
     street: 'Turbine Hall A and B',
@@ -43,7 +45,7 @@ const ROUTE = [
     street: 'Electric Boulevard',
     stores: [
       { name: 'Zara', at: '48,000 sq ft', note: 'Ground and upper ground. One of the largest branches in the country.' },
-      { name: 'Anthropologie', at: 'opened 2026', note: 'Lifestyle and homeware, and one of the newest arrivals here.' },
+      { name: 'Anthropologie', at: 'opening soon', note: 'Lifestyle and homeware, next through the doors.' },
       { name: 'Uniqlo', at: '', note: 'The basics run, done properly.' },
       { name: 'Mango', at: '', note: 'Spanish, and consistently better in person than online.' },
     ],
@@ -53,8 +55,17 @@ const ROUTE = [
     stores: [
       { name: 'Le Labo', at: '', note: 'Fragrance blended in front of you and labelled with your name.' },
       { name: 'Aesop', at: '', note: 'The interiors are designed per site, so this one is worth a look on its own.' },
-      { name: 'Jo Malone London', at: '', note: 'British scent, and the gifting answer when you have run out of ideas.' },
+      { name: 'Penhaligon\'s', at: '', note: 'British scent since 1870, and the gifting answer when you have run out of ideas.' },
       { name: 'Moida K-Beauty', at: 'opened 2026', note: 'Korean skincare, and the reason this corner now gets queues.' },
+    ],
+  },
+  {
+    street: 'The independents',
+    stores: [
+      { name: 'Scamp & Dude', at: '', note: 'Independent British womenswear with a superhero streak, in among the flagships.' },
+      { name: 'Curated Makers', at: '', note: 'More than forty local independent makers under one roof. If you came for the independents, start here.' },
+      { name: 'The Battersea General Store', at: '', note: 'The clue is in the name: the local store, not a national anybody.' },
+      { name: 'Postmark', at: '', note: 'An independent London card shop, for the thing you always remember on the way out.' },
     ],
   },
   {
@@ -223,9 +234,9 @@ export default function BatterseaPowerStationPage() {
               </p>
               <p>It is also south of the river and on the way to nothing, so it works better as a plan than a detour.</p>
               <p>
-                STREET connects you to the same stores from wherever you are. Browse what London&apos;s local
-                stores actually have on the shelf, buy from the ones nearest you, and have it with you the
-                same day. Battersea is in our first launch area.
+                STREET connects you to London&apos;s independents from wherever you are. Browse what
+                they actually have, buy from the ones nearest you, and it comes to you instead.
+                Battersea is in our first launch area.
               </p>
               <p className="guide-cta-line">Go when you can. We will cover the weeks you cannot.</p>
               <Link href="/waitlist" className="btn btn-primary">

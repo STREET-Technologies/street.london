@@ -9,8 +9,8 @@ const barlow = Barlow({
   variable: "--font-body",
 });
 
-const SITE_TITLE = "Instant Delivery from London's Local Shops";
-const SITE_DESCRIPTION = "Shop London's high street and get it delivered in under an hour. Fashion, activewear, eyewear, beauty and more from independent boutiques in one app.";
+const SITE_TITLE = "On-Demand Delivery from London's Local Shops";
+const SITE_DESCRIPTION = "Shop London's high street and have it brought straight to your door. Fashion, activewear, eyewear, beauty and more from independent boutiques in one app.";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://street.london'),
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: '/img/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'STREET. Your high street, instantly.',
+        alt: 'STREET. Your high street, delivered.',
       },
     ],
   },
@@ -91,7 +91,7 @@ export default function RootLayout({
             "name": "STREET",
             "alternateName": "STREET London",
             "url": "https://street.london",
-            "description": "Instant delivery marketplace connecting Londoners with their local high street retailers.",
+            "description": "On-demand delivery marketplace connecting Londoners with their local high street retailers.",
             "email": "hi@street.london",
             "logo": "https://street.london/img/logo-green-transparent.png",
             "address": {
@@ -127,7 +127,7 @@ export default function RootLayout({
             "name": "STREET",
             "operatingSystem": "iOS, Android",
             "applicationCategory": "ShoppingApplication",
-            "description": "Shop London's high street and get it delivered in under an hour.",
+            "description": "Shop London's high street, delivered straight to your door.",
             "offers": {
               "@type": "Offer",
               "price": "0",

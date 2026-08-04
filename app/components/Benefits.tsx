@@ -28,7 +28,7 @@ export default function Benefits() {
       <div className="container">
         <div className="benefits-intro">
           <h2 className="section-title">Why Shop with STREET?</h2>
-          <p className="section-intro">Local shops, one app, sixty-minute delivery</p>
+          <p className="section-intro">Local shops, one app, one flat delivery fee</p>
         </div>
         <div className="benefits-grid">
           {/* Benefit 1 */}
@@ -44,7 +44,7 @@ export default function Benefits() {
               </p>
               <ul className="benefit-list">
                 <li>Independent and local stores</li>
-                <li>Personalised recommendations</li>
+                <li>Real-time stock from real stores</li>
                 <li>Support your neighbourhood</li>
               </ul>
             </div>
@@ -60,7 +60,7 @@ export default function Benefits() {
               <ul className="benefit-list">
                 <li>Every local store in one place</li>
                 <li>Fast checkout direct with your store</li>
-                <li>Unified loyalty rewards</li>
+                <li>One flat £9.99 delivery, wherever the shop is</li>
               </ul>
             </div>
             <div className="benefit-image">
@@ -86,7 +86,7 @@ export default function Benefits() {
             Collected from the shop and delivered to your door while you carry on with your day.
           </p>
           <ul className="benefit-band-points">
-            <li>In under an hour</li>
+            <li>From a shop just down the road</li>
             <li>Track it in real time</li>
             <li>Door to door, every time</li>
           </ul>

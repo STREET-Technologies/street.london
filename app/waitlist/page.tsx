@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import WaitlistClient from './WaitlistClient';
 
 const TITLE = 'Join the Waitlist: STREET London Early Access';
-const DESCRIPTION = "Be first to shop London's high street through STREET. Sign up for early access to instant delivery from independent boutiques and local shops.";
+const DESCRIPTION = "Be first to shop London's high street through STREET. Sign up for early access to on-demand delivery from independent boutiques and local shops.";
 
 export const metadata: Metadata = {
   title: TITLE,
