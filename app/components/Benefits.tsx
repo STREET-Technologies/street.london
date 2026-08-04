@@ -86,7 +86,7 @@ export default function Benefits() {
             Collected from the shop and delivered to your door while you carry on with your day.
           </p>
           <ul className="benefit-band-points">
-            <li>From a shop nearby, not a warehouse</li>
+            <li>From a shop just down the road</li>
             <li>Track it in real time</li>
             <li>Door to door, every time</li>
           </ul>

@@ -13,7 +13,7 @@ const IMAGES = [
 const TAGLINES = [
   'Your high street, delivered.',
   'Independent London shops, one app.',
-  'From a shop nearby, not a warehouse.',
+  'From a shop just down the road.',
 ];
 
 const CROSSFADE_INTERVAL = 3000;
