@@ -26,30 +26,39 @@ export const metadata: Metadata = {
   },
 };
 
-// PLACEHOLDER DATA — researched, not verified. To be replaced with the list from the
-// SLT session. Retail turnover here is high; confirm every tenancy before this ships.
-// Partner exclusions (do not add): Percival, Nobody's Child.
+// Every tenancy and door number below verified against thisissoho.co.uk (the
+// Carnaby estate's own directory, Shaftesbury Capital) on 2026-08-05. All nine
+// original entries confirmed still trading; American Classics and adidas
+// Originals added, both directory-listed on streets already covered.
+// Stores are ordered by door number, so the list reads as the walk.
+// Retail turnover here is high — re-verify before any significant traffic push.
+// Partner exclusions (do not add): Percival (7 Marshall Street),
+// Nobody's Child (47 Carnaby Street).
 // See docs/planning/shopping-street-guides.md
-// Street numbers appear only where a source confirms them. Names without a
-// number are confirmed as trading on the street but the door number is not.
 const ROUTE = [
   {
     street: 'Newburgh Street',
     stores: [
-      { name: "Annie's Ibiza", at: '', note: 'Vintage and party dresses, arranged like a dressing-up box for adults.' },
-      { name: 'Aubin', at: '', note: 'British heritage clothing, relaxed tailoring, denim done properly.' },
-      { name: 'RRL', at: '', note: "Ralph Lauren's selvedge denim and vintage workwear line." },
-      { name: 'Mark Powell', at: '', note: 'Bespoke Soho tailoring with a sharp, unmistakably British cut.' },
-      { name: 'Metal Morphosis', at: '', note: 'Piercing and jewellery, thirty years in the same trade on the same street.' },
-      { name: 'The White Horse', at: '', note: 'A pub on this corner since the 1930s, which tells you what kind of street it is.' },
+      { name: 'Ugly Dumpling', at: 'No. 1', note: 'Dumplings, and an easy way to start the walk rather than end it.' },
+      { name: 'Nagare Coffee', at: 'No. 2', note: 'Coffee for a street that is meant to be taken slowly.' },
+      { name: "Annie's Ibiza", at: 'No. 3', note: 'Vintage and party dresses, arranged like a dressing-up box for adults.' },
+      { name: 'HIMI', at: 'No. 4', note: 'A Japanese izakaya, small plates and sake.' },
+      { name: 'RRL', at: 'No. 6', note: "Ralph Lauren's selvedge denim and vintage workwear line." },
+      { name: 'American Classics', at: 'No. 7', note: 'American workwear and vintage, on this street for decades.' },
+      { name: 'Mark Powell', at: 'No. 10', note: 'Bespoke Soho tailoring with a sharp, unmistakably British cut. The Shoe Snob and J.FitzPatrick share the ground floor.' },
+      { name: 'Metal Morphosis', at: 'No. 11', note: 'Piercing and jewellery, thirty years in the same trade on the same street.' },
+      { name: 'Antidote', at: 'No. 12', note: 'Wine bar with small plates, for when the walk turns into an evening.' },
+      { name: 'Aubin', at: 'No. 15', note: 'British heritage clothing, relaxed tailoring, denim done properly.' },
+      { name: 'The White Horse', at: 'No. 16', note: 'A pub on this corner since the 1930s, which tells you what kind of street it is.' },
     ],
   },
   {
     street: "Foubert's Place",
     stores: [
-      { name: 'Soho Home', at: 'No. 31', note: 'Homeware and furniture lifted straight from the Soho House interiors.' },
+      { name: 'adidas Originals', at: 'No. 8', note: 'The archive end of the range rather than the run of the mill.' },
       { name: 'Shinola', at: 'No. 28', note: 'Detroit-built watches, leather goods, journals and bicycles.' },
-      { name: 'Zahter', at: 'No. 30 to 32', note: 'Turkish cooking, and the reason to stop before you reach Carnaby Street.' },
+      { name: 'Zahter', at: 'No. 30 to 32', note: 'Istanbulite cooking over wood and charcoal, and the reason to stop before you reach Carnaby Street.' },
+      { name: 'Soho Home', at: 'No. 31', note: 'Homeware and furniture lifted straight from the Soho House interiors.' },
     ],
   },
 ];
@@ -182,11 +191,11 @@ export default function CarnabyStreetPage() {
               </ol>
 
               <p className="route-credit">
-                Stores on Newburgh Street cross-checked against{' '}
+                Every stop on this route, and every door number, cross-checked against{' '}
                 <a href="https://www.thisissoho.co.uk/every-street-has-a-story/newburgh-street/" target="_blank" rel="noopener noreferrer">
                   This Is Soho
                 </a>
-                , who know the street better than we do.
+                , who know the street better than we do. Last checked August 2026.
               </p>
 
               <p>This is the part of the neighbourhood that rewards a slow walk rather than a list.</p>
