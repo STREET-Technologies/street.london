@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const TITLE = 'Marylebone High Street Shops: A Village Shopping Guide';
+const TITLE = 'Marylebone High Street Shops: A Village Guide';
 const DESCRIPTION =
   'A guide to shopping Marylebone High Street, the estate that rebuilt it around independents, and the Sunday farmers market on Cramer Street.';
 

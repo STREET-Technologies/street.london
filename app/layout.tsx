@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import CookieConsent from "./components/CookieConsent";
 
@@ -7,6 +8,14 @@ const barlow = Barlow({
   weight: ['400', '500', '600', '700', '800'],
   subsets: ["latin"],
   variable: "--font-body",
+});
+
+// next/font preloads Hanson and generates a metrics-matched fallback,
+// eliminating the layout shift the raw @font-face swap caused on heroes.
+const hanson = localFont({
+  src: "../public/fonts/Hanson-Bold.ttf",
+  weight: "800",
+  variable: "--font-title",
 });
 
 const SITE_TITLE = "On-Demand Delivery from London's Local Shops";
@@ -137,7 +146,7 @@ export default function RootLayout({
           })}}
         />
       </head>
-      <body className={barlow.variable}>
+      <body className={`${barlow.variable} ${hanson.variable}`}>
         {children}
         <CookieConsent />
       </body>

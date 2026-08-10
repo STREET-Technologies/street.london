@@ -37,6 +37,9 @@ const JOURNEY = [
 export default function DemoPage() {
   return (
     <>
+      {/* The hero photo is a CSS background, invisible to the preload scanner;
+          without this hint it becomes the LCP bottleneck on mobile. */}
+      <link rel="preload" as="image" href="/img/demo/hero-bg.jpg" fetchPriority="high" />
       <Navigation />
       <main className="demo-page">
         {/* Hero — value prop + the customer-journey video as the money shot */}

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const TITLE = "London Shopping Areas: A Guide to the City's Shopping Streets";
+const TITLE = 'London Shopping Areas: Street-by-Street Guide';
 const DESCRIPTION =
   'Where to shop in London, street by street. Carnaby, Kings Road, Notting Hill, Kensington, Marylebone and Battersea Power Station, and what each is good for.';
 

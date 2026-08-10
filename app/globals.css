@@ -5,14 +5,9 @@
    Feel: Warm, inviting, boutique shopping experience
    =================================== */
 
-/* Custom Fonts */
-@font-face {
-    font-family: 'Hanson';
-    src: url('/fonts/Hanson-Bold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
+/* Custom fonts are loaded via next/font in app/layout.tsx, which owns
+   --font-title (Hanson) and --font-body (Barlow), preloading both with
+   metrics-matched fallbacks. */
 
 /* Reset & Base */
 * {
@@ -35,8 +30,6 @@
     --terracotta: #e8d5c4;
     --sage: #dce5dc;
 
-    --font-title: 'Hanson', 'Arial Black', sans-serif;
-    --font-body: 'Barlow', sans-serif;
 
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.04);
@@ -2736,7 +2729,7 @@ body {
     background: var(--cream);
     color: var(--black);
     min-height: 100dvh;
-    padding-top: 96px;
+    padding-top: var(--page-top);
 }
 
 /* --- Hero: full-bleed golden-hour photo, cream wash keeps the headline

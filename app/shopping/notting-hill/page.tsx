@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const TITLE = 'Notting Hill Shops: Where to Shop on Portobello Road and Beyond';
+const TITLE = 'Notting Hill Shops: Portobello Road & Beyond';
 const DESCRIPTION =
   'A guide to shopping Notting Hill: what runs where on Portobello Road, and the boutiques on Westbourne Grove, Ledbury Road and Golborne Road.';
 
