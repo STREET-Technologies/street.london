@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-10T10:00:00+01:00",
+  "title": "Design System: street.london",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Street Lime", "canonical": "#c6ff00", "tonalRamp": ["oklch(25% 0.09 122)", "oklch(38% 0.14 122)", "oklch(52% 0.19 122)", "oklch(65% 0.23 122)", "oklch(78% 0.26 122)", "oklch(92% 0.27 122)", "oklch(95% 0.18 122)", "oklch(97% 0.09 122)"] },
+      "black": { "role": "neutral", "displayName": "Ink Black", "canonical": "#000000", "tonalRamp": ["#000000", "#1a1a1a", "#333333", "#4d4d4d", "#666666", "#a4a3a8", "#d9d9d9", "#f5f5f5"] },
+      "cream": { "role": "neutral", "displayName": "Morning Cream", "canonical": "#fdfbf7", "tonalRamp": ["oklch(20% 0.01 85)", "oklch(35% 0.012 85)", "oklch(50% 0.014 85)", "oklch(65% 0.014 85)", "oklch(80% 0.012 85)", "oklch(90% 0.01 85)", "oklch(96% 0.007 85)", "oklch(99% 0.004 85)"] },
+      "sand": { "role": "neutral", "displayName": "Warm Sand", "canonical": "#f7f3ed" },
+      "gray-dark": { "role": "neutral", "displayName": "Slate", "canonical": "#666666" },
+      "gray": { "role": "neutral", "displayName": "Fog (decorative only)", "canonical": "#a4a3a8" },
+      "gray-light": { "role": "neutral", "displayName": "Mist", "canonical": "#f5f5f5" },
+      "error": { "role": "tertiary", "displayName": "Signal Red", "canonical": "#c62828" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display (Hanson)", "purpose": "Page titles via .page-title; one per page, mixed case, centered." },
+      "headline": { "displayName": "Headline (Hanson)", "purpose": "Section h2s inside guide content." },
+      "tagline": { "displayName": "Tagline (Barlow 600)", "purpose": ".page-tagline h2 directly under a page title." },
+      "body": { "displayName": "Body (Barlow)", "purpose": "Running copy, lh 1.7-1.8, 62-68ch measure in guides." },
+      "label": { "displayName": "Label (Barlow 600)", "purpose": "Form labels and nav links." }
+    },
+    "shadows": [
+      { "name": "shadow-sm (Whisper)", "value": "0 2px 12px rgba(0,0,0,0.04)", "purpose": "Resting content surfaces." },
+      { "name": "shadow-md (Lift)", "value": "0 8px 24px rgba(0,0,0,0.06)", "purpose": "Form cards and button hover." },
+      { "name": "shadow-lg (Float)", "value": "0 16px 48px rgba(0,0,0,0.08)", "purpose": "Large feature surfaces." }
+    ],
+    "motion": [
+      { "name": "transition", "value": "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Single global easing for all state transitions." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "480px" },
+      { "name": "tablet", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one CTA style: black fill, lime hover flip, loading-aware.",
+      "html": "<button class=\"ds-btn-primary\">Join the Waitlist</button>",
+      "css": ".ds-btn-primary { font-family: Barlow, sans-serif; font-weight: 600; font-size: 1rem; background: #000; color: #fff; padding: 1rem 2.5rem; border: none; border-radius: 8px; cursor: pointer; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); } .ds-btn-primary:hover { background: #c6ff00; color: #000; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); } .ds-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }"
+    },
+    {
+      "name": "Category Pill",
+      "kind": "chip",
+      "refersTo": "pill-button",
+      "description": "Multi-select category chip; active state fills Street Lime.",
+      "html": "<button class=\"ds-pill\">Womenswear</button> <button class=\"ds-pill ds-pill-active\">Menswear</button>",
+      "css": ".ds-pill { font-family: Barlow, sans-serif; font-size: 0.95rem; font-weight: 500; padding: 0.625rem 1.25rem; border: 2px solid #f5f5f5; background: #fff; color: #000; border-radius: 50px; cursor: pointer; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); } .ds-pill:hover { border-color: #c6ff00; background: #fdfbf7; } .ds-pill-active { background: #c6ff00; border-color: #c6ff00; font-weight: 600; }"
+    },
+    {
+      "name": "Form Card",
+      "kind": "card",
+      "refersTo": "form-card",
+      "description": "The shared white form surface used by every form page.",
+      "html": "<div class=\"ds-form-card\"><label class=\"ds-label\">Email *</label><input class=\"ds-input\" type=\"email\" placeholder=\"your.email@example.com\" /></div>",
+      "css": ".ds-form-card { background: #fff; padding: 3rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); max-width: 600px; } .ds-label { display: block; font-family: Barlow, sans-serif; font-weight: 600; font-size: 0.95rem; color: #000; margin-bottom: 0.5rem; } .ds-input { width: 100%; padding: 0.875rem 1rem; border: 2px solid #f5f5f5; border-radius: 8px; font-family: Barlow, sans-serif; font-size: 1rem; background: #fff; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); } .ds-input:focus { outline: none; border-color: #c6ff00; }"
+    },
+    {
+      "name": "Page Hero",
+      "kind": "custom",
+      "refersTo": "page-title",
+      "description": "The shared subpage header: centered Hanson title, Barlow tagline and subtitle.",
+      "html": "<header class=\"ds-page-hero\"><h1 class=\"ds-page-title\">London Retail Partners</h1><h2 class=\"ds-page-tagline\">Sell on STREET. Reach London customers.</h2><p class=\"ds-page-subtitle\">Let us bring shoppers to you and increase your exposure.</p></header>",
+      "css": ".ds-page-hero { text-align: center; max-width: 800px; margin: 0 auto; } .ds-page-title { font-family: 'Arial Black', sans-serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.2; color: #000; margin-bottom: 1.5rem; } .ds-page-tagline { font-family: Barlow, sans-serif; font-size: clamp(1.125rem, 2.5vw, 1.5rem); font-weight: 600; line-height: 1.35; letter-spacing: -0.01em; color: #666; margin: 0.5rem auto 1.25rem; max-width: 720px; } .ds-page-subtitle { font-family: Barlow, sans-serif; font-size: 1.25rem; line-height: 1.6; color: #666; }"
+    },
+    {
+      "name": "Route Waypoint",
+      "kind": "custom",
+      "refersTo": "route",
+      "description": "Signature wayfinding motif: black signage tile with lime numeral on a route spine.",
+      "html": "<ol class=\"ds-route\"><li class=\"ds-route-leg\"><h3 class=\"ds-route-street\">Newburgh Street</h3><p class=\"ds-route-stop\">Mark Powell <span class=\"ds-route-at\">AT No. 2</span></p></li><li class=\"ds-route-leg\"><h3 class=\"ds-route-street\">Foubert's Place</h3><p class=\"ds-route-stop\">adidas Originals <span class=\"ds-route-at\">AT No. 8</span></p></li></ol>",
+      "css": ".ds-route { list-style: none; counter-reset: leg; margin: 0; padding: 0 0 0 3rem; position: relative; font-family: Barlow, sans-serif; } .ds-route::before { content: ''; position: absolute; left: 0.85rem; top: 0.9rem; bottom: 1.4rem; width: 2px; background: #f5f5f5; } .ds-route-leg { counter-increment: leg; position: relative; margin-bottom: 2.5rem; } .ds-route-leg::before { content: counter(leg); position: absolute; left: -3rem; top: -0.1rem; width: 1.9rem; height: 1.9rem; display: grid; place-items: center; background: #000; color: #c6ff00; font-family: 'Arial Black', sans-serif; font-size: 0.95rem; } .ds-route-street { font-family: 'Arial Black', sans-serif; font-size: 1.15rem; color: #000; margin: 0 0 1rem; } .ds-route-stop { font-size: 1.05rem; font-weight: 700; color: #000; margin: 0; } .ds-route-at { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; color: #666; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Fixed cream bar with blur, Hanson logo, Barlow links, black CTA.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-logo\">STREET</span><span class=\"ds-nav-links\"><a class=\"ds-nav-link\" href=\"#\">Features</a><a class=\"ds-nav-link\" href=\"#\">FAQ</a><a class=\"ds-nav-cta\" href=\"#\">Join the Waitlist</a></span></nav>",
+      "css": ".ds-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; background: rgba(253,251,247,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); font-family: Barlow, sans-serif; } .ds-nav-logo { font-family: 'Arial Black', sans-serif; font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; color: #000; } .ds-nav-links { display: inline-flex; align-items: center; gap: 2.5rem; } .ds-nav-link { color: #000; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.4s cubic-bezier(0.4,0,0.2,1); } .ds-nav-link:hover { color: #666; } .ds-nav-cta { background: #000; color: #fff; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; text-decoration: none; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The High Street, Signposted",
+    "overview": "The site borrows its grammar from street furniture and wayfinding: black signage tiles with lime numerals, route spines that walk you shop by shop, breadcrumbs, and one loud lime accent that works like a painted kerb line. Everything sits on a warm cream ground with white surfaces floating gently above it — bold but friendly, chunky display type softened by rounded corners and pill shapes. Density is generous and editorial; the system is deliberately small: one display face, one body face, one accent, three shadows.",
+    "keyCharacteristics": [
+      "Warm cream ground, white cards, black ink, lime signal",
+      "Hanson display type used sparingly and always in charge",
+      "Wayfinding motifs: numbered black waypoint tiles, route spines, breadcrumbs",
+      "Soft ambient shadows; no borders doing depth work"
+    ],
+    "rules": [
+      { "name": "The Kerb Line Rule", "body": "Lime is a signal, not a surface. It appears on interaction, on waypoints, and on small brand marks — never as large fills behind text blocks and never as text on cream/white.", "section": "colors" },
+      { "name": "The One Shout Rule", "body": "Hanson appears only where it leads: page titles, section headings, the logo, waypoint numerals, pull-quote marks. Never for paragraphs, labels, or buttons.", "section": "typography" },
+      { "name": "The No Outline Rule", "body": "Cards never take borders. If a surface needs separation from white, it gets a sand tint or a shadow step, not a stroke.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do start every subpage with the shared page-hero block and let --page-top handle nav clearance — never hardcode top padding on a page shell.",
+      "Do put lime on black (or black on lime) exclusively; check any new text/background pair against 4.5:1.",
+      "Do use Slate (--gray-dark) for all secondary text on light grounds; --gray is decorative only.",
+      "Do give every form submit a disabled/loading state and an inline .form-error — no alert()."
+    ],
+    "donts": [
+      "Don't create a new hero, title, or form-card style per page; extend the shared classes in globals.css.",
+      "Don't use gradient text, side-stripe borders, or bordered cards — all previously shipped and deliberately removed.",
+      "Don't set Hanson below ~1.4rem or use it for running text.",
+      "Don't publish delivery-time claims in any copy surface (CAP Code 3.7 — the slogan is 'Delivered', no minute numbers)."
+    ]
+  }
+}
