@@ -21,6 +21,8 @@ export default function RetailersClient() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleCheckboxChange = (category: string) => {
     setFormData((prev) => ({
@@ -33,6 +35,8 @@ export default function RetailersClient() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+    setSubmitError('');
 
     try {
       const response = await fetch('/api/retailers', {
@@ -47,11 +51,13 @@ export default function RetailersClient() {
         setSubmitted(true);
       } else {
         console.error('Submission failed:', result.error);
-        alert('Failed to submit. Please try again.');
+        setSubmitError('Failed to submit. Please try again.');
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('Failed to submit. Please try again.');
+      setSubmitError('Failed to submit. Please try again.');
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -94,12 +100,12 @@ export default function RetailersClient() {
       <Navigation />
       <main className="retailers-page">
         <div className="container">
-          <div className="retailers-hero">
-            <h1 className="retailers-title">London Retail Partners</h1>
+          <div className="page-hero">
+            <h1 className="page-title">London Retail Partners</h1>
             <h2 className="page-tagline">
               Sell on STREET. Reach London customers with on-demand delivery.
             </h2>
-            <p className="retailers-subtitle">
+            <p className="page-subtitle">
               Let us bring shoppers to you virtually and increase your exposure! Sign up to hear more and be one of the
               first brands onboard!
             </p>
@@ -191,7 +197,7 @@ export default function RetailersClient() {
             <div className="form-group">
               <label>Product Categories *</label>
               <div className="selection-pills">
-                {['Womenswear', 'Menswear', 'Activewear', 'Eyewear', 'Accessories', 'Shoes', 'Kidswear', 'Kids', 'Beauty', 'Homewear'].map(
+                {['Womenswear', 'Menswear', 'Activewear', 'Eyewear', 'Accessories', 'Shoes', 'Kidswear', 'Beauty', 'Homeware'].map(
                   (category) => (
                     <button
                       key={category}
@@ -240,8 +246,10 @@ export default function RetailersClient() {
               </select>
             </div>
 
-            <button type="submit" className="btn-primary btn-large">
-              Submit Application
+            {submitError && <p className="form-error" role="alert">{submitError}</p>}
+
+            <button type="submit" className="btn-primary btn-large" disabled={submitting}>
+              {submitting ? 'Submitting…' : 'Submit Application'}
             </button>
           </form>
         </div>

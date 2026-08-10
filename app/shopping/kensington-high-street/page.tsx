@@ -65,17 +65,19 @@ export default function KensingtonHighStreetPage() {
       <Navigation />
       <main className="guide-page">
         <div className="container">
-          <nav className="guide-breadcrumb" aria-label="Breadcrumb">
-            <Link href="/shopping">London shopping areas</Link>
-            <span aria-hidden="true">/</span>
-            <span>Kensington High Street</span>
-          </nav>
+          <header className="page-hero">
+            <nav className="guide-breadcrumb" aria-label="Breadcrumb">
+              <Link href="/shopping">London shopping areas</Link>
+              <span aria-hidden="true">/</span>
+              <span>Kensington High Street</span>
+            </nav>
 
-          <h1 className="guide-title">Kensington High Street Shops: A Shopping Guide</h1>
-          <p className="guide-standfirst">
-            This was once the most glamorous shopping street in London. It is now a very good high street in
-            the shell of something grander, and knowing that is the key to enjoying it.
-          </p>
+            <h1 className="page-title">Kensington High Street Shops: A Shopping Guide</h1>
+            <p className="page-subtitle">
+              This was once the most glamorous shopping street in London. It is now a very good high street in
+              the shell of something grander, and knowing that is the key to enjoying it.
+            </p>
+          </header>
 
           <figure className="guide-figure guide-figure-hero">
             <Image

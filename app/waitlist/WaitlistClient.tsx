@@ -16,9 +16,13 @@ export default function WaitlistClient() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+    setSubmitError('');
 
     try {
       const response = await fetch('/api/waitlist', {
@@ -33,11 +37,13 @@ export default function WaitlistClient() {
         setSubmitted(true);
       } else {
         console.error('Submission failed:', result.error);
-        alert('Failed to submit. Please try again.');
+        setSubmitError('Failed to submit. Please try again.');
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('Failed to submit. Please try again.');
+      setSubmitError('Failed to submit. Please try again.');
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -82,15 +88,13 @@ export default function WaitlistClient() {
       <Navigation />
       <main className="waitlist-page">
         <div className="container">
-          <div className="waitlist-hero">
-            <h1 className="waitlist-title">
-              On-Demand Delivery London. <span className="highlight">Join the Waitlist</span>
-            </h1>
+          <div className="page-hero">
+            <h1 className="page-title">On-Demand Delivery London. Join the Waitlist</h1>
             <h2 className="page-tagline">
               Join the waitlist for early access to on-demand delivery in London
             </h2>
-            <p className="waitlist-subtitle">
-              BE THE FIRST ON OUR STREET AND SIGN UP TO GET EXCLUSIVE REWARDS!
+            <p className="page-subtitle">
+              Be the first on our STREET and sign up to get exclusive rewards!
             </p>
           </div>
 
@@ -150,7 +154,7 @@ export default function WaitlistClient() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="stores">Top 2 stores are you most excited to shop from? *</label>
+              <label htmlFor="stores">Which 2 stores are you most excited to shop from? *</label>
               <input
                 type="text"
                 id="stores"
@@ -182,8 +186,10 @@ export default function WaitlistClient() {
               .
             </p>
 
-            <button type="submit" className="btn-primary btn-large">
-              Join the Waitlist
+            {submitError && <p className="form-error" role="alert">{submitError}</p>}
+
+            <button type="submit" className="btn-primary btn-large" disabled={submitting}>
+              {submitting ? 'Submitting…' : 'Join the Waitlist'}
             </button>
           </form>
         </div>

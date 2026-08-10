@@ -77,12 +77,12 @@ export default function RiderClient() {
       <Navigation />
       <main className="retailers-page">
         <div className="container">
-          <div className="retailers-hero">
-            <h1 className="retailers-title">Let&apos;s cover the streetS together</h1>
+          <div className="page-hero">
+            <h1 className="page-title">Let&apos;s cover the streetS together</h1>
             <h2 className="page-tagline">
               Become a STREET courier. Flexible delivery work in London.
             </h2>
-            <p className="retailers-subtitle">
+            <p className="page-subtitle">
               Join our team of riders and drivers. Earn money delivering to your local community with flexible hours.
             </p>
           </div>

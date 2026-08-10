@@ -42,6 +42,18 @@
     --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.04);
     --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.08);
+
+    --error: #c62828;
+
+    /* Clearance under the fixed nav for every page shell.
+       The nav is ~76px tall; this is the only place the offset is defined. */
+    --page-top: 120px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --page-top: 100px;
+    }
 }
 
 html {
@@ -242,6 +254,13 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
 .btn-large {
     padding: 1.25rem 3rem;
     font-size: 1.125rem;
@@ -424,7 +443,7 @@ body {
     font-size: clamp(1.125rem, 2.5vw, 1.5rem);
     font-weight: 600;
     line-height: 1.35;
-    margin: 0.5rem 0 1.25rem;
+    margin: 0.5rem auto 1.25rem;
     color: var(--gray-dark);
     max-width: 720px;
     letter-spacing: -0.01em;
@@ -1324,26 +1343,28 @@ body {
    =================================== */
 .retailers-page {
     min-height: 100dvh;
-    padding: 120px 0 4rem;
+    padding: var(--page-top) 0 4rem;
     background: var(--cream);
 }
 
-.retailers-hero {
+/* Shared page hero. Every subpage header uses these three classes
+   (plus .page-tagline); no page defines its own title treatment. */
+.page-hero {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 4rem;
 }
 
-.retailers-title {
+.page-title {
     font-family: var(--font-title);
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 800;
     margin-bottom: 1.5rem;
     line-height: 1.2;
     color: var(--black);
 }
 
-.retailers-subtitle {
+.page-subtitle {
     font-size: 1.25rem;
     color: var(--gray-dark);
     line-height: 1.6;
@@ -1373,13 +1394,20 @@ body {
     transform: translateX(4px);
 }
 
-.retailers-form {
-    max-width: 800px;
+/* The one form-card definition. All form surfaces share it;
+   page classes below only set width. */
+.retailers-form,
+.waitlist-form,
+.contact-form-wrapper {
     margin: 0 auto;
     background: var(--white);
     padding: 3rem;
-    border-radius: 24px;
+    border-radius: 12px;
     box-shadow: var(--shadow-md);
+}
+
+.retailers-form {
+    max-width: 800px;
 }
 
 .form-row {
@@ -1501,13 +1529,6 @@ body {
     margin-bottom: 2rem;
 }
 
-.doers-title {
-    background: linear-gradient(135deg, var(--primary) 0%, #a8d400 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
 .doers-benefits {
     display: flex;
     flex-wrap: wrap;
@@ -1529,14 +1550,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .retailers-title {
-        font-size: 2.5rem;
-    }
-
-    .retailers-form {
-        padding: 2rem 1.5rem;
-    }
-
     .form-row {
         grid-template-columns: 1fr;
     }
@@ -1826,48 +1839,25 @@ body {
 /* ===== WAITLIST PAGE ===== */
 .waitlist-page {
     background: var(--cream);
-    padding: 6rem 0 4rem;
+    padding: var(--page-top) 0 4rem;
     min-height: calc(100dvh - 80px);
-}
-
-.waitlist-hero {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.waitlist-title {
-    font-family: var(--font-title);
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    color: var(--black);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-    text-transform: uppercase;
-}
-
-.waitlist-title .highlight {
-    color: var(--primary);
-}
-
-.waitlist-subtitle {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    font-weight: 700;
-    color: var(--black);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .waitlist-form {
     max-width: 600px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-md);
 }
 
 .waitlist-form .btn-large {
     display: block;
     margin: 0 auto;
+}
+
+.form-error {
+    color: var(--error);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .form-disclaimer {
@@ -1887,7 +1877,9 @@ body {
 }
 
 @media (max-width: 768px) {
-    .waitlist-form {
+    .retailers-form,
+    .waitlist-form,
+    .contact-form-wrapper {
         padding: 2rem 1.5rem;
     }
 }
@@ -1895,7 +1887,7 @@ body {
 /* ===== CONTACT PAGE ===== */
 .contact-page {
     background: var(--cream);
-    padding: 6rem 0 4rem;
+    padding: var(--page-top) 0 4rem;
     min-height: calc(100dvh - 80px);
 }
 
@@ -1990,12 +1982,6 @@ body {
     transform: translateY(-1px);
 }
 
-.contact-form-wrapper {
-    background: var(--white);
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-}
 
 .contact-form h2 {
     font-family: var(--font-title);
@@ -2042,7 +2028,7 @@ body {
 /* ===== LEGAL PAGES ===== */
 .legal-page {
     background: var(--cream);
-    padding: 6rem 0 4rem;
+    padding: var(--page-top) 0 4rem;
     min-height: calc(100dvh - 80px);
 }
 
@@ -2535,7 +2521,7 @@ body {
 
 .support-page {
     background: var(--cream);
-    padding: 8rem 0 6rem;
+    padding: var(--page-top) 0 6rem;
     min-height: 100dvh;
 }
 
@@ -3132,7 +3118,7 @@ body {
    =================================== */
 .guide-page {
     background: var(--cream);
-    padding: 6rem 0 4rem;
+    padding: var(--page-top) 0 4rem;
 }
 
 .guide-page .container {
@@ -3143,6 +3129,7 @@ body {
     display: flex;
     gap: 0.6rem;
     align-items: center;
+    justify-content: center;
     font-size: 0.85rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -3162,22 +3149,6 @@ body {
     border-bottom-color: var(--primary);
 }
 
-.guide-title {
-    font-family: var(--font-title);
-    font-size: clamp(2.25rem, 5vw, 3.25rem);
-    line-height: 1.05;
-    color: var(--black);
-    margin-bottom: 1.5rem;
-}
-
-.guide-standfirst {
-    font-size: clamp(1.1rem, 2vw, 1.3rem);
-    line-height: 1.6;
-    color: var(--black);
-    margin-bottom: 2.5rem;
-    max-width: 62ch;
-}
-
 /* Figures ------------------------------------------------ */
 .guide-figure {
     margin: 0 0 2.5rem;
@@ -3195,39 +3166,6 @@ body {
     color: var(--gray-dark);
     margin-top: 0.75rem;
     line-height: 1.5;
-}
-
-/* Placeholder — remove once real photography lands */
-.guide-figure-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    aspect-ratio: 3 / 2;
-    background: var(--sand);
-    border: 2px dashed var(--terracotta);
-    border-radius: 12px;
-    text-align: center;
-    padding: 2rem;
-}
-
-.guide-figure-hero .guide-figure-placeholder {
-    aspect-ratio: 16 / 9;
-}
-
-.guide-figure-label {
-    font-family: var(--font-title);
-    font-size: clamp(1rem, 2.5vw, 1.4rem);
-    color: var(--black);
-    letter-spacing: 0.02em;
-}
-
-.guide-figure-hint {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--gray-dark);
 }
 
 /* Body --------------------------------------------------- */
@@ -3346,7 +3284,7 @@ body {
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.04em;
-    color: var(--gray);
+    color: var(--gray-dark);
 }
 
 .route-stop-note {
@@ -3422,7 +3360,7 @@ body {
 
 @media (max-width: 768px) {
     .guide-page {
-        padding: 4rem 0 3rem;
+        padding-bottom: 3rem;
     }
 
     .guide-content {
@@ -3446,18 +3384,6 @@ body {
 
 .guide-area-link:hover {
     opacity: 0.7;
-}
-
-.guide-area-soon {
-    display: inline-block;
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--gray);
-    padding: 0.35rem 0.75rem;
-    border: 1px solid var(--gray-light);
-    border-radius: 999px;
 }
 
 .route-credit {

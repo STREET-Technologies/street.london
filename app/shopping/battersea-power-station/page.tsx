@@ -93,18 +93,20 @@ export default function BatterseaPowerStationPage() {
       <Navigation />
       <main className="guide-page">
         <div className="container">
-          <nav className="guide-breadcrumb" aria-label="Breadcrumb">
-            <Link href="/shopping">London shopping areas</Link>
-            <span aria-hidden="true">/</span>
-            <span>Battersea Power Station</span>
-          </nav>
+          <header className="page-hero">
+            <nav className="guide-breadcrumb" aria-label="Breadcrumb">
+              <Link href="/shopping">London shopping areas</Link>
+              <span aria-hidden="true">/</span>
+              <span>Battersea Power Station</span>
+            </nav>
 
-          <h1 className="guide-title">Battersea Power Station Shops: A Shopping Guide</h1>
-          <p className="guide-standfirst">
-            Every other destination in this guide happened slowly. This one was designed. Battersea Power
-            Station is the newest retail address in London and the only one where you can see exactly what it
-            was built to be.
-          </p>
+            <h1 className="page-title">Battersea Power Station Shops: A Shopping Guide</h1>
+            <p className="page-subtitle">
+              Every other destination in this guide happened slowly. This one was designed. Battersea Power
+              Station is the newest retail address in London and the only one where you can see exactly what it
+              was built to be.
+            </p>
+          </header>
 
           <figure className="guide-figure guide-figure-hero">
             <Image

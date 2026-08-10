@@ -78,18 +78,20 @@ export default function NottingHillPage() {
       <Navigation />
       <main className="guide-page">
         <div className="container">
-          <nav className="guide-breadcrumb" aria-label="Breadcrumb">
-            <Link href="/shopping">London shopping areas</Link>
-            <span aria-hidden="true">/</span>
-            <span>Notting Hill</span>
-          </nav>
+          <header className="page-hero">
+            <nav className="guide-breadcrumb" aria-label="Breadcrumb">
+              <Link href="/shopping">London shopping areas</Link>
+              <span aria-hidden="true">/</span>
+              <span>Notting Hill</span>
+            </nav>
 
-          <h1 className="guide-title">Notting Hill Shops: Where to Shop on Portobello Road and Beyond</h1>
-          <p className="guide-standfirst">
-            Portobello Road runs five separate markets along its length, and Saturday is the only day all of
-            them trade. Come then for the whole thing and expect crowds. Come midweek and you get a calmer
-            street with fewer stalls, which suits a lot of people better.
-          </p>
+            <h1 className="page-title">Notting Hill Shops: Where to Shop on Portobello Road and Beyond</h1>
+            <p className="page-subtitle">
+              Portobello Road runs five separate markets along its length, and Saturday is the only day all of
+              them trade. Come then for the whole thing and expect crowds. Come midweek and you get a calmer
+              street with fewer stalls, which suits a lot of people better.
+            </p>
+          </header>
 
           <figure className="guide-figure guide-figure-hero">
             <Image

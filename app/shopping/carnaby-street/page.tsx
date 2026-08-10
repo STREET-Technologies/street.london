@@ -80,18 +80,20 @@ export default function CarnabyStreetPage() {
       <Navigation />
       <main className="guide-page">
         <div className="container">
-          <nav className="guide-breadcrumb" aria-label="Breadcrumb">
-            <Link href="/shopping">London shopping areas</Link>
-            <span aria-hidden="true">/</span>
-            <span>Carnaby Street</span>
-          </nav>
+          <header className="page-hero">
+            <nav className="guide-breadcrumb" aria-label="Breadcrumb">
+              <Link href="/shopping">London shopping areas</Link>
+              <span aria-hidden="true">/</span>
+              <span>Carnaby Street</span>
+            </nav>
 
-          <h1 className="guide-title">Carnaby Street Shops: Where to Shop in Soho</h1>
-          <p className="guide-standfirst">
-            Carnaby Street is a neighbourhood pretending to be a street. Most people walk the pedestrianised
-            main run between Great Marlborough Street and Broadwick Street, photograph the arch, and leave.
-            That stretch is the least interesting part of it.
-          </p>
+            <h1 className="page-title">Carnaby Street Shops: Where to Shop in Soho</h1>
+            <p className="page-subtitle">
+              Carnaby Street is a neighbourhood pretending to be a street. Most people walk the pedestrianised
+              main run between Great Marlborough Street and Broadwick Street, photograph the arch, and leave.
+              That stretch is the least interesting part of it.
+            </p>
+          </header>
 
           <figure className="guide-figure guide-figure-hero">
             <Image

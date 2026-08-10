@@ -72,18 +72,20 @@ export default function KingsRoadPage() {
       <Navigation />
       <main className="guide-page">
         <div className="container">
-          <nav className="guide-breadcrumb" aria-label="Breadcrumb">
-            <Link href="/shopping">London shopping areas</Link>
-            <span aria-hidden="true">/</span>
-            <span>Kings Road</span>
-          </nav>
+          <header className="page-hero">
+            <nav className="guide-breadcrumb" aria-label="Breadcrumb">
+              <Link href="/shopping">London shopping areas</Link>
+              <span aria-hidden="true">/</span>
+              <span>Kings Road</span>
+            </nav>
 
-          <h1 className="guide-title">Kings Road Shops: A Guide to Shopping in Chelsea</h1>
-          <p className="guide-standfirst">
-            The Kings Road is a mile and a half long and changes character roughly every four hundred yards.
-            Walk it east to west and you get the whole story: polished at Sloane Square, stranger by the time
-            you reach the other end.
-          </p>
+            <h1 className="page-title">Kings Road Shops: A Guide to Shopping in Chelsea</h1>
+            <p className="page-subtitle">
+              The Kings Road is a mile and a half long and changes character roughly every four hundred yards.
+              Walk it east to west and you get the whole story: polished at Sloane Square, stranger by the time
+              you reach the other end.
+            </p>
+          </header>
 
           <figure className="guide-figure guide-figure-hero">
             <Image

@@ -74,17 +74,19 @@ export default function MaryleboneHighStreetPage() {
       <Navigation />
       <main className="guide-page">
         <div className="container">
-          <nav className="guide-breadcrumb" aria-label="Breadcrumb">
-            <Link href="/shopping">London shopping areas</Link>
-            <span aria-hidden="true">/</span>
-            <span>Marylebone High Street</span>
-          </nav>
+          <header className="page-hero">
+            <nav className="guide-breadcrumb" aria-label="Breadcrumb">
+              <Link href="/shopping">London shopping areas</Link>
+              <span aria-hidden="true">/</span>
+              <span>Marylebone High Street</span>
+            </nav>
 
-          <h1 className="guide-title">Marylebone High Street Shops: A Village Shopping Guide</h1>
-          <p className="guide-standfirst">
-            The quietest shopping street in central London, and a lot of people would call it the finest. Fifteen minutes
-            from Oxford Street and it does not feel like the same city.
-          </p>
+            <h1 className="page-title">Marylebone High Street Shops: A Village Shopping Guide</h1>
+            <p className="page-subtitle">
+              The quietest shopping street in central London, and a lot of people would call it the finest. Fifteen minutes
+              from Oxford Street and it does not feel like the same city.
+            </p>
+          </header>
 
           <figure className="guide-figure guide-figure-hero">
             <Image

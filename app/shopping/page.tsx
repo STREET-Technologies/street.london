@@ -25,8 +25,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Area guides. `href: null` renders as unlinked until that spoke ships, so the
-// pillar never points at a 404. See docs/planning/shopping-street-guides.md
+// Area guides. See docs/planning/shopping-street-guides.md
 const AREAS = [
   {
     name: 'Carnaby Street and Soho',
@@ -93,11 +92,13 @@ export default function ShoppingPage() {
       <Navigation />
       <main className="guide-page">
         <div className="container">
-          <h1 className="guide-title">London Shopping Areas</h1>
-          <p className="guide-standfirst">
-            London does not have a shopping district. It has about forty of them, and the difference between a
-            good afternoon and a wasted one is knowing which street matches what you came for.
-          </p>
+          <header className="page-hero">
+            <h1 className="page-title">London Shopping Areas</h1>
+            <p className="page-subtitle">
+              London does not have a shopping district. It has about forty of them, and the difference between a
+              good afternoon and a wasted one is knowing which street matches what you came for.
+            </p>
+          </header>
 
           <div className="guide-content">
             <section className="guide-section">
@@ -118,13 +119,9 @@ export default function ShoppingPage() {
                 <p>
                   <strong>Good for:</strong> {area.goodFor}
                 </p>
-                {area.href ? (
-                  <Link href={area.href} className="guide-area-link">
-                    Read the {area.name.split(',')[0].replace(' and Soho', '')} guide
-                  </Link>
-                ) : (
-                  <span className="guide-area-soon">Full guide coming soon</span>
-                )}
+                <Link href={area.href} className="guide-area-link">
+                  Read the {area.name.split(',')[0].replace(' and Soho', '')} guide
+                </Link>
               </section>
             ))}
 
