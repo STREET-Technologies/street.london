@@ -27,6 +27,15 @@ export const metadata: Metadata = {
 
 type FAQItem = { question: string; answer: string };
 
+/** "Refunds & Returns" → "refunds-returns", so sections can be deep-linked (TT-475). */
+function sectionId(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/&/g, ' ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 type FAQSection = {
   title: string;
   items: FAQItem[];
@@ -204,6 +213,11 @@ const SECTIONS: FAQSection[] = [
         answer:
           "Contact the retailer directly through their returns policy link in the app. If you need help reaching them, you can also chat with us and we'll point you in the right direction.",
       },
+      {
+        question: 'Is the delivery fee refunded if I return something?',
+        answer:
+          'No. The delivery fee pays the rider for a delivery that has been completed, so it is not refunded when items are returned. You get it back only if the order is declined or cancelled before it is dispatched, or if the retailer refunds it for a faulty item. Refunds themselves are issued by the retailer, not by STREET.',
+      },
     ],
   },
   {
@@ -281,7 +295,11 @@ export default function SupportPage() {
           </div>
 
           {SECTIONS.map((section) => (
-            <div key={section.title} className="support-section">
+            <div
+              key={section.title}
+              id={sectionId(section.title)}
+              className="support-section"
+            >
               <h2 className="support-section-title">{section.title}</h2>
               <div className="faq-list">
                 {section.items.map((faq) => (
