@@ -1,13 +1,10 @@
 import { NextResponse } from 'next/server';
+import { VISITED_COOKIE, visitedCookieOptions } from '@/lib/visited-cookie';
 
 export function GET() {
   const response = NextResponse.redirect(
     new URL('/', process.env.NEXT_PUBLIC_SITE_URL ?? 'https://street.london'),
   );
-  response.cookies.set('street_visited', '1', {
-    maxAge: 60 * 60 * 24 * 30, // 30 days
-    path: '/',
-    sameSite: 'lax',
-  });
+  response.cookies.set(VISITED_COOKIE, '1', visitedCookieOptions);
   return response;
 }
