@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { VISITED_COOKIE, visitedCookieOptions } from './lib/visited-cookie';
 
 // Search engine crawlers, social card scrapers, and AI search bots.
 // These see the canonical homepage instead of the first-visit /join redirect
@@ -12,14 +13,10 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const visited = request.cookies.get('street_visited');
+  const visited = request.cookies.get(VISITED_COOKIE);
   if (!visited) {
     const response = NextResponse.redirect(new URL('/join', request.url));
-    response.cookies.set('street_visited', '1', {
-      maxAge: 60 * 60 * 24 * 30, // 30 days
-      path: '/',
-      sameSite: 'lax',
-    });
+    response.cookies.set(VISITED_COOKIE, '1', visitedCookieOptions);
     return response;
   }
 
